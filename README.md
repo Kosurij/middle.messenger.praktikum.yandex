@@ -5,7 +5,7 @@
 ## Ссылки.
 
 [Ссылка на Netlify](https://lucky-truffle-2d27d8.netlify.app)
-[Ссылка на PR]()
+[Ссылка на PR](https://github.com/Kosurij/middle.messenger.praktikum.yandex/pull/1)
 
 ## Локальный запуск.
 
