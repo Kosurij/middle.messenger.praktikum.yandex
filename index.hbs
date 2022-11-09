@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <title> My first sprint </title>
+  <link rel="stylesheet" href="style.less">
+</head>
+<body>
+<main class="main-page">
+  <div class="main-page__chatsList">
+    <div class="chatsList__header">
+      <a class="chatsList__header__link" href="src/pages/profile/profile.hbs"> Профиль </a>
+      <a class="chatsList__header__link" href="src/pages/404/404.hbs"> 404 страница </a>
+      <a class="chatsList__header__link" href="src/pages/500/500.hbs"> 500 страница </a>
+      <a class="chatsList__header__link" href="src/pages/registration/registration.hbs"> Регистрация </a>
+      <a class="chatsList__header__link" href="src/pages/login/login.hbs"> Авторизация </a>
+    </div>
+  </div>
+  <div class="main-page__currentChat">
+    <div class="currentChat__messages">
+      Выберите чат, чтобы отправить сообщение
+    </div>
+    <div class="currentChat__message">
+      <button class="currentChat__message__addFile"></button>
+      <input type="text" id="message" class="currentChat__message__input" name="message" placeholder="Сообщение" />
+      <button class="currentChat__message__sendMessage"></button>
+    </div>
+  </div>
+</main>
+</body>
+</html>

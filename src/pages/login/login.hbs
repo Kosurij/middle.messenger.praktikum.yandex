@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <title>My first sprint</title>
+  <link rel="stylesheet" href="../../../style.less">
+</head>
+<body>
+  <form class="login-form">
+    <h1 class="login-form__header">Вход</h1>
+    <div class="login-form__content">
+      {{>inputField type="text" id="login-form__login" label="Логин" name="login" }}
+      {{>inputField type="password" id="login-form__password" label="Пароль" name="password" }}
+    </div>
+    <div class="login-form__footer">
+      {{>button label="Авторизоваться"}}
+      {{>button label="Нет аккаунта?" type="ghost"}}
+    </div>
+  </form>
+</body>
+</html>
+
+
+
+
