@@ -1,0 +1,77 @@
+.profile {
+  display: flex;
+  width: 100%;
+
+  &__sidebar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 65px;
+    background: @background-color;
+    border-right: 1px solid @border-color-2;
+    height: 100vh;
+
+    &__backButton {
+      background: url("../../../static/left_arrow.svg");
+      cursor: pointer;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+
+      &:hover {
+        opacity: .8;
+      }
+    }
+  }
+
+  &__content {
+    width:100%;
+    text-align: center;
+    margin: 60px auto 0;
+  }
+}
+
+.avatar__image {
+  cursor: pointer;
+  border-radius: 50%;
+
+  &:hover {
+    opacity: .7;
+  }
+}
+
+.header__name {
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 20px;
+}
+
+.profile__data {
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.profile__action {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__button {
+    width: 500px;
+    text-align: start;
+    border-bottom: 1px solid @border-color-2;
+    padding: 10px 0;
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  &__link {
+    font-size: 14px;
+  }
+}

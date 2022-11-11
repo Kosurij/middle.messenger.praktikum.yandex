@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <title>My first sprint</title>
+  <link rel="stylesheet" href="../../../style.less">
+</head>
+<body>
+  <main>
+    <form class="registration-form">
+      <h1 class="registration-form__header">Регистрация</h1>
+      <div class="registration-form__content">
+        {{>inputField type="email" id="registration-form__email" label="Почта" name="email" }}
+        {{>inputField type="text" id="registration-form__login" label="Логин" name="login" }}
+        {{>inputField type="text" id="registration-form__firstName" label="Имя" name="first_name" }}
+        {{>inputField type="text" id="registration-form__secondName" label="Фамилия" name="second_name" }}
+        {{>inputField type="tel" id="registration-form__phone" label="Телефон" name="phone" }}
+        {{>inputField type="password" id="registration-form__password[0]" label="Пароль" name="password" }}
+        {{>inputField type="password" id="registration-form__password[1]" label="Пароль (еще раз)" name="password" }}
+      </div>
+      <div class="registration-form__footer">
+        {{>button label="Зарегистрироваться" type="submit"}}
+        {{>link url="../login/login.hbs" text="Войти" type="medium"}}
+      </div>
+    </form>
+  </main>
+</body>
+</html>
