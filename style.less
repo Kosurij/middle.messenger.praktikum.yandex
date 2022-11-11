@@ -12,7 +12,9 @@
 @border-color-1: #d2d2d2;
 @border-color-2: #EAEAEA;
 @opacity-main: #1976D20A;
+@box-shadow-color: #00000023;
 @background-color: #FBFBFB;
+@white-color: #FFFFFFFF;
 
 * {
   margin: 0;
@@ -35,7 +37,7 @@ a {
   background: @primary-color;
   border-radius: 8px;
   cursor: pointer;
-  color: white;
+  color: @white-color;
   width: 280px;
   height: 37px;
   outline: none;
@@ -47,7 +49,7 @@ a {
   }
 
   &__ghost {
-    background: white;
+    background: @white-color;
     color: @primary-color;
 
     &:hover {
@@ -66,6 +68,10 @@ a {
 
   &:hover {
    color: rgba(@primary-color, .8)
+  }
+
+  &-medium {
+    font-size: 13px;
   }
 
   &-large {
@@ -163,6 +169,7 @@ a {
     width: 25%;
     background: @background-color;
     flex-shrink: 1;
+    border-right: 1px solid @border-color-2;
   }
 
   &__currentChat {
@@ -222,18 +229,26 @@ a {
   }
 }
 
-.chatsList__header {
+.chatsList__nav {
+  color: @secondary-color;
+}
+
+.nav__list {
+  list-style: none;
   width: 100%;
   display: flex;
   align-items: flex-end;
   flex-direction: column;
-  color: @secondary-color;
 
-  &__link::after {
-    color: @secondary-color;
-    margin-left: 5px;
-    margin-right: 10px;
-    content: "❯";
+  &__link {
+    &::after {
+      margin-left: 5px;
+      margin-right: 10px;
+      content: "❯";
+    }
+
+    &:hover {
+      color: @primary-color;
+    }
   }
 }
-
