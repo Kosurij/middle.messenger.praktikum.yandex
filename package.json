@@ -21,12 +21,12 @@
   },
   "homepage": "https://github.com/Kosurij/middle.messenger.praktikum.yandex#readme",
   "devDependencies": {
-    "@anikin/parcel-transformer-handlebars": "^1.0.9",
-    "@parcel/transformer-less": "^2.7.0",
-    "express": "^4.18.2",
-    "parcel": "^2.7.0"
+    "@anikin/parcel-transformer-handlebars": "1.0.9",
+    "@parcel/transformer-less": "2.7.0",
+    "parcel": "2.7.0",
+    "handlebars": "4.7.7"
   },
   "dependencies": {
-    "handlebars": "^4.7.7"
+    "express": "4.18.2"
   }
 }
