@@ -4,8 +4,10 @@ import styles from "../Link/link.less";
 
 interface ILinkProps {
   text: string;
-  type: string;
   url: string;
+  type?: string;
+  color?: string;
+  customClass?: string;
 }
 
 export default class Link extends Block {
@@ -16,8 +18,10 @@ export default class Link extends Block {
   render() {
     return this.compile(template, {
       text: this.props.text,
-      type: this.props.type,
       url: this.props.url,
+      type: this.props.type,
+      color: this.props.color,
+      customClass: this.props.customClass,
       styles
     })
   }

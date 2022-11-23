@@ -1,8 +1,6 @@
-import Block from "../../utils/Block";
+import Block from '/src/utils/Block';
+import { Button, InputFiled, Link } from '/src/components'
 import template from './loginPage.hbs';
-import { Button } from "../../components/Button/Button";
-import InputFiled from "../../components/InputField/InputField";
-import Link from "../../components/Link/Link";
 import styles from './login.less'
 
 export class LoginPage extends Block {

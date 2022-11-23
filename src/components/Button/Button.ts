@@ -11,7 +11,7 @@ interface IButtonProps {
   styles?: Record<string, string>;
 }
 
-export class Button extends Block {
+export default class Button extends Block {
   constructor(props: IButtonProps) {
     super(props);
   }

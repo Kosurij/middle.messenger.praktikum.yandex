@@ -9,3 +9,5 @@ declare module "*.less" {
 
   export default styles;
 }
+
+declare module "*.png"

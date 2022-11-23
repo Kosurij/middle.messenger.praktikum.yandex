@@ -6,6 +6,10 @@
     "build": "parcel build ./index.hbs",
     "start": "parcel build ./index.hbs && node ./server.js"
   },
+  "staticFiles": {
+    "staticPath": "static/",
+    "staticOutPath": "static/"
+  },
   "engines": {
     "node": ">=12"
   },
