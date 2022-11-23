@@ -1,0 +1,29 @@
+@import url('../../styles/variables');
+
+.link {
+  display: block;
+  color: @primary-color;
+  font-size: 12px;
+  text-decoration: none;
+  font-weight: 500;
+
+  &:hover {
+    color: rgba(@primary-color, .8)
+  }
+
+  &-medium {
+    font-size: 13px;
+  }
+
+  &-large {
+    font-size: 14px;
+  }
+
+  &-red {
+    color: @error-color;
+
+    &:hover {
+      color: rgba(@error-color, .8)
+    }
+  }
+}

@@ -1,0 +1,26 @@
+@import url('../../styles/variables');
+
+.button {
+  background: @primary-color;
+  border-radius: 8px;
+  cursor: pointer;
+  color: @white-color;
+  width: 280px;
+  height: 37px;
+  outline: none;
+  border: none;
+  font-weight: 500;
+
+  &:hover {
+    opacity: .8;
+  }
+
+  &__ghost {
+    background: @white-color;
+    color: @primary-color;
+
+    &:hover {
+      background: rgba(@opacity-main, 0.04);
+    }
+  }
+}
