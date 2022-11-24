@@ -65,7 +65,7 @@ export class RegistrationPage extends Block {
     this.children.loginLink = new Link({
       text: 'Войти',
       type: 'medium',
-      url: '/registration'
+      url: '/'
     })
   }
   protected render() {

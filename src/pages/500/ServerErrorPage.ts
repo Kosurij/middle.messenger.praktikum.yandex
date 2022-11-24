@@ -7,7 +7,7 @@ export class ServerErrorPage extends Block {
   protected initChildren() {
     this.children.homeLink = new Link({
       text: 'Назад к чатам',
-      url: '/',
+      url: '/chats',
     })
   }
   protected render() {

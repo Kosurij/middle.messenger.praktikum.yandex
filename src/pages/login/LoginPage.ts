@@ -4,10 +4,6 @@ import template from './loginPage.hbs';
 import styles from './login.less'
 
 export class LoginPage extends Block {
-  // constructor(props: { buttonText: string }) {
-  //   super(props);
-  // }
-
   protected initChildren() {
     this.children.loginField = new InputFiled({
       type: 'text',
@@ -34,18 +30,9 @@ export class LoginPage extends Block {
     this.children.registerLink = new Link({
       text: 'Нет аккаунта?',
       type: 'medium',
-      url: '/'
+      url: '/registration'
     })
   }
-  // protected componentDidUpdate(oldProps: any, newProps: any): boolean  {
-  //   if (oldProps.buttonText !== newProps.buttonText) {
-  //     this.children.button.setProps({
-  //       label: newProps.buttonText,
-  //     })
-  //   }
-  //
-  //   return super.componentDidUpdate(oldProps, newProps);
-  // }
 
   protected render() {
     return this.compile(template, { styles })

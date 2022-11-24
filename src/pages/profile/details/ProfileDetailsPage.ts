@@ -1,9 +1,9 @@
 import Block from "/src/utils/Block";
 import { Link } from "/src/components";
-import template from "./profileDetails.hbs";
 import { ProfileHeader } from "../components/ProfileHeader/ProfileHeader";
 import { ProfileSidebar } from "../components/ProfileSidebar/ProfileSidebar";
 import { ProfileDetailsData } from "./components/ProfileDetailsData/ProfileDetailsData";
+import template from "./profileDetails.hbs";
 import styles from "./profileDetails.less";
 
 export class ProfileDetailsPage extends Block {
