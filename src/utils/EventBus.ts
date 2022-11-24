@@ -27,7 +27,6 @@ export default class EventBus {
     }
 
     this.listeners[event].forEach(listener => {
-      // @ts-ignore
       listener(...args)
     })
   }

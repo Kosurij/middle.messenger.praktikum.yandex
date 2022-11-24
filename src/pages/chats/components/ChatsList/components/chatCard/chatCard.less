@@ -2,17 +2,14 @@
 
 .chatCard {
   margin: 0 10px;
-  padding: 15px 0;
+  padding: 15px 7px;
   color: @secondary-color;
-
   display: flex;
   border-bottom: 1px solid @border-color-1;
-  justify-content: space-between;
   cursor: pointer;
 
   &:hover {
-    background-color: @opacity-main;
-    opacity: .7;
+    background-color: @opacity-secondary;
   }
 }
 
@@ -24,6 +21,7 @@
 
 .chatInfo {
   margin-left: 10px;
+  flex-grow: 1;
 
   &__name {
     color: @text-color;
@@ -47,6 +45,7 @@
   justify-content: space-between;
   align-items: center;
   margin-left: 5px;
+  flex-shrink: 1;
 
   font-size: 12px;
   font-weight: 500;

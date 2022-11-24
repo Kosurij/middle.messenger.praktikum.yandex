@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "dev": "parcel serve src/index.html --no-cache",
+    "ts": "tsc",
     "build": "parcel build ./index.html",
     "start": "parcel build ./index.html && node ./server.js"
   },

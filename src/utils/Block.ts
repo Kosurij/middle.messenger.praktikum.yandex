@@ -183,6 +183,12 @@ export default class Block {
     const fragment = this._createDocumentElement('template') as HTMLTemplateElement;
 
     Object.entries(this.children).forEach(([key, child]) => {
+      if (Array.isArray(child)) {
+        context[key] = child.map(ch => `<div data-id=id-${ch.id}></div>`)
+
+        return;
+      }
+
       context[key] = `<div data-id=id-${child.id}></div>`
     })
 
@@ -190,7 +196,19 @@ export default class Block {
 
     fragment.innerHTML = htmlString;
 
-    Object.entries(this.children).forEach(([key, child]) => {
+    Object.entries(this.children).forEach(([, child]) => {
+      if (Array.isArray(child)) {
+        child.forEach(ch => {
+          const stub = fragment.content.querySelector(`[data-id='id-${ch.id}']`)
+
+          if (stub) {
+            stub.replaceWith(ch.getContent())
+          }
+        })
+
+        return fragment.content;
+      }
+
       const stub = fragment.content.querySelector(`[data-id='id-${child.id}']`)
 
       if (!stub) {

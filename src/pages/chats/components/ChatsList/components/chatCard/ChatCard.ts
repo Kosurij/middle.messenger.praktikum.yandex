@@ -21,7 +21,7 @@ export class ChatCard extends Block {
       lastMessage: this.props.lastMessage,
       lastMessageDate: this.props.lastMessageDate,
       newMessages: this.props.newMessages,
-      styles
+      styles,
     })
   }
 }
