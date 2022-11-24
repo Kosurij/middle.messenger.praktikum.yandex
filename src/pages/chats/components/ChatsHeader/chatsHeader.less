@@ -1,0 +1,52 @@
+@import '/src/styles/variables';
+
+.chatsHeader {
+  padding-bottom: 15px;
+  border-bottom: 1px solid @border-color-1;
+  margin: 0 10px;
+
+  &__profileLink {
+    color: @secondary-color;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+
+    &__link {
+      &::after {
+        margin-left: 5px;
+        margin-right: 10px;
+        content: "❯";
+      }
+
+      &:hover {
+        color: @primary-color;
+      }
+    }
+  }
+}
+
+.searchInput {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+
+  &__input {
+    width: 100%;
+    padding: 10px 10px 10px 35px;
+    border: 1px solid @border-color-1;
+    border-radius: 5px;
+    outline: 0;
+    color: @text-color;
+    background: @background-color-2 url("/static/searchIcon.svg") no-repeat 10px center;
+
+    &::placeholder {
+      color: @secondary-color;
+    }
+
+    &:focus {
+      background-color: @background-color;
+      border-color: @primary-color;
+    }
+  }
+}

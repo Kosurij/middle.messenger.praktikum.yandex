@@ -1,5 +1,5 @@
 import Block from "/src/utils/Block";
-import avatar from "/static/user__avatar.png";
+import avatar from "/static/user_avatar.svg";
 import template from "./profileHeader.hbs";
 import styles from "./profileHeader.less";
 

@@ -1,0 +1,51 @@
+@import '/src/styles/variables';
+
+.messageInput {
+  height: 9%;
+  margin: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 2px solid @border-color-2;
+
+  &__input {
+    width: 93%;
+    border: 1px solid @border-color-1;
+    background: @background-color-2;
+    border-radius: 30px;
+    outline: 0;
+    padding: 10px 20px;
+    color: @text-color;
+
+    &::placeholder {
+      color: @secondary-color;
+    }
+
+    &:focus {
+      background-color: @background-color;
+      border-color: @primary-color;
+    }
+  }
+
+  &__sendMessage,
+  &__addFile {
+    cursor: pointer;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    outline: none;
+    border: none;
+
+    &:hover {
+      opacity: .8;
+    }
+  }
+
+  &__addFile {
+    background: url("/static/add_file.svg");
+  }
+
+  &__sendMessage {
+    background: url("/static/right_arrow.svg");
+  }
+}

@@ -10,4 +10,4 @@ declare module "*.less" {
   export default styles;
 }
 
-declare module "*.png"
+declare module "*.svg"

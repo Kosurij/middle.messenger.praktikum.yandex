@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "scripts": {
     "dev": "parcel serve src/index.html --no-cache",
-    "build": "parcel build ./index.hbs",
-    "start": "parcel build ./index.hbs && node ./server.js"
+    "build": "parcel build ./index.html",
+    "start": "parcel build ./index.html && node ./server.js"
   },
   "staticFiles": {
     "staticPath": "static/",

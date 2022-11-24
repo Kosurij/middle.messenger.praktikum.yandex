@@ -1,0 +1,20 @@
+@import '/src/styles/variables';
+
+.chats {
+  width: 100%;
+  display: flex;
+
+  &__list {
+    padding-top: 20px;
+    width: 25%;
+    background: @background-color;
+    flex-shrink: 1;
+    border-right: 1px solid @border-color-2;
+  }
+
+  &__current {
+    width: 75%;
+    height: 100vh;
+    color: @secondary-color;
+  }
+}

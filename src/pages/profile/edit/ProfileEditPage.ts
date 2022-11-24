@@ -11,7 +11,7 @@ export class ProfileEditPage extends Block {
 
     this.children.sidebar = new ProfileSidebar();
 
-    this.children.profileEditData = new ProfileEditForm();
+    this.children.profileEditForm = new ProfileEditForm();
   }
 
   protected render() {

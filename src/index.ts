@@ -6,6 +6,7 @@ import { ServerErrorPage } from "./pages/500/ServerErrorPage";
 import { ProfileDetailsPage } from "./pages/profile/details/ProfileDetailsPage";
 import {ProfileEditPage} from "/src/pages/profile/edit/ProfileEditPage";
 import {ChangePasswordPage} from "/src/pages/profile/changePassword/ChangePasswordPage";
+import {ChatsPage} from "/src/pages/chats/ChatsPage";
 
 document.addEventListener('DOMContentLoaded', () => {
   // const loginPage = new LoginPage({ buttonText: 'Click me'});
@@ -15,9 +16,10 @@ document.addEventListener('DOMContentLoaded', () => {
   // const serverErrorPage = new ServerErrorPage();
   // const profileDetailsPage = new ProfileDetailsPage();
   // const profileEditPage = new ProfileEditPage();
-  const changePasswordPage = new ChangePasswordPage();
+  // const changePasswordPage = new ChangePasswordPage();
+  const chatsPage = new ChatsPage();
 
-  renderDOM('#app', changePasswordPage);
+  renderDOM('#app', chatsPage);
 
   // setTimeout(() => {
   //   loginPage.setProps({
