@@ -14,6 +14,7 @@ export class ChatCard extends Block {
   constructor(props: IChatCardProps) {
     super(props);
   }
+
   protected render() {
     return this.compile(template, {
       chatIcon: this.props.chatIcon,
