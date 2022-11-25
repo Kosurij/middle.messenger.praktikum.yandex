@@ -18,6 +18,11 @@
     background: transparent;
     transition: border-color 0.2s;
 
+    &:invalid {
+      border-bottom: 1px solid @error-color;
+    }
+
+
     &::placeholder {
       color: transparent;
     }
@@ -32,6 +37,10 @@
       padding-bottom: 6px;
       border-bottom: 2px solid @primary-color;
     }
+
+    &:invalid:focus  {
+      border-bottom: 2px solid @error-color;
+    }
   }
 
   & label,
@@ -42,6 +51,10 @@
     transition: 0.2s;
     font-size: .8rem;
     color: @primary-color;
+  }
+
+  &__input:invalid ~ &__label {
+    color: @error-color;
   }
 
   & label {

@@ -3,8 +3,8 @@ import { Button, InputFiled, Link } from '/src/components'
 import template from './loginPage.hbs';
 import styles from './login.less';
 import { RegistrationPage } from "/src/pages/registration/RegistrationPage";
+import  {ChatsPage } from "/src/pages/chats/ChatsPage";
 import { renderDOM } from "/src/utils/renderDOM";
-import {ChatsPage} from "/src/pages/chats/ChatsPage";
 
 export class LoginPage extends Block {
   protected initChildren() {
@@ -13,6 +13,12 @@ export class LoginPage extends Block {
       id: 'login-form__login',
       label: 'Логин',
       name: 'login',
+      required: 'required',
+      events: {
+        blur: () => {
+          console.log('work')
+        }
+      }
     })
 
     this.children.passwordField = new InputFiled({
@@ -26,7 +32,18 @@ export class LoginPage extends Block {
       label: 'Авторизоваться',
       type: 'submit',
       events: {
-        click: () => console.log('gotcha')
+        click: (e) => {
+          if (e) {
+            e.preventDefault();
+
+            const loginField = document.querySelector('#login-form__login') as HTMLInputElement;
+            const passwordField = document.querySelector('#login-form__password') as HTMLInputElement;
+
+            const data: Record<string, string> = { login: loginField?.value, password: passwordField?.value }
+
+            console.log(data)
+          }
+        }
       }
     })
 

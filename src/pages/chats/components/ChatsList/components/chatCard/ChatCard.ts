@@ -8,6 +8,9 @@ interface IChatCardProps {
   lastMessage: string;
   lastMessageDate: string | Date;
   newMessages: string | number;
+  events?: {
+    click?: () => void;
+  }
 }
 
 export class ChatCard extends Block {
@@ -22,6 +25,9 @@ export class ChatCard extends Block {
       lastMessage: this.props.lastMessage,
       lastMessageDate: this.props.lastMessageDate,
       newMessages: this.props.newMessages,
+      events: {
+        click: this.props.click
+      },
       styles,
     })
   }

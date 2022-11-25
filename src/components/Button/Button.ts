@@ -6,7 +6,7 @@ interface IButtonProps {
   label: string;
   type: string;
   events?: {
-    click?: () => void;
+    click?: (e?: Event) => void;
   },
   styles?: Record<string, string>;
 }

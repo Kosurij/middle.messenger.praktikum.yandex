@@ -2,20 +2,13 @@
 
 .messagesContainer {
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
 }
 
 .messages {
-  display: flex;
-  flex-direction: column;
-  overflow-y: auto;
-  height: 84%;
-  margin-bottom: 25px;
-
-  &-empty {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+  flex-grow: 1;
 
   &__userInfo {
     display: flex;
@@ -37,5 +30,3 @@
     }
   }
 }
-
-

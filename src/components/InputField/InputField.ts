@@ -9,6 +9,10 @@ interface IInputFieldProps {
   id: string;
   value?: string;
   styles?: Record<string, string>;
+  required?: string;
+  events?: {
+    blur?: () => void;
+  }
 }
 
 
@@ -24,6 +28,10 @@ export default class InputFiled extends Block {
       type: this.props.type,
       id: this.props.id,
       value: this.props.value,
+      required: this.props.required,
+      events: {
+        blur: this.props.blur
+      },
       styles
     })
   }

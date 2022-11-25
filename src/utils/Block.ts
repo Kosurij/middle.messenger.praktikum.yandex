@@ -20,7 +20,7 @@ export default class Block<P extends Record<string, unknown> = any> {
 
   public id = nanoid(6);
   protected props: Props<P>;
-  public children: Record<string, Block> | Record<string, Block[]>;
+  public children: Record<string, Block<P>> | Record<string, Block<P>[]>;
   private eventBus: () => EventBus<BlockEvents<Props<P>>>;
   private _element: HTMLElement | null = null;
 
@@ -74,6 +74,8 @@ export default class Block<P extends Record<string, unknown> = any> {
     Object.entries(propsAndChildren).forEach(([key, value]) => {
       if (value instanceof Block) {
         children[key] = value;
+      } else if (Array.isArray(value) && value.every(v => v instanceof Block)) {
+        props[key] = value;
       } else {
         props[key] = value;
       }
