@@ -24,14 +24,13 @@ export class ProfileDetailsPage extends Block {
       text: 'Изменить пароль',
       url: '/changePassword',
       type: 'large',
-      customClass: 'profile__action__link'
     })
 
     this.children.homeLink = new Link({
       text: 'Выйти',
       url: '/',
       type: 'large',
-      color: 'red',
+      customClass: 'profile__action__homeLink',
     })
   }
 
