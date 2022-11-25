@@ -8,7 +8,7 @@ import {ChangePasswordPage} from "/src/pages/profile/changePassword/ChangePasswo
 import {NotFoundPage} from "/src/pages/404/404Page";
 import {ServerErrorPage} from "/src/pages/500/ServerErrorPage";
 
-function renderDOM(component: Block ): void {
+export function renderDOM(component: Block ): void {
   const root = document.querySelector('#app');
 
   if (!root) {

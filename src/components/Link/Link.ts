@@ -8,6 +8,9 @@ interface ILinkProps {
   type?: string;
   color?: string;
   customClass?: string;
+  events?: {
+    click?: (e: Event) => void;
+  },
 }
 
 export default class Link extends Block {
@@ -22,6 +25,9 @@ export default class Link extends Block {
       type: this.props.type,
       color: this.props.color,
       customClass: this.props.customClass,
+      events: {
+        click: this.props.click
+      },
       styles
     })
   }

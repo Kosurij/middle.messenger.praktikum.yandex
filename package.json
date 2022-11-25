@@ -4,8 +4,8 @@
   "scripts": {
     "dev": "parcel serve src/index.html --no-cache",
     "ts": "tsc",
-    "build": "parcel build ./index.html",
-    "start": "parcel build ./index.html && node ./server.js"
+    "build": "parcel build src/index.html",
+    "start": "parcel build src/index.html && node ./server.js"
   },
   "staticFiles": {
     "staticPath": "static/",
@@ -13,6 +13,13 @@
   },
   "engines": {
     "node": ">=12"
+  },
+  "targets": {
+    "default": {
+      "engines": {
+        "browsers": ">= 50%"
+      }
+    }
   },
   "repository": {
     "type": "git",
