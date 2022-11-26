@@ -1,0 +1,42 @@
+@import '/src/styles/variables';
+
+.message-form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid @border-color-1;
+  padding: 10px 0;
+  margin: 0 20px;
+  color: @text-color;
+
+  &__sendMessage,
+  &__addFile {
+    cursor: pointer;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    outline: none;
+    border: none;
+
+    &:hover {
+      opacity: .8;
+    }
+  }
+
+  &__addFile {
+    background: url("/static/add_file.svg");
+  }
+
+  &__sendMessage {
+    background: url("/static/right_arrow.svg");
+  }
+
+  &-error {
+    &_input {
+      border: 1px solid @error-color;
+      background-color: rgba(@error-color, 0.1);
+    }
+  }
+}
+
+

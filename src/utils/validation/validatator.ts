@@ -30,15 +30,15 @@ const PATTERNS: Record<TFieldNamesKeys, RegExp> = {
   [FIELD_NAMES.repeatPassword]: /^(?=.*?([A-Z]))(?=.*?\d)(\w|-|_){8,40}$/
 }
 
-const highlightErrors  = (errors: TErrors) => {
-  const inputWrappers: HTMLElement[] = Array.from(document.querySelectorAll('.inputField'));
+const highlightErrors  = (errors: TErrors, selector = '.inputField', errorClass = 'inputField-error') => {
+  const inputWrappers: HTMLElement[] = Array.from(document.querySelectorAll(selector));
 
   inputWrappers.forEach(inputWrapper => {
-    const input = inputWrapper.firstElementChild as HTMLInputElement;
+    const input = inputWrapper.querySelector('input') as HTMLInputElement;
 
     errors[input.name]
-        ? inputWrapper.classList.add('inputField-error')
-        : inputWrapper.classList.remove('inputField-error')
+        ? inputWrapper.classList.add(errorClass)
+        : inputWrapper.classList.remove(errorClass)
   })
 }
 
@@ -46,7 +46,7 @@ const validateFormData = ([fieldName, value]: TFormData): boolean => PATTERNS[fi
 
 const validateInput = ({ name, value } : TInput) => PATTERNS[name].test(value)
 
-export const formValidation = (formData: FormData) => {
+export const formValidation = (formData: FormData, selector?: string, errorClass?: string) => {
   const errors: TErrors = {}
 
   for(let inputField of formData) {
@@ -55,20 +55,20 @@ export const formValidation = (formData: FormData) => {
     }
   }
 
-  highlightErrors(errors);
+  highlightErrors(errors, selector, errorClass);
 
   if (!Object.keys(errors).length) {
     return null;
   }
 }
 
-export const inputValidation = (input: HTMLInputElement) => {
+export const inputValidation = (input: HTMLInputElement, selector?: string, errorClass?: string) => {
   const errors: TErrors = {}
 
   if (!validateInput(input as TInput)) {
     errors[input.name] = true;
   }
 
-  highlightErrors(errors)
+  highlightErrors(errors, selector, errorClass)
 }
 

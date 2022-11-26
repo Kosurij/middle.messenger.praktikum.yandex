@@ -1,8 +1,8 @@
 import Block from "/src/utils/Block";
-import { MessageInput } from "./components/MessageInput/MessageInput";
 import { MessageList } from "./components/MessageList/MessageList";
 import template from "./messages.hbs";
 import styles from "./messages.less";
+import {MessageForm} from "/src/pages/chats/components/Messages/components/MessageInputForm/MessageForm";
 
 interface IMessages {
   userName: string;
@@ -17,7 +17,7 @@ export class Messages extends Block {
   }
 
   protected initChildren() {
-    this.children.inputMessage = new MessageInput();
+    this.children.messageForm = new MessageForm();
 
     this.children.messagesList = new MessageList({
       date: this.props.date,

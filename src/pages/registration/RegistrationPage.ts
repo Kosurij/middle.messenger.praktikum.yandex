@@ -2,7 +2,7 @@ import Block from "/src/utils/Block";
 import { Link, Button, InputFiled } from '../../components'
 import template from './registration.hbs';
 import styles from './registration.less'
-import {LoginPage} from "/src/pages/login/LoginPage";
+import { LoginPage } from "/src/pages/login/LoginPage";
 import { renderDOM } from "/src/utils/renderDOM";
 import { inputValidation } from "/src/utils/validation/validatator";
 import { validateForm } from "/src/utils/validation/validateForm";

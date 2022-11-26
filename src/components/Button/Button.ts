@@ -8,7 +8,7 @@ interface IButtonProps {
   events?: {
     click?: (e?: Event) => void;
   },
-  styles?: Record<string, string>;
+  customClass?: string,
 }
 
 export default class Button extends Block {
@@ -23,7 +23,8 @@ export default class Button extends Block {
       events: {
         click: this.props.click
       },
-      styles
+      styles,
+      customClass: this.props.customClass
     })
   }
 }
