@@ -15,16 +15,6 @@
     "staticPath": "static/",
     "staticOutPath": "static/"
   },
-  "engines": {
-    "node": ">=12"
-  },
-  "targets": {
-    "default": {
-      "engines": {
-        "browsers": ">= 50%"
-      }
-    }
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Kosurij/middle.messenger.praktikum.yandex.git"
