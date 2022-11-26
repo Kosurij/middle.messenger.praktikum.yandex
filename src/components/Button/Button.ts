@@ -1,6 +1,6 @@
 import Block from "../../utils/Block";
 import template from './button.hbs';
-import styles from './button.less'
+import styles from './button.less';
 
 interface IButtonProps {
   label: string;
@@ -21,10 +21,10 @@ export default class Button extends Block {
       label: this.props.label,
       type: this.props.type,
       events: {
-        click: this.props.click
+        click: this.props.click,
       },
       styles,
-      customClass: this.props.customClass
-    })
+      customClass: this.props.customClass,
+    });
   }
 }

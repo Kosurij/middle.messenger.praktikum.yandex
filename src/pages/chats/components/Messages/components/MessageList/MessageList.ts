@@ -20,7 +20,7 @@ export class MessageList extends Block {
     return this.compile(template, {
       date: this.props.date,
       messageList: this.props.messageList,
-      styles
-    })
+      styles,
+    });
   }
 }

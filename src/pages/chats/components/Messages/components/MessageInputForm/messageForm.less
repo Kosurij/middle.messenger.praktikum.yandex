@@ -1,4 +1,4 @@
-@import '/src/styles/variables';
+@import url('/src/styles/variables');
 
 .message-form {
   display: flex;
@@ -19,24 +19,22 @@
     border: none;
 
     &:hover {
-      opacity: .8;
+      opacity: 0.8;
     }
   }
 
   &__addFile {
-    background: url("/static/add_file.svg");
+    background: url('/static/add_file.svg');
   }
 
   &__sendMessage {
-    background: url("/static/right_arrow.svg");
+    background: url('/static/right_arrow.svg');
   }
 
   &-error {
     &_input {
       border: 1px solid @error-color;
-      background-color: rgba(@error-color, 0.1);
+      background-color: rgb(@error-color 0.1);
     }
   }
 }
-
-

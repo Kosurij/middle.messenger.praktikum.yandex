@@ -1,9 +1,9 @@
 import Block from "/src/utils/Block";
-import { Link } from '../../components'
+import { Link } from '../../components';
 import template from './404.hbs';
-import styles from './404.less'
-import {renderDOM} from "/src/utils/renderDOM";
-import {ChatsPage} from "/src/pages/chats/ChatsPage";
+import styles from './404.less';
+import { renderDOM } from "/src/utils/renderDOM";
+import { ChatsPage } from "/src/pages/chats/ChatsPage";
 
 export class NotFoundPage extends Block {
   protected initChildren() {
@@ -16,12 +16,13 @@ export class NotFoundPage extends Block {
 
           e.preventDefault();
 
-          renderDOM(chatsPage)
-        }
-      }
-    })
+          renderDOM(chatsPage);
+        },
+      },
+    });
   }
+
   protected render() {
-    return this.compile(template, { styles })
+    return this.compile(template, { styles });
   }
 }

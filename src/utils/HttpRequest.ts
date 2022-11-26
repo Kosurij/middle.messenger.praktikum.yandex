@@ -20,7 +20,7 @@ export class HttpRequest {
       const xhr = new XMLHttpRequest();
       const isGet = method === METHODS.GET;
 
-      xhr.open(method, isGet && data? `${url}${new URLSearchParams(data as Record<string, string>).toString()}` : url );
+      xhr.open(method, isGet && data ? `${url}${new URLSearchParams(data as Record<string, string>).toString()}` : url);
 
       if (headers?.length) {
         headers.forEach(([name, val]) => {
@@ -42,15 +42,11 @@ export class HttpRequest {
     });
   };
 
-  get = (url: string, options: IOptions) =>
-      this.request(url, {...options, method: METHODS.GET}, options.timeout);
+  get = (url: string, options: IOptions) => this.request(url, { ...options, method: METHODS.GET }, options.timeout);
 
-  post = (url: string, options: IOptions) =>
-      this.request(url, {...options, method: METHODS.POST}, options.timeout);
+  post = (url: string, options: IOptions) => this.request(url, { ...options, method: METHODS.POST }, options.timeout);
 
-  put = (url: string, options: IOptions) =>
-      this.request(url, {...options, method: METHODS.PUT}, options.timeout);
+  put = (url: string, options: IOptions) => this.request(url, { ...options, method: METHODS.PUT }, options.timeout);
 
-  delete = (url: string, options: IOptions) =>
-      this.request(url, {...options, method: METHODS.DELETE}, options.timeout);
+  delete = (url: string, options: IOptions) => this.request(url, { ...options, method: METHODS.DELETE }, options.timeout);
 }

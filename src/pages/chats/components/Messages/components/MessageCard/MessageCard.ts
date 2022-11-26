@@ -18,7 +18,7 @@ export class MessageCard extends Block {
       message: this.props.message,
       time: this.props.time,
       type: this.props.type,
-      styles
-    })
+      styles,
+    });
   }
 }

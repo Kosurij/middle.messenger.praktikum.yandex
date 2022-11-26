@@ -2,7 +2,7 @@ import Block from "/src/utils/Block";
 import { MessageList } from "./components/MessageList/MessageList";
 import template from "./messages.hbs";
 import styles from "./messages.less";
-import {MessageForm} from "/src/pages/chats/components/Messages/components/MessageInputForm/MessageForm";
+import { MessageForm } from "/src/pages/chats/components/Messages/components/MessageInputForm/MessageForm";
 
 interface IMessages {
   userName: string;
@@ -30,7 +30,7 @@ export class Messages extends Block {
       this.children.messagesList = new MessageList({
         date: this.props.date,
         messageList: this.props.messageList,
-      })
+      });
     }
 
     return super.componentDidUpdate(oldProps, newProps);
@@ -41,7 +41,7 @@ export class Messages extends Block {
       userName: this.props.userName,
       userAvatar: this.props.userAvatar,
       messagesList: this.props.messagesList,
-      styles
-    })
+      styles,
+    });
   }
 }

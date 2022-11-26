@@ -1,7 +1,7 @@
 import Block from "/src/utils/Block";
-import { Link, Button, InputFiled } from '../../components'
+import { Link, Button, InputFiled } from '../../components';
 import template from './registration.hbs';
-import styles from './registration.less'
+import styles from './registration.less';
 import { LoginPage } from "/src/pages/login/LoginPage";
 import { renderDOM } from "/src/utils/renderDOM";
 import { inputValidation } from "/src/utils/validation/validatator";
@@ -21,8 +21,8 @@ export class RegistrationPage extends Block {
         focusout: (e) => {
           inputValidation(e.target as HTMLInputElement);
         },
-      }
-    })
+      },
+    });
 
     this.children.loginField = new InputFiled({
       type: 'text',
@@ -36,8 +36,8 @@ export class RegistrationPage extends Block {
         focusout: (e) => {
           inputValidation(e.target as HTMLInputElement);
         },
-      }
-    })
+      },
+    });
 
     this.children.firstNameField = new InputFiled({
       type: 'text',
@@ -51,8 +51,8 @@ export class RegistrationPage extends Block {
         focusout: (e) => {
           inputValidation(e.target as HTMLInputElement);
         },
-      }
-    })
+      },
+    });
 
     this.children.secondNameField = new InputFiled({
       type: 'text',
@@ -66,8 +66,8 @@ export class RegistrationPage extends Block {
         focusout: (e) => {
           inputValidation(e.target as HTMLInputElement);
         },
-      }
-    })
+      },
+    });
 
     this.children.phoneField = new InputFiled({
       type: 'tel',
@@ -81,8 +81,8 @@ export class RegistrationPage extends Block {
         focusout: (e) => {
           inputValidation(e.target as HTMLInputElement);
         },
-      }
-    })
+      },
+    });
 
     this.children.passwordField = new InputFiled({
       type: 'password',
@@ -96,8 +96,8 @@ export class RegistrationPage extends Block {
         focusout: (e) => {
           inputValidation(e.target as HTMLInputElement);
         },
-      }
-    })
+      },
+    });
 
     this.children.repeatPasswordField = new InputFiled({
       type: 'password',
@@ -111,8 +111,8 @@ export class RegistrationPage extends Block {
         focusout: (e) => {
           inputValidation(e.target as HTMLInputElement);
         },
-      }
-    })
+      },
+    });
 
     this.children.registerButton = new Button({
       label: 'Зарегистрироваться',
@@ -122,9 +122,9 @@ export class RegistrationPage extends Block {
           const form = document.querySelector('#registration-form') as HTMLFormElement;
 
           form.onsubmit = (e) => validateForm(e);
-        }
-      }
-    })
+        },
+      },
+    });
 
     this.children.loginLink = new Link({
       text: 'Войти',
@@ -136,12 +136,13 @@ export class RegistrationPage extends Block {
 
           e.preventDefault();
 
-          renderDOM(loginPage)
-        }
-      }
-    })
+          renderDOM(loginPage);
+        },
+      },
+    });
   }
+
   protected render() {
-    return this.compile(template, { styles })
+    return this.compile(template, { styles });
   }
 }

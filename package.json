@@ -5,7 +5,11 @@
     "dev": "parcel serve src/index.html --no-cache",
     "ts": "tsc",
     "build": "parcel build src/index.html",
-    "start": "parcel build src/index.html && node ./server.js"
+    "start": "parcel build src/index.html && node ./server.js",
+    "lint": "eslint src",
+    "lint:fix": "eslint --fix src",
+    "lint:less": "stylelint \"./src/**/*.less\"",
+    "lint:less:fix": "stylelint \"./src/**/*.less\" --fix"
   },
   "staticFiles": {
     "staticPath": "static/",
@@ -36,9 +40,18 @@
     "@anikin/parcel-transformer-handlebars": "1.0.9",
     "@anikin/parcel-transformer-handlebars-precompile": "1.0.1",
     "@parcel/transformer-less": "2.7.0",
+    "@typescript-eslint/eslint-plugin": "5.44.0",
+    "@typescript-eslint/parser": "5.44.0",
+    "eslint": "8.28.0",
+    "eslint-config-airbnb-base": "15.0.0",
+    "eslint-plugin-import": "2.25.4",
     "handlebars": "4.7.7",
     "nanoid": "^4.0.0",
     "parcel": "2.7.0",
+    "postcss-less": "^6.0.0",
+    "postcss-lit": "^0.5.0",
+    "stylelint": "^14.15.0",
+    "stylelint-config-standard": "^29.0.0",
     "typescript": "4.9.3"
   },
   "dependencies": {

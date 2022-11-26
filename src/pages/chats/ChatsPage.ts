@@ -18,26 +18,26 @@ export class ChatsPage extends Block {
         new MessageCard({
           message: 'Привет! Смотри, тут всплыл интересный кусок лунной космической истории — НАСА в какой-то момент попросила Хассельблад адаптировать модель SWC для полетов на Луну. Сейчас мы все знаем что астронавты летали с моделью 500 EL — и к слову говоря, все тушки этих камер все еще находятся на поверхности Луны, так как астронавты с собой забрали только кассеты с пленкой',
           time: '11:56',
-          type: 'got'
+          type: 'got',
         }),
         new MessageCard({
           message: 'Привет! Смотри, тут всплыл интересный кусок лунной космической истории — НАСА в какой-то момент попросила Хассельблад адаптировать модель SWC для полетов на Луну. Сейчас мы все знаем что астронавты летали с моделью 500 EL — и к слову говоря, все тушки этих камер все еще находятся на поверхности Луны, так как астронавты с собой забрали только кассеты с пленкой',
           time: '11:56',
-          type: 'got'
+          type: 'got',
         }),
         new MessageCard({
           message: 'Привет! Смотри, тут всплыл интересный кусок лунной космической истории — НАСА в какой-то момент попросила Хассельблад адаптировать модель SWC для полетов на Луну. Сейчас мы все знаем что астронавты летали с моделью 500 EL — и к слову говоря, все тушки этих камер все еще находятся на поверхности Луны, так как астронавты с собой забрали только кассеты с пленкой',
           time: '11:56',
-          type: 'got'
+          type: 'got',
         }),
         new MessageCard({
           message: 'Круто!',
           time: '12:00',
-          type: 'sent'
+          type: 'sent',
         }),
       ],
       userName: 'Иван',
-      userAvatar: avatar
+      userAvatar: avatar,
     });
 
     this.children.chatsList = new ChatsList({
@@ -56,41 +56,40 @@ export class ChatsPage extends Block {
                   new MessageCard({
                     message: 'Новый текст',
                     time: '11:56',
-                    type: 'sent'
+                    type: 'sent',
                   }),
                   new MessageCard({
                     message: 'И Human Interface Guidelines и Material Design рекомендуют!',
                     time: '12:00',
-                    type: 'got'
+                    type: 'got',
                   }),
                 ],
                 date: '20 июня',
                 userName: 'Андрей',
-                userAvatar: avatar
-              })
-            }
-          }
+                userAvatar: avatar,
+              });
+            },
+          },
         }),
         new ChatCard({
           chatIcon: avatar,
           chatName: 'Иван',
           lastMessage: 'И Human Interface Guidelines и Material Design рекомендуют. И Human Interface Guidelines и Material Design рекомендуют',
           lastMessageDate: '10:40',
-          newMessages: '2'
+          newMessages: '2',
         }),
         new ChatCard({
           chatIcon: avatar,
           chatName: 'chatName',
           lastMessage: 'Описание',
           lastMessageDate: '21:00',
-          newMessages: '4'
-        })
-      ]
+          newMessages: '4',
+        }),
+      ],
     });
-
   }
 
   protected render() {
-    return this.compile(template, { styles })
+    return this.compile(template, { styles });
   }
 }

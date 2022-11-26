@@ -1,6 +1,6 @@
 import Block from "/src/utils/Block";
-import template from './chatCard.hbs'
-import styles from './chatCard.less'
+import template from './chatCard.hbs';
+import styles from './chatCard.less';
 
 interface IChatCardProps {
   chatIcon: string;
@@ -26,9 +26,9 @@ export class ChatCard extends Block {
       lastMessageDate: this.props.lastMessageDate,
       newMessages: this.props.newMessages,
       events: {
-        click: this.props.click
+        click: this.props.click,
       },
       styles,
-    })
+    });
   }
 }

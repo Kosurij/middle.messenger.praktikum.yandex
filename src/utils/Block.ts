@@ -15,13 +15,17 @@ export default class Block<P extends Record<string, unknown> = any> {
     INIT: "init",
     FLOW_CDM: "flow:component-did-mount",
     FLOW_CDU: "flow:component-did-update",
-    FLOW_RENDER: "flow:render"
+    FLOW_RENDER: "flow:render",
   } as const;
 
   public id = nanoid(6);
+
   protected props: Props<P>;
+
   public children: Record<string, Block<P>> | Record<string, Block<P>[]>;
+
   private eventBus: () => EventBus<BlockEvents<Props<P>>>;
+
   private _element: HTMLElement | null = null;
 
   constructor(propsAndChildren: Props<P> = {} as Props<P>) {
@@ -49,20 +53,19 @@ export default class Block<P extends Record<string, unknown> = any> {
       return;
     }
 
-    Object.keys(events).forEach(eventName => {
+    Object.keys(events).forEach((eventName) => {
       this._element?.addEventListener(eventName, events[eventName]);
     });
-
   }
 
   private _removeEvents(): void {
     const { events = {} } = this.props;
 
     if (!events || !this._element) {
-      return
+      return;
     }
 
-    Object.keys(events).forEach(eventName => {
+    Object.keys(events).forEach((eventName) => {
       this._element?.removeEventListener(eventName, events[eventName]);
     });
   }
@@ -74,14 +77,14 @@ export default class Block<P extends Record<string, unknown> = any> {
     Object.entries(propsAndChildren).forEach(([key, value]) => {
       if (value instanceof Block) {
         children[key] = value;
-      } else if (Array.isArray(value) && value.every(v => v instanceof Block)) {
+      } else if (Array.isArray(value) && value.every((v) => v instanceof Block)) {
         props[key] = value;
       } else {
         props[key] = value;
       }
     });
 
-    return {props: props as Props<P>, children};
+    return { props: props as Props<P>, children };
   }
 
   protected initChildren(): void {}
@@ -110,7 +113,7 @@ export default class Block<P extends Record<string, unknown> = any> {
   public dispatchComponentDidMount() {
     this.eventBus().emit(Block.EVENTS.FLOW_CDM);
 
-    Object.values(this.children).forEach(child => child.dispatchComponentDidMount());
+    Object.values(this.children).forEach((child) => child.dispatchComponentDidMount());
   }
 
   private _componentDidUpdate(oldProps: Props<P>, newProps: Props<P>): void {
@@ -145,7 +148,7 @@ export default class Block<P extends Record<string, unknown> = any> {
       this._element.replaceWith(newElement);
     }
 
-    this._element = newElement
+    this._element = newElement;
 
     this._addEvents();
   }
@@ -168,7 +171,7 @@ export default class Block<P extends Record<string, unknown> = any> {
         return typeof value === 'function' ? value.bind(target) : value;
       },
       set(target, prop: string, value) {
-        const oldTarget = { ...target};
+        const oldTarget = { ...target };
 
         target[prop as keyof Props<P>] = value;
 
@@ -178,7 +181,7 @@ export default class Block<P extends Record<string, unknown> = any> {
       },
       deleteProperty() {
         throw new Error("Нет доступа");
-      }
+      },
     });
   }
 
@@ -195,18 +198,17 @@ export default class Block<P extends Record<string, unknown> = any> {
   }
 
   compile(template: (ctx: any) => string, context: any) {
-    const contextAndStubs = {...context};
-
+    const contextAndStubs = { ...context };
 
     Object.entries(this.children).forEach(([name, child]) => {
       if (Array.isArray(child)) {
-        contextAndStubs[name] = child.map(ch => `<div data-id=id-${ch.id}></div>`)
+        contextAndStubs[name] = child.map((ch) => `<div data-id=id-${ch.id}></div>`);
 
         return;
       }
 
-      contextAndStubs[name] = `<div data-id=id-${child.id}></div>`
-    })
+      contextAndStubs[name] = `<div data-id=id-${child.id}></div>`;
+    });
 
     const htmlString = template(contextAndStubs);
 
@@ -216,25 +218,25 @@ export default class Block<P extends Record<string, unknown> = any> {
 
     Object.entries(this.children).forEach(([_, child]) => {
       if (Array.isArray(child)) {
-        child.forEach(ch => {
-          const stub = fragment.content.querySelector(`[data-id='id-${ch.id}']`)
+        child.forEach((ch) => {
+          const stub = fragment.content.querySelector(`[data-id='id-${ch.id}']`);
 
           if (stub) {
-            stub.replaceWith(ch.getContent())
+            stub.replaceWith(ch.getContent());
           }
-        })
+        });
 
         return fragment.content;
       }
 
-      const stub = fragment.content.querySelector(`[data-id='id-${child.id}']`)
+      const stub = fragment.content.querySelector(`[data-id='id-${child.id}']`);
 
       if (!stub) {
         return;
       }
 
       stub.replaceWith(child.getContent()!);
-    })
+    });
 
     return fragment.content;
   }

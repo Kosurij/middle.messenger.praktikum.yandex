@@ -2,8 +2,8 @@ import Block from "/src/utils/Block";
 import { Link } from "/src/components";
 import template from "./profileSidebar.hbs";
 import styles from "./profileSidebar.less";
-import {renderDOM} from "/src/utils/renderDOM";
-import {ChatsPage} from "/src/pages/chats/ChatsPage";
+import { renderDOM } from "/src/utils/renderDOM";
+import { ChatsPage } from "/src/pages/chats/ChatsPage";
 
 export class ProfileSidebar extends Block {
   protected initChildren() {
@@ -17,13 +17,13 @@ export class ProfileSidebar extends Block {
 
           e.preventDefault();
 
-          renderDOM(chatsPage)
-        }
-      }
-    })
+          renderDOM(chatsPage);
+        },
+      },
+    });
   }
 
   protected render() {
-    return this.compile(template, { styles })
+    return this.compile(template, { styles });
   }
 }

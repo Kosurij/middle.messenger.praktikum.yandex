@@ -1,11 +1,11 @@
 import Block from "/src/utils/Block";
-import {ProfileHeader} from "/src/pages/profile/components/ProfileHeader/ProfileHeader";
-import {ProfileSidebar} from "/src/pages/profile/components/ProfileSidebar/ProfileSidebar";
-import {Button, InputFiled} from "/src/components";
+import { ProfileHeader } from "/src/pages/profile/components/ProfileHeader/ProfileHeader";
+import { ProfileSidebar } from "/src/pages/profile/components/ProfileSidebar/ProfileSidebar";
+import { Button, InputFiled } from "/src/components";
 import template from "./changePassword.hbs";
 import styles from "./changePassword.less";
-import {inputValidation} from "/src/utils/validation/validatator";
-import {validateForm} from "/src/utils/validation/validateForm";
+import { inputValidation } from "/src/utils/validation/validatator";
+import { validateForm } from "/src/utils/validation/validateForm";
 
 export class ChangePasswordPage extends Block {
   protected initChildren() {
@@ -25,8 +25,8 @@ export class ChangePasswordPage extends Block {
         focusout: (e) => {
           inputValidation(e.target as HTMLInputElement);
         },
-      }
-    })
+      },
+    });
 
     this.children.newPasswordField = new InputFiled({
       type: 'password',
@@ -40,8 +40,8 @@ export class ChangePasswordPage extends Block {
         focusout: (e) => {
           inputValidation(e.target as HTMLInputElement);
         },
-      }
-    })
+      },
+    });
 
     this.children.repeatNewPasswordField = new InputFiled({
       type: 'password',
@@ -55,8 +55,8 @@ export class ChangePasswordPage extends Block {
         focusout: (e) => {
           inputValidation(e.target as HTMLInputElement);
         },
-      }
-    })
+      },
+    });
 
     this.children.saveButton = new Button({
       label: 'Сохранить',
@@ -66,12 +66,12 @@ export class ChangePasswordPage extends Block {
           const form = document.querySelector('#changePassword-form') as HTMLFormElement;
 
           form.onsubmit = (e) => validateForm(e);
-        }
-      }
-    })
+        },
+      },
+    });
   }
 
   protected render() {
-    return this.compile(template, { styles })
+    return this.compile(template, { styles });
   }
 }

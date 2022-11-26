@@ -14,4 +14,4 @@ export const validateForm = (event: SubmitEvent, selector?: string, errorClass?:
   if (invalidFields === null) {
     console.log(Object.fromEntries(new FormData(form).entries()));
   }
-}
+};

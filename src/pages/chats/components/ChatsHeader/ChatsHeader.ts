@@ -1,9 +1,9 @@
 import Block from "/src/utils/Block";
 import { Link } from "/src/components";
-import template from './chatsHeader.hbs'
-import styles from './chatsHeader.less'
-import {renderDOM} from "/src/utils/renderDOM";
-import {ProfileDetailsPage} from "/src/pages/profile/details/ProfileDetailsPage";
+import template from './chatsHeader.hbs';
+import styles from './chatsHeader.less';
+import { renderDOM } from "/src/utils/renderDOM";
+import { ProfileDetailsPage } from "/src/pages/profile/details/ProfileDetailsPage";
 
 export class ChatsHeader extends Block {
   protected initChildren() {
@@ -17,13 +17,13 @@ export class ChatsHeader extends Block {
 
           e.preventDefault();
 
-          renderDOM(profileDetailsPage)
-        }
-      }
-    })
+          renderDOM(profileDetailsPage);
+        },
+      },
+    });
   }
 
   protected render() {
-    return this.compile(template, { styles })
+    return this.compile(template, { styles });
   }
 }

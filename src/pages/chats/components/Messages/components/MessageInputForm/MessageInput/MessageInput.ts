@@ -20,7 +20,7 @@ export class MessageInput extends Block {
         focusin: this.props.focusin,
         focusout: this.props.focusout,
       },
-      styles
-    })
+      styles,
+    });
   }
 }

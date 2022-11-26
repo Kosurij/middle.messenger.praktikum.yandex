@@ -1,6 +1,6 @@
 import Block from "../../utils/Block";
-import template from "../TextField/textField.hbs";
-import styles from "../TextField/textField.less";
+import template from "./textField.hbs";
+import styles from "./textField.less";
 
 interface ITextFieldProps {
   label: string;
@@ -16,7 +16,7 @@ export default class TextField extends Block {
     return this.compile(template, {
       label: this.props.label,
       value: this.props.value,
-      styles
-    })
+      styles,
+    });
   }
 }

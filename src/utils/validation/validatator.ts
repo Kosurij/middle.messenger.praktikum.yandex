@@ -27,29 +27,34 @@ const PATTERNS: Record<TFieldNamesKeys, RegExp> = {
   [FIELD_NAMES.message]: /[\s\S]+/,
   [FIELD_NAMES.oldPassword]: /^(?=.*?([A-Z]))(?=.*?\d)(\w|-|_){8,40}$/,
   [FIELD_NAMES.password]: /^(?=.*?([A-Z]))(?=.*?\d)(\w|-|_){8,40}$/,
-  [FIELD_NAMES.repeatPassword]: /^(?=.*?([A-Z]))(?=.*?\d)(\w|-|_){8,40}$/
-}
+  [FIELD_NAMES.repeatPassword]: /^(?=.*?([A-Z]))(?=.*?\d)(\w|-|_){8,40}$/,
+};
 
-const highlightErrors  = (errors: TErrors, selector = '.inputField', errorClass = 'inputField-error') => {
+const highlightErrors = (errors: TErrors, selector = '.inputField', errorClass = 'inputField-error') => {
   const inputWrappers: HTMLElement[] = Array.from(document.querySelectorAll(selector));
 
-  inputWrappers.forEach(inputWrapper => {
+  inputWrappers.forEach((inputWrapper) => {
     const input = inputWrapper.querySelector('input') as HTMLInputElement;
 
     errors[input.name]
-        ? inputWrapper.classList.add(errorClass)
-        : inputWrapper.classList.remove(errorClass)
-  })
-}
+      ? inputWrapper.classList.add(errorClass)
+      : inputWrapper.classList.remove(errorClass);
+  });
+};
 
-const validateFormData = ([fieldName, value]: TFormData): boolean => PATTERNS[fieldName].test(value)
+const validateFormData = ([fieldName, value]: TFormData): boolean => PATTERNS[fieldName].test(value);
 
-const validateInput = ({ name, value } : TInput) => PATTERNS[name].test(value)
+const validateInput = ({ name, value } : TInput) => PATTERNS[name].test(value);
 
 export const formValidation = (formData: FormData, selector?: string, errorClass?: string) => {
-  const errors: TErrors = {}
+  const errors: TErrors = {};
 
-  for(let inputField of formData) {
+  /*
+   * Линтер предлагает отказаться от цикла for и бежать методом, однако это formData и тут так не получится.
+   * Чтобы избежать лишних приседаний с пробегом по итератору и мутированием FormData, временно отключаю это правило.
+   */
+  // eslint-disable-next-line no-restricted-syntax
+  for (const inputField of formData) {
     if (!validateFormData(inputField as TFormData)) {
       errors[inputField[0]] = true;
     }
@@ -60,15 +65,14 @@ export const formValidation = (formData: FormData, selector?: string, errorClass
   if (!Object.keys(errors).length) {
     return null;
   }
-}
+};
 
 export const inputValidation = (input: HTMLInputElement, selector?: string, errorClass?: string) => {
-  const errors: TErrors = {}
+  const errors: TErrors = {};
 
   if (!validateInput(input as TInput)) {
     errors[input.name] = true;
   }
 
-  highlightErrors(errors, selector, errorClass)
-}
-
+  highlightErrors(errors, selector, errorClass);
+};

@@ -5,6 +5,6 @@ import styles from "./profileHeader.less";
 
 export class ProfileHeader extends Block {
   protected render() {
-    return this.compile(template, { styles, avatar })
+    return this.compile(template, { styles, avatar });
   }
 }

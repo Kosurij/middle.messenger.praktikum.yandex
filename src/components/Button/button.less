@@ -1,4 +1,4 @@
-@import '/src/styles/variables';
+@import url('/src/styles/variables');
 
 .button {
   background: @primary-color;
@@ -12,7 +12,7 @@
   font-weight: 500;
 
   &:hover {
-    opacity: .8;
+    opacity: 0.8;
   }
 
   &__ghost {
@@ -20,7 +20,7 @@
     color: @primary-color;
 
     &:hover {
-      background: rgba(@opacity-main, 0.04);
+      background: rgb(@opacity-main 0.04);
     }
   }
 }

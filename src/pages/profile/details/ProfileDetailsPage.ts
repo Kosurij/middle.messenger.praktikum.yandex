@@ -10,7 +10,6 @@ import { LoginPage } from "/src/pages/login/LoginPage";
 import template from "./profileDetails.hbs";
 import styles from "./profileDetails.less";
 
-
 export class ProfileDetailsPage extends Block {
   protected initChildren() {
     this.children.profileHeader = new ProfileHeader();
@@ -29,10 +28,10 @@ export class ProfileDetailsPage extends Block {
 
           e.preventDefault();
 
-          renderDOM(profileEditPage)
-        }
-      }
-    })
+          renderDOM(profileEditPage);
+        },
+      },
+    });
 
     this.children.changePasswordLink = new Link({
       text: 'Изменить пароль',
@@ -44,10 +43,10 @@ export class ProfileDetailsPage extends Block {
 
           e.preventDefault();
 
-          renderDOM(changePasswordPage)
-        }
-      }
-    })
+          renderDOM(changePasswordPage);
+        },
+      },
+    });
 
     this.children.homeLink = new Link({
       text: 'Выйти',
@@ -60,13 +59,13 @@ export class ProfileDetailsPage extends Block {
 
           e.preventDefault();
 
-          renderDOM(loginPage)
-        }
-      }
-    })
+          renderDOM(loginPage);
+        },
+      },
+    });
   }
 
   protected render() {
-    return this.compile(template, { styles })
+    return this.compile(template, { styles });
   }
 }

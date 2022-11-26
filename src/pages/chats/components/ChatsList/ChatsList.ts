@@ -15,6 +15,6 @@ export class ChatsList extends Block {
   }
 
   render() {
-    return this.compile(template, {})
+    return this.compile(template, {});
   }
 }

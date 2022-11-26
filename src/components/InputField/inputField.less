@@ -1,4 +1,4 @@
-@import '/src/styles/variables';
+@import url('/src/styles/variables');
 
 .inputField {
   position: relative;
@@ -13,7 +13,6 @@
     padding: 7px 0;
     background: transparent;
     transition: border-color 0.2s;
-
 
     &::placeholder {
       color: transparent;
@@ -37,7 +36,7 @@
     top: 0;
     display: block;
     transition: 0.2s;
-    font-size: .8rem;
+    font-size: 0.8rem;
     color: @primary-color;
   }
 
@@ -46,10 +45,9 @@
   }
 }
 
-
 .inputField-error {
   &::after {
-    content: "Невалидный формат данных";
+    content: 'Невалидный формат данных';
     color: @error-color;
     position: absolute;
     bottom: -15px;
@@ -59,7 +57,7 @@
   &__input {
     border-bottom: 1px solid @error-color;
 
-    &:focus  {
+    &:focus {
       border-bottom: 2px solid @error-color;
     }
   }

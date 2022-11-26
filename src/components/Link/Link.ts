@@ -1,6 +1,6 @@
 import Block from "../../utils/Block";
-import template from "../Link/link.hbs";
-import styles from "../Link/link.less";
+import template from "./link.hbs";
+import styles from "./link.less";
 
 interface ILinkProps {
   text: string;
@@ -26,11 +26,9 @@ export default class Link extends Block {
       color: this.props.color,
       customClass: this.props.customClass,
       events: {
-        click: this.props.click
+        click: this.props.click,
       },
-      styles
-    })
+      styles,
+    });
   }
 }
-
-
