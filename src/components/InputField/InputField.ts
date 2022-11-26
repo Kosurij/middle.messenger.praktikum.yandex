@@ -11,8 +11,11 @@ interface IInputFieldProps {
   styles?: Record<string, string>;
   required?: string;
   events?: {
-    blur?: () => void;
-  }
+    // Использованы эти события, т.к. корневым элементом является div, а у него нет события focus/blur.
+    focusin?: (e: Event ) => void;
+    focusout?: (e: Event) => void;
+  },
+  error?: string;
 }
 
 
@@ -29,9 +32,12 @@ export default class InputFiled extends Block {
       id: this.props.id,
       value: this.props.value,
       required: this.props.required,
+      title: this.props.title,
       events: {
-        blur: this.props.blur
+        focusin: this.props.focusin,
+        focusout: this.props.focusout
       },
+      error: this.props.error || null,
       styles
     })
   }

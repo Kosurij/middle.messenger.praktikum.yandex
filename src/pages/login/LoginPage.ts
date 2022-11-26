@@ -1,10 +1,12 @@
 import Block from '/src/utils/Block';
 import { Button, InputFiled, Link } from '/src/components'
-import template from './loginPage.hbs';
-import styles from './login.less';
 import { RegistrationPage } from "/src/pages/registration/RegistrationPage";
 import  {ChatsPage } from "/src/pages/chats/ChatsPage";
 import { renderDOM } from "/src/utils/renderDOM";
+import { validateForm } from "/src/utils/validation/validateForm";
+import { inputValidation } from "/src/utils/validation/validatator";
+import template from './loginPage.hbs';
+import styles from './login.less';
 
 export class LoginPage extends Block {
   protected initChildren() {
@@ -13,11 +15,13 @@ export class LoginPage extends Block {
       id: 'login-form__login',
       label: 'Логин',
       name: 'login',
-      required: 'required',
       events: {
-        blur: () => {
-          console.log('work')
-        }
+        focusin: (e) => {
+          inputValidation(e.target as HTMLInputElement);
+        },
+        focusout: (e) => {
+          inputValidation(e.target as HTMLInputElement);
+        },
       }
     })
 
@@ -26,23 +30,24 @@ export class LoginPage extends Block {
       id: 'login-form__password',
       label: 'Пароль',
       name: 'password',
-    })
+      events: {
+        focusin: (e) => {
+          inputValidation(e.target as HTMLInputElement);
+        },
+        focusout: (e) => {
+          inputValidation(e.target as HTMLInputElement);
+        },
+      }
+  })
 
     this.children.loginButton = new Button({
       label: 'Авторизоваться',
       type: 'submit',
       events: {
-        click: (e) => {
-          if (e) {
-            e.preventDefault();
+        click: () => {
+          const form = document.querySelector('#login-form') as HTMLFormElement;
 
-            const loginField = document.querySelector('#login-form__login') as HTMLInputElement;
-            const passwordField = document.querySelector('#login-form__password') as HTMLInputElement;
-
-            const data: Record<string, string> = { login: loginField?.value, password: passwordField?.value }
-
-            console.log(data)
-          }
+          form.onsubmit = (e) => validateForm(e);
         }
       }
     })

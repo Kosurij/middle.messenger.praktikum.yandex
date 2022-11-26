@@ -4,10 +4,6 @@
   position: relative;
   padding: 15px 0 0;
 
-  &:first-child {
-    margin-top: 0;
-  }
-
   &__input {
     width: 100%;
     font-size: 1rem;
@@ -17,10 +13,6 @@
     padding: 7px 0;
     background: transparent;
     transition: border-color 0.2s;
-
-    &:invalid {
-      border-bottom: 1px solid @error-color;
-    }
 
 
     &::placeholder {
@@ -37,10 +29,6 @@
       padding-bottom: 6px;
       border-bottom: 2px solid @primary-color;
     }
-
-    &:invalid:focus  {
-      border-bottom: 2px solid @error-color;
-    }
   }
 
   & label,
@@ -53,11 +41,31 @@
     color: @primary-color;
   }
 
-  &__input:invalid ~ &__label {
-    color: @error-color;
-  }
-
   & label {
     color: @secondary-color;
+  }
+}
+
+
+.inputField-error {
+  &::after {
+    content: "Невалидный формат данных";
+    color: @error-color;
+    position: absolute;
+    bottom: -15px;
+    right: 0;
+  }
+
+  &__input {
+    border-bottom: 1px solid @error-color;
+
+    &:focus  {
+      border-bottom: 2px solid @error-color;
+    }
+  }
+
+  & label,
+  &__input:focus ~ &__label {
+    color: @error-color;
   }
 }
