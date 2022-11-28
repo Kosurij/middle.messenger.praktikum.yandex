@@ -67,12 +67,22 @@ export const formValidation = (formData: FormData, selector?: string, errorClass
   }
 };
 
-export const inputValidation = (input: HTMLInputElement, selector?: string, errorClass?: string) => {
-  const errors: TErrors = {};
+export const inputValidation = (input: HTMLInputElement, errorClass = 'inputField-error') => {
+  let inputError = null;
+  const parentElement = input.parentElement as HTMLElement;
 
   if (!validateInput(input as TInput)) {
-    errors[input.name] = true;
+    inputError = true;
   }
 
-  highlightErrors(errors, selector, errorClass);
+  console.log('input', input);
+  console.log('parentNode', input.parentElement);
+
+  inputError
+    ? parentElement.classList.add(errorClass)
+    : parentElement.classList.remove(errorClass);
+};
+
+export const inputValidationHandler = (e: Event) => {
+  inputValidation(e.target as HTMLInputElement);
 };

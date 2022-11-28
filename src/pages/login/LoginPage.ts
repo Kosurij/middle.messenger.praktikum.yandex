@@ -4,7 +4,6 @@ import { RegistrationPage } from "/src/pages/registration/RegistrationPage";
 import { ChatsPage } from "/src/pages/chats/ChatsPage";
 import { renderDOM } from "/src/utils/renderDOM";
 import { validateForm } from "/src/utils/validation/validateForm";
-import { inputValidation } from "/src/utils/validation/validatator";
 import template from './loginPage.hbs';
 import styles from './login.less';
 
@@ -15,14 +14,6 @@ export class LoginPage extends Block {
       id: 'login-form__login',
       label: 'Логин',
       name: 'login',
-      events: {
-        focusin: (e) => {
-          inputValidation(e.target as HTMLInputElement);
-        },
-        focusout: (e) => {
-          inputValidation(e.target as HTMLInputElement);
-        },
-      },
     });
 
     this.children.passwordField = new InputFiled({
@@ -30,14 +21,6 @@ export class LoginPage extends Block {
       id: 'login-form__password',
       label: 'Пароль',
       name: 'password',
-      events: {
-        focusin: (e) => {
-          inputValidation(e.target as HTMLInputElement);
-        },
-        focusout: (e) => {
-          inputValidation(e.target as HTMLInputElement);
-        },
-      },
     });
 
     this.children.loginButton = new Button({

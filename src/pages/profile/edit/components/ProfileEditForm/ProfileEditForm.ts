@@ -1,7 +1,6 @@
 import Block from "/src/utils/Block";
 import { Button, InputFiled } from "/src/components";
 import { validateForm } from "/src/utils/validation/validateForm";
-import { inputValidation } from "/src/utils/validation/validatator";
 import template from "./profileEditForm.hbs";
 import styles from "./profileEditForm.less";
 
@@ -13,14 +12,6 @@ export class ProfileEditForm extends Block {
       label: 'Почта',
       name: 'email',
       value: 'pochta@yandex.ru',
-      events: {
-        focusin: (e) => {
-          inputValidation(e.target as HTMLInputElement);
-        },
-        focusout: (e) => {
-          inputValidation(e.target as HTMLInputElement);
-        },
-      },
     });
 
     this.children.loginEditField = new InputFiled({
@@ -29,14 +20,6 @@ export class ProfileEditForm extends Block {
       label: 'Логин',
       name: 'login',
       value: 'ivanivanov',
-      events: {
-        focusin: (e) => {
-          inputValidation(e.target as HTMLInputElement);
-        },
-        focusout: (e) => {
-          inputValidation(e.target as HTMLInputElement);
-        },
-      },
     });
 
     this.children.firstNameEditField = new InputFiled({
@@ -45,14 +28,6 @@ export class ProfileEditForm extends Block {
       label: 'Имя',
       name: 'first_name',
       value: 'Иван',
-      events: {
-        focusin: (e) => {
-          inputValidation(e.target as HTMLInputElement);
-        },
-        focusout: (e) => {
-          inputValidation(e.target as HTMLInputElement);
-        },
-      },
     });
 
     this.children.secondNameEditField = new InputFiled({
@@ -61,14 +36,6 @@ export class ProfileEditForm extends Block {
       label: 'Фамилия',
       name: 'second_name',
       value: 'Иванов',
-      events: {
-        focusin: (e) => {
-          inputValidation(e.target as HTMLInputElement);
-        },
-        focusout: (e) => {
-          inputValidation(e.target as HTMLInputElement);
-        },
-      },
     });
 
     this.children.phoneEditField = new InputFiled({
@@ -77,14 +44,6 @@ export class ProfileEditForm extends Block {
       label: 'Телефон',
       name: 'phone',
       value: '+79099673030',
-      events: {
-        focusin: (e) => {
-          inputValidation(e.target as HTMLInputElement);
-        },
-        focusout: (e) => {
-          inputValidation(e.target as HTMLInputElement);
-        },
-      },
     });
 
     this.children.saveButton = new Button({

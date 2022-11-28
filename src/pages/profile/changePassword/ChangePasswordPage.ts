@@ -4,7 +4,6 @@ import { ProfileSidebar } from "/src/pages/profile/components/ProfileSidebar/Pro
 import { Button, InputFiled } from "/src/components";
 import template from "./changePassword.hbs";
 import styles from "./changePassword.less";
-import { inputValidation } from "/src/utils/validation/validatator";
 import { validateForm } from "/src/utils/validation/validateForm";
 
 export class ChangePasswordPage extends Block {
@@ -18,14 +17,6 @@ export class ChangePasswordPage extends Block {
       id: 'changePassword__oldPassword',
       label: 'Старый пароль',
       name: 'oldPassword',
-      events: {
-        focusin: (e) => {
-          inputValidation(e.target as HTMLInputElement);
-        },
-        focusout: (e) => {
-          inputValidation(e.target as HTMLInputElement);
-        },
-      },
     });
 
     this.children.newPasswordField = new InputFiled({
@@ -33,14 +24,6 @@ export class ChangePasswordPage extends Block {
       id: 'changePassword__newPassword',
       label: 'Новый пароль',
       name: 'password',
-      events: {
-        focusin: (e) => {
-          inputValidation(e.target as HTMLInputElement);
-        },
-        focusout: (e) => {
-          inputValidation(e.target as HTMLInputElement);
-        },
-      },
     });
 
     this.children.repeatNewPasswordField = new InputFiled({
@@ -48,14 +31,6 @@ export class ChangePasswordPage extends Block {
       id: 'changePassword__repeatNewPassword',
       label: 'Повторите новый пароль',
       name: 'repeatPassword',
-      events: {
-        focusin: (e) => {
-          inputValidation(e.target as HTMLInputElement);
-        },
-        focusout: (e) => {
-          inputValidation(e.target as HTMLInputElement);
-        },
-      },
     });
 
     this.children.saveButton = new Button({

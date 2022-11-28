@@ -1,6 +1,12 @@
 import Block from "../../utils/Block";
 import template from "./inputField.hbs";
 import styles from "./inputField.less";
+import { inputValidationHandler } from "/src/utils/validation/validatator";
+
+const eventsObject = {
+  focusin: inputValidationHandler,
+  focusout: inputValidationHandler,
+};
 
 interface IInputFieldProps {
   label: string;
@@ -10,17 +16,11 @@ interface IInputFieldProps {
   value?: string;
   styles?: Record<string, string>;
   required?: string;
-  events?: {
-    // Использованы эти события, т.к. корневым элементом является div, а у него нет события focus/blur.
-    focusin?: (e: Event) => void;
-    focusout?: (e: Event) => void;
-  },
-  error?: string;
 }
 
 export default class InputFiled extends Block {
   constructor(props: IInputFieldProps) {
-    super(props);
+    super({ ...props, events: eventsObject });
   }
 
   render() {
@@ -32,11 +32,6 @@ export default class InputFiled extends Block {
       value: this.props.value,
       required: this.props.required,
       title: this.props.title,
-      events: {
-        focusin: this.props.focusin,
-        focusout: this.props.focusout,
-      },
-      error: this.props.error || null,
       styles,
     });
   }

@@ -15,16 +15,6 @@
     "staticPath": "static/",
     "staticOutPath": "static/"
   },
-  "engines": {
-    "node": ">=12"
-  },
-  "targets": {
-    "default": {
-      "engines": {
-        "browsers": ">= 50%"
-      }
-    }
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Kosurij/middle.messenger.praktikum.yandex.git"
@@ -46,15 +36,15 @@
     "eslint-config-airbnb-base": "15.0.0",
     "eslint-plugin-import": "2.25.4",
     "handlebars": "4.7.7",
-    "nanoid": "^4.0.0",
     "parcel": "2.7.0",
-    "postcss-less": "^6.0.0",
-    "postcss-lit": "^0.5.0",
-    "stylelint": "^14.15.0",
-    "stylelint-config-standard": "^29.0.0",
+    "postcss-less": "6.0.0",
+    "postcss-lit": "0.5.0",
+    "stylelint": "14.15.0",
+    "stylelint-config-standard": "29.0.0",
     "typescript": "4.9.3"
   },
   "dependencies": {
-    "express": "4.18.2"
+    "express": "4.18.2",
+    "nanoid": "4.0.0"
   }
 }

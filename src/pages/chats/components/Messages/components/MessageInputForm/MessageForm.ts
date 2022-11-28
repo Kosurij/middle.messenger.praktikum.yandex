@@ -24,12 +24,10 @@ export class MessageForm extends Block {
     this.children.messageInput = new MessageInput({
       events: {
         focusin: (e) => {
-          console.log('work');
-          inputValidation(e.target as HTMLInputElement, '.messageInput', 'messageInput-error');
+          inputValidation(e.target as HTMLInputElement, 'messageInput-error');
         },
         focusout: (e) => {
-          console.log('work');
-          inputValidation(e.target as HTMLInputElement, '.messageInput', 'messageInput-error');
+          inputValidation(e.target as HTMLInputElement, 'messageInput-error');
         },
       },
     });
