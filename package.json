@@ -2,12 +2,18 @@
   "name": "middle.messenger.praktikum.yandex",
   "version": "1.0.0",
   "scripts": {
-    "dev": "parcel serve ./index.hbs --no-cache",
-    "build": "parcel build ./index.hbs",
-    "start": "parcel build ./index.hbs && node ./server.js"
+    "dev": "parcel serve src/index.html --no-cache",
+    "ts": "tsc",
+    "build": "parcel build src/index.html",
+    "start": "parcel build src/index.html && node ./server.js",
+    "lint": "eslint src",
+    "lint:fix": "eslint --fix src",
+    "lint:less": "stylelint \"./src/**/*.less\"",
+    "lint:less:fix": "stylelint \"./src/**/*.less\" --fix"
   },
-  "engines": {
-    "node": ">=12"
+  "staticFiles": {
+    "staticPath": "static/",
+    "staticOutPath": "static/"
   },
   "repository": {
     "type": "git",
@@ -22,11 +28,23 @@
   "homepage": "https://github.com/Kosurij/middle.messenger.praktikum.yandex#readme",
   "devDependencies": {
     "@anikin/parcel-transformer-handlebars": "1.0.9",
+    "@anikin/parcel-transformer-handlebars-precompile": "1.0.1",
     "@parcel/transformer-less": "2.7.0",
+    "@typescript-eslint/eslint-plugin": "5.44.0",
+    "@typescript-eslint/parser": "5.44.0",
+    "eslint": "8.28.0",
+    "eslint-config-airbnb-base": "15.0.0",
+    "eslint-plugin-import": "2.25.4",
+    "handlebars": "4.7.7",
     "parcel": "2.7.0",
-    "handlebars": "4.7.7"
+    "postcss-less": "6.0.0",
+    "postcss-lit": "0.5.0",
+    "stylelint": "14.15.0",
+    "stylelint-config-standard": "29.0.0",
+    "typescript": "4.9.3"
   },
   "dependencies": {
-    "express": "4.18.2"
+    "express": "4.18.2",
+    "nanoid": "4.0.0"
   }
 }

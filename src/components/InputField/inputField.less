@@ -1,0 +1,69 @@
+@import url('/src/styles/variables');
+
+.inputField {
+  position: relative;
+  padding: 15px 0 0;
+
+  &__input {
+    width: 100%;
+    font-size: 1rem;
+    border: none;
+    border-bottom: 1px solid @border-color-1;
+    outline: 0;
+    padding: 7px 0;
+    background: transparent;
+    transition: border-color 0.2s;
+
+    &::placeholder {
+      color: transparent;
+    }
+
+    &:placeholder-shown ~ .inputField__label {
+      font-size: 1rem;
+      cursor: text;
+      top: 20px;
+    }
+
+    &:focus {
+      padding-bottom: 6px;
+      border-bottom: 2px solid @primary-color;
+    }
+  }
+
+  & label,
+  &__input:focus ~ &__label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 0.8rem;
+    color: @primary-color;
+  }
+
+  & label {
+    color: @secondary-color;
+  }
+}
+
+.inputField-error {
+  &::after {
+    content: 'Невалидный формат данных';
+    color: @error-color;
+    position: absolute;
+    bottom: -25px;
+    right: 0;
+  }
+
+  &__input {
+    border-bottom: 1px solid @error-color;
+
+    &:focus {
+      border-bottom: 2px solid @error-color;
+    }
+  }
+
+  & label,
+  &__input:focus ~ &__label {
+    color: @error-color;
+  }
+}

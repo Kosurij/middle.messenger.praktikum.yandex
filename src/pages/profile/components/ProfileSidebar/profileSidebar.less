@@ -1,0 +1,23 @@
+@import url('/src/styles/variables');
+
+.sidebar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 65px;
+  background: @background-color;
+  border-right: 1px solid @border-color-2;
+  height: 100vh;
+
+  &__backButton {
+    background: url('/static/left_arrow.svg');
+    cursor: pointer;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "env": {
+    "browser": true,
+     "es6": true,
+     "jest": true
+  },
+  "extends": [
+    "airbnb-base",
+    "eslint:recommended",
+    "plugin:import/recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended"
+   ],
+   "parser": "@typescript-eslint/parser",
+   "parserOptions": {
+     "sourceType": "module"
+   },
+  "plugins": ["@typescript-eslint"],
+  "rules": {
+    "max-len": [1, { "code": 140 }],
+    "class-methods-use-this": 1,
+
+    "no-useless-constructor": 1,
+    "import/extensions": 0,
+    "import/no-absolute-path": 0,
+    "no-underscore-dangle": 0,
+    "eqeqeq": [1, "always"],
+    "no-undef": 1,
+    "no-console": 1,
+    "no-unused-vars": 0,
+    "no-mixed-operators": 0,
+    "no-confusing-arrow": 0,
+    "no-extra-parens": 0,
+    "no-param-reassign": 0,
+    "prefer-template": 0,
+    "no-script-url": 0,
+    "prefer-promise-reject-errors": 0,
+    "no-unused-expressions": 0,
+    "padding-line-between-statements": [
+      "error",
+      {
+        "blankLine": "always",
+        "prev": "*",
+        "next": "return"
+      },
+      {
+        "blankLine": "always",
+        "prev": ["const", "let", "var"],
+        "next": "*"
+      },
+      {
+        "blankLine": "any",
+        "prev": ["const", "let", "var"],
+        "next": ["const", "let", "var"]
+      }
+    ],
+    "multiline-comment-style": [2, "starred-block"],
+     "no-shadow": 0,
+     "no-useless-escape": 0,
+     "no-use-before-define": 0,
+     "consistent-return": 0,
+     "array-callback-return": 0,
+     "default-case": 0,
+     "default-param-last": 0,
+     "no-case-declarations": 0,
+     "import/prefer-default-export": 0,
+     "import/no-useless-path-segments": 1,
+     "import/no-unresolved": 0,
+     "import/no-extraneous-dependencies": 0,
+     "import/no-named-as-default": 0,
+     "import/no-duplicates": 0,
+     "import/order": 1,
+     "import/newline-after-import": 1,
+     "import/no-named-as-default-member": 0,
+     "import/namespace": 0,
+     "import/named": 0,
+    "@typescript-eslint/camelcase": 0,
+    "@typescript-eslint/explicit-function-return-type": 0,
+    "@typescript-eslint/no-non-null-assertion": 0,
+    "@typescript-eslint/member-delimiter-style": 0,
+    "@typescript-eslint/no-empty-function": 1,
+    "@typescript-eslint/no-this-alias": 1,
+    "@typescript-eslint/no-unused-vars": [
+       1,
+       {
+         "vars": "all",
+         "args": "after-used",
+         "ignoreRestSiblings": true
+       }
+     ],
+    "@typescript-eslint/no-use-before-define": 0,
+    "@typescript-eslint/no-explicit-any": 0,
+    "@typescript-eslint/explicit-module-boundary-types": 0,
+    "@typescript-eslint/explicit-member-accessibility": 0,
+    "@typescript-eslint/no-angle-bracket-type-assertion": 0,
+    "@typescript-eslint/ban-ts-comment": 0,
+    "@typescript-eslint/ban-types": 0,
+    "@typescript-eslint/no-extra-semi": 0,
+    "arrow-body-style": 0,
+    "prefer-arrow-callback": 0,
+    "quotes": 0
+   }
+}

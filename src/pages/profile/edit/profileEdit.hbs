@@ -1,33 +1,7 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-  <title>My first sprint</title>
-  <link rel="stylesheet" href="../../../../style.less">
-</head>
-<body>
-  <main class="profile">
-    <div class="profile__sidebar">
-      <a href="/" class="profile__sidebar__backButton"></a>
-    </div>
-    <div class="profile__content">
-      <div class="profile__header">
-        <div class="header__avatar">
-          <img class="avatar__image" src="../../../../static/user__avatar.png" alt="avatar">
-        </div>
-        <div class="header__name">Иван</div>
-      </div>
-      <form class="profileEdit__data">
-        {{>inputField type="email" id="profileEdit__email" label="Почта" name="email" value="pochta@yandex.ru" }}
-        {{>inputField type="text" id="profileEdit__login" label="Логин" name="login" value="ivanivanov"}}
-        {{>inputField type="text" id="profileEdit__firstName" label="Имя" name="first_name" value="Иван" }}
-        {{>inputField type="text" id="profileEdit__secondName" label="Фамилия" name="second_name" value="Иванов" }}
-        {{>inputField type="text" id="profileEdit__chatName" label="Имя в чате" name="chatName" value="Иван" }}
-        {{>inputField type="tel" id="profileEdit__phone" label="Телефон" name="phone" value="+7 (909) 967 30 30" }}
-        <div class="profileEdit__actionButton">
-          {{>button label="Сохранить" type="submit"}}
-        </div>
-      </form>
-      </div>
-  </main>
-</body>
-</html>
+<main class="profile">
+  {{{ sidebar }}}
+  <div class="profile__content">
+    {{{ profileHeader }}}
+    {{{ profileEditForm }}}
+  </div>
+</main>

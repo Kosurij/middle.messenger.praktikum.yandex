@@ -1,0 +1,62 @@
+@import url('/src/styles/variables');
+
+.chatCard {
+  margin: 0 10px;
+  padding: 15px 7px;
+  color: @secondary-color;
+  display: flex;
+  border-bottom: 1px solid @border-color-1;
+  cursor: pointer;
+
+  &:hover {
+    background-color: @opacity-secondary;
+  }
+}
+
+.chatIcon img {
+  width: 47px;
+  height: 47px;
+  border-radius: 50%;
+}
+
+.chatInfo {
+  margin-left: 10px;
+  flex-grow: 1;
+
+  &__name {
+    color: @text-color;
+    font-weight: 600;
+  }
+
+  &__lastMessage {
+    margin-top: 5px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+  }
+}
+
+.chatSubInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 5px;
+  flex-shrink: 1;
+  font-size: 12px;
+  font-weight: 500;
+
+  &__newMessages {
+    width: 20px;
+    height: 20px;
+    background-color: @primary-color;
+    border-radius: 50%;
+    color: @white-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

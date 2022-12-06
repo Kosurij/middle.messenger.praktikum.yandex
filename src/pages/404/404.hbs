@@ -1,16 +1,7 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-  <title>My first sprint</title>
-  <link rel="stylesheet" href="../../../style.less">
-</head>
-<body>
-  <main class="notFound__wrapper">
-    <h1 class="notFound__title">404</h1>
-    <h2 class="notFound__subtitle">Не туда попали</h2>
-    <div class="notFound__backButton">
-      {{>link url="/" text="Назад к чатам" }}
-    </div>
-  </main>
-</body>
-</html>
+<main class="notFound__wrapper">
+  <h1 class="notFound__title">404</h1>
+  <h2 class="notFound__subtitle">Не туда попали</h2>
+  <div class="notFound__backButton">
+    {{{ homeLink }}}
+  </div>
+</main>
