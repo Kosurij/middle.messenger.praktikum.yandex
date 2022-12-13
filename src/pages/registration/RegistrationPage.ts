@@ -1,10 +1,8 @@
 import Block from "/src/utils/Block";
 import { Link, Button, InputFiled } from '../../components';
+import { validateForm } from "/src/utils/validation/validateForm";
 import template from './registration.hbs';
 import styles from './registration.less';
-import { LoginPage } from "/src/pages/login/LoginPage";
-import { renderDOM } from "/src/utils/renderDOM";
-import { validateForm } from "/src/utils/validation/validateForm";
 
 export class RegistrationPage extends Block {
   protected initChildren() {
@@ -72,16 +70,7 @@ export class RegistrationPage extends Block {
     this.children.loginLink = new Link({
       text: 'Войти',
       type: 'medium',
-      url: '/',
-      events: {
-        click: (e) => {
-          const loginPage = new LoginPage();
-
-          e.preventDefault();
-
-          renderDOM(loginPage);
-        },
-      },
+      to: '/',
     });
   }
 

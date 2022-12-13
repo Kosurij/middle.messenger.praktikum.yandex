@@ -33,7 +33,7 @@
   & label,
   &__input:focus ~ &__label {
     position: absolute;
-    top: 0;
+    top: 5px;
     display: block;
     transition: 0.2s;
     font-size: 0.8rem;
@@ -47,10 +47,11 @@
 
 .inputField-error {
   &::after {
-    content: 'Невалидный формат данных';
+    content: attr(data-content);
+    font-size: 10px;
     color: @error-color;
     position: absolute;
-    bottom: -25px;
+    bottom: -15px;
     right: 0;
   }
 

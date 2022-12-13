@@ -18,16 +18,43 @@ export enum FIELD_NAMES {
   message = "message",
 }
 
-const PATTERNS: Record<TFieldNamesKeys, RegExp> = {
-  [FIELD_NAMES.first_name]: /^[А-ЯЁA-Z]{1}([а-яёa-z]|-[А-ЯЁA-Zа-яёa-z]{1}[а-яёa-z])*$/,
-  [FIELD_NAMES.second_name]: /^[А-ЯЁA-Z]{1}([а-яёa-z]|-[А-ЯЁA-Zа-яёa-z]{1}[а-яёa-z])*$/,
-  [FIELD_NAMES.login]: /^(?=.*?([a-zA-Z]|-|_))(\w|-|_){3,20}$/,
-  [FIELD_NAMES.email]: /^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/,
-  [FIELD_NAMES.phone]: /^\+?\d{10,15}$/,
-  [FIELD_NAMES.message]: /[\s\S]+/,
-  [FIELD_NAMES.oldPassword]: /^(?=.*?([A-Z]))(?=.*?\d)(\w|-|_){8,40}$/,
-  [FIELD_NAMES.password]: /^(?=.*?([A-Z]))(?=.*?\d)(\w|-|_){8,40}$/,
-  [FIELD_NAMES.repeatPassword]: /^(?=.*?([A-Z]))(?=.*?\d)(\w|-|_){8,40}$/,
+const VALIDATION_FIELDS: Record<TFieldNamesKeys, { pattern: RegExp, info: string }> = {
+  [FIELD_NAMES.first_name]: {
+    pattern: /^[А-ЯЁA-Z]{1}([а-яёa-z]|-[А-ЯЁA-Zа-яёa-z]{1}[а-яёa-z])*$/,
+    info: 'Только из букв (первая заглавная)'
+  },
+  [FIELD_NAMES.second_name]: {
+    pattern: /^[А-ЯЁA-Z]{1}([а-яёa-z]|-[А-ЯЁA-Zа-яёa-z]{1}[а-яёa-z])*$/,
+    info: 'Только из букв (первая заглавная)'
+  },
+  [FIELD_NAMES.login]: {
+    pattern: /^(?=.*?([a-zA-Z]|-|_))(\w|-|_){3,20}$/,
+    info: 'Логин должен содержать 3-20 символов: цифры, буквы и "_", "-"'
+  },
+  [FIELD_NAMES.email]: {
+    pattern: /^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/,
+    info: 'Некорректный email'
+  },
+  [FIELD_NAMES.phone]: {
+    pattern: /^\+?\d{10,15}$/,
+    info: 'Некорректный номер телефона'
+  },
+  [FIELD_NAMES.message]: {
+    pattern: /[\s\S]+/,
+    info: 'Сообщение не должно быть пустым',
+  },
+  [FIELD_NAMES.oldPassword]: {
+    pattern: /^(?=.*?([A-Z]))(?=.*?\d)(\w|-|_){8,40}$/,
+    info: 'Пароль должен содержать 8-40 символов: заглавную букву и цифру'
+  },
+  [FIELD_NAMES.password]: {
+    pattern: /^(?=.*?([A-Z]))(?=.*?\d)(\w|-|_){8,40}$/,
+    info: 'Пароль должен содержать 8-40 символов: заглавную букву и цифру'
+  },
+  [FIELD_NAMES.repeatPassword]: {
+    pattern: /^(?=.*?([A-Z]))(?=.*?\d)(\w|-|_){8,40}$/,
+    info: 'Пароль должен содержать 8-40 символов: заглавную букву и цифру'
+  },
 };
 
 const highlightErrors = (errors: TErrors, selector = '.inputField', errorClass = 'inputField-error') => {
@@ -36,15 +63,18 @@ const highlightErrors = (errors: TErrors, selector = '.inputField', errorClass =
   inputWrappers.forEach((inputWrapper) => {
     const input = inputWrapper.querySelector('input') as HTMLInputElement;
 
-    errors[input.name]
-      ? inputWrapper.classList.add(errorClass)
-      : inputWrapper.classList.remove(errorClass);
+    if (errors[input.name]) {
+      inputWrapper.classList.add(errorClass);
+      inputWrapper.dataset.content = VALIDATION_FIELDS[input.name as TFieldNamesKeys].info;
+    } else {
+      inputWrapper.classList.remove(errorClass)
+    }
   });
 };
 
-const validateFormData = ([fieldName, value]: TFormData): boolean => PATTERNS[fieldName].test(value);
+const validateFormData = ([fieldName, value]: TFormData): boolean => VALIDATION_FIELDS[fieldName].pattern.test(value);
 
-const validateInput = ({ name, value } : TInput) => PATTERNS[name].test(value);
+const validateInput = ({ name, value } : TInput) => VALIDATION_FIELDS[name].pattern.test(value);
 
 export const formValidation = (formData: FormData, selector?: string, errorClass?: string) => {
   const errors: TErrors = {};
@@ -75,12 +105,12 @@ export const inputValidation = (input: HTMLInputElement, errorClass = 'inputFiel
     inputError = true;
   }
 
-  console.log('input', input);
-  console.log('parentNode', input.parentElement);
-
-  inputError
-    ? parentElement.classList.add(errorClass)
-    : parentElement.classList.remove(errorClass);
+  if (inputError) {
+    parentElement.classList.add(errorClass);
+    parentElement.dataset.content = VALIDATION_FIELDS[input.name as TFieldNamesKeys].info;
+  } else {
+    parentElement.classList.remove(errorClass);
+  }
 };
 
 export const inputValidationHandler = (e: Event) => {

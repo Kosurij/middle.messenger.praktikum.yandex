@@ -1,8 +1,5 @@
 import Block from '/src/utils/Block';
 import { Button, InputFiled, Link } from '/src/components';
-import { RegistrationPage } from "/src/pages/registration/RegistrationPage";
-import { ChatsPage } from "/src/pages/chats/ChatsPage";
-import { renderDOM } from "/src/utils/renderDOM";
 import { validateForm } from "/src/utils/validation/validateForm";
 import template from './loginPage.hbs';
 import styles from './login.less';
@@ -38,31 +35,7 @@ export class LoginPage extends Block {
     this.children.registerLink = new Link({
       text: 'Нет аккаунта?',
       type: 'medium',
-      url: '/registration',
-      events: {
-        click: (e) => {
-          const registrationPage = new RegistrationPage();
-
-          e.preventDefault();
-
-          renderDOM(registrationPage);
-        },
-      },
-    });
-
-    this.children.chatsLink = new Link({
-      text: 'К чатам',
-      type: 'medium',
-      url: '/chats',
-      events: {
-        click: (e) => {
-          const chatsPage = new ChatsPage();
-
-          e.preventDefault();
-
-          renderDOM(chatsPage);
-        },
-      },
+      to: '/registration',
     });
   }
 
