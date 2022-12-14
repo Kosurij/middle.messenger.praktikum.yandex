@@ -1,7 +1,7 @@
 import { isPlainObject, TPlainObject } from "/src/utils/helpers/isPlainObject";
 
 function isArrayOrObject(value: unknown): value is [] | TPlainObject {
-  return isPlainObject(value) || isArray(value);
+  return isPlainObject(value) || Array.isArray(value);
 }
 
 function isEqual(lhs: TPlainObject | string, rhs: TPlainObject | string) {

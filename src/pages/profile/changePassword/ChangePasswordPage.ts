@@ -26,13 +26,6 @@ export class ChangePasswordPage extends Block {
       name: 'password',
     });
 
-    this.children.repeatNewPasswordField = new InputFiled({
-      type: 'password',
-      id: 'changePassword__repeatNewPassword',
-      label: 'Повторите новый пароль',
-      name: 'repeatPassword',
-    });
-
     this.children.saveButton = new Button({
       label: 'Сохранить',
       type: 'submit',

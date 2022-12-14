@@ -2,37 +2,42 @@ import Block from "/src/utils/Block";
 import { TextField } from "/src/components";
 import template from "./profileDetailsData.hbs";
 import styles from "./profileDetailsData.less";
+import { IUser } from "/src/types/authTypes";
 
 export class ProfileDetailsData extends Block {
+  constructor(props: IUser) {
+    super(props);
+  }
+
   protected initChildren() {
     this.children.emailField = new TextField({
       label: 'Почта',
-      value: 'pochta@yandex.ru',
+      value: this.props?.email,
     });
 
     this.children.loginField = new TextField({
       label: 'Логин',
-      value: 'ivanivanov',
+      value: this.props?.login,
     });
 
     this.children.firstNameField = new TextField({
       label: 'Имя',
-      value: 'Иван',
+      value: this.props?.first_name,
     });
 
     this.children.secondNameField = new TextField({
       label: 'Фамилия',
-      value: 'Иванов',
+      value: this.props?.second_name,
     });
 
     this.children.chatNameField = new TextField({
       label: 'Имя в чате',
-      value: 'Иван',
+      value: this.props?.login,
     });
 
     this.children.phoneField = new TextField({
       label: 'Телефон',
-      value: '+7 (909) 967 30 30',
+      value: this.props?.phone,
     });
   }
 

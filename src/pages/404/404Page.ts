@@ -1,5 +1,6 @@
-import Block from "/src/utils/Block";
+import Block from '/src/utils/Block';
 import { Link } from '../../components';
+import { ROUTES } from '/src/const/routes';
 import template from './404.hbs';
 import styles from './404.less';
 
@@ -7,7 +8,7 @@ export class NotFoundPage extends Block {
   protected initChildren() {
     this.children.homeLink = new Link({
       text: 'Вернуться на главную',
-      to: '/',
+      to: ROUTES.INDEX,
       type: 'large',
     });
   }

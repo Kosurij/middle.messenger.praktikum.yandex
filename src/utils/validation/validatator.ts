@@ -13,7 +13,6 @@ export enum FIELD_NAMES {
   email = "email",
   oldPassword = "oldPassword",
   password = "password",
-  repeatPassword = "repeatPassword",
   phone = "phone",
   message = "message",
 }
@@ -48,10 +47,6 @@ const VALIDATION_FIELDS: Record<TFieldNamesKeys, { pattern: RegExp, info: string
     info: 'Пароль должен содержать 8-40 символов: заглавную букву и цифру'
   },
   [FIELD_NAMES.password]: {
-    pattern: /^(?=.*?([A-Z]))(?=.*?\d)(\w|-|_){8,40}$/,
-    info: 'Пароль должен содержать 8-40 символов: заглавную букву и цифру'
-  },
-  [FIELD_NAMES.repeatPassword]: {
     pattern: /^(?=.*?([A-Z]))(?=.*?\d)(\w|-|_){8,40}$/,
     info: 'Пароль должен содержать 8-40 символов: заглавную букву и цифру'
   },

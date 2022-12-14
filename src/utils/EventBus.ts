@@ -21,7 +21,7 @@ export default class EventBus<E extends { [Ev: string]: unknown[] }> {
     );
   }
 
-  emit<K extends keyof E>(event: K, ...args: E[K]) {
+  emit<K extends keyof E>(event: K, ...args: E[K] | any) {
     if (!this.listeners[event]) {
       return;
     }

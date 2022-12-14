@@ -4,37 +4,44 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d1d11500-9420-42ea-a59d-c99902836c0f" name="Changes" comment="Ско">
+    <list default="true" id="d1d11500-9420-42ea-a59d-c99902836c0f" name="Changes" comment="Добавлен favicon.&#10;Скорректирована валидация: выводятся понятные пользователю ошибки.&#10;Добавлен класс роутера и изменен роутинг.">
       <change afterPath="$PROJECT_DIR$/src/api/AuthApi.ts" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/api/BaseApi.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/hocs/withRouter.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/const/routes.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/controllers/AuthController.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/controllers/BaseController.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/hocs/withStore.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/reducers/reducers.ts" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/types/authTypes.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/Router.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/helpers/isArray.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/helpers/isEqual.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/helpers/isPlainObject.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/helpers/merge.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/helpers/set.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.nvmrc" beforeDir="false" afterPath="$PROJECT_DIR$/.nvmrc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/InputField/inputField.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/InputField/inputField.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Link/Link.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Link/Link.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Link/link.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Link/link.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/types/commonTypes.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/HTTPTransport.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/Store.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Button/Button.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Button/Button.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Button/button.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Button/button.hbs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/404/404.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/404/404.less" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/404/404Page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/404/404Page.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/500/ServerErrorPage.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/500/ServerErrorPage.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/chats/components/ChatsHeader/ChatsHeader.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/chats/components/ChatsHeader/ChatsHeader.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/login/LoginPage.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/login/LoginPage.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/login/login.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/login/login.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/profile/changePassword/ChangePasswordPage.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/profile/changePassword/ChangePasswordPage.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/profile/changePassword/changePassword.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/profile/changePassword/changePassword.hbs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/profile/components/ProfileSidebar/ProfileSidebar.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/profile/components/ProfileSidebar/ProfileSidebar.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/profile/details/ProfileDetailsPage.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/profile/details/ProfileDetailsPage.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/profile/details/components/ProfileDetailsData/ProfileDetailsData.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/profile/details/components/ProfileDetailsData/ProfileDetailsData.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/profile/details/profileDetails.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/profile/details/profileDetails.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/profile/details/profileDetails.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/profile/details/profileDetails.less" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/registration/RegistrationPage.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/registration/RegistrationPage.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/registration/registration.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/registration/registration.hbs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/registration/registration.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/registration/registration.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/Block.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/Block.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/HttpRequest.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/HTTPTransport.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/renderDOM.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/EventBus.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/EventBus.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/HttpRequest.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/helpers/isEqual.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/helpers/isEqual.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/helpers/set.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/helpers/set.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/utils/validation/validatator.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/validation/validatator.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/validation/validateForm.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/validation/validateForm.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,7 +67,7 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="ProjectErrors" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="2I6WJ5SNGeiUh6KLI2zpE7jPa7c" />
   <component name="ProjectLevelVcsManager">
@@ -162,7 +169,13 @@
       <workItem from="1670475480202" duration="595000" />
       <workItem from="1670480839521" duration="834000" />
       <workItem from="1670854789401" duration="13384000" />
-      <workItem from="1670933784683" duration="6999000" />
+      <workItem from="1670933784683" duration="7377000" />
+      <workItem from="1670992059728" duration="1361000" />
+      <workItem from="1670993461248" duration="149000" />
+      <workItem from="1670994177922" duration="402000" />
+      <workItem from="1670996021801" duration="8561000" />
+      <workItem from="1671022952479" duration="3567000" />
+      <workItem from="1671035678109" duration="7856000" />
     </task>
     <task id="LOCAL-00001" summary="Обновлен netlify.toml">
       <created>1669502710525</created>
@@ -213,7 +226,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669611813638</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Добавлен favicon.&#10;Скорректирована валидация: выводятся понятные пользователю ошибки.&#10;Добавлен класс роутера и изменен роутинг.">
+      <created>1670942033920</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1670942033920</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -237,6 +257,7 @@
     <MESSAGE value="Поле версия ноды перенесена в .nvmrc&#10;Исправлена валидация.&#10;События focusin/focusout сразу добавляются в классе InputField.&#10;Убраны лишние логи и div." />
     <MESSAGE value="Скорректирована переменная PORT" />
     <MESSAGE value="Временно удален .nvmrc" />
-    <option name="LAST_COMMIT_MESSAGE" value="Временно удален .nvmrc" />
+    <MESSAGE value="Добавлен favicon.&#10;Скорректирована валидация: выводятся понятные пользователю ошибки.&#10;Добавлен класс роутера и изменен роутинг." />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавлен favicon.&#10;Скорректирована валидация: выводятся понятные пользователю ошибки.&#10;Добавлен класс роутера и изменен роутинг." />
   </component>
 </project>

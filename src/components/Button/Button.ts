@@ -8,6 +8,7 @@ interface IButtonProps {
   events?: {
     click?: (e?: Event) => void;
   },
+  isGhost?: boolean,
   customClass?: string,
 }
 
@@ -23,8 +24,9 @@ export default class Button extends Block {
       events: {
         click: this.props.click,
       },
-      styles,
+      isGhost: this.props.isGhost,
       customClass: this.props.customClass,
+      styles,
     });
   }
 }
