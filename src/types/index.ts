@@ -22,3 +22,14 @@ export interface IUser {
   phone: string;
   avatar: string;
 }
+
+export type TProfile = Omit<IUser, 'password | id | avatar'>;
+
+export type TAvatar = FormData;
+
+export interface IPassword {
+  oldPassword: string;
+  newPassword: string;
+}
+
+export type TState = any;

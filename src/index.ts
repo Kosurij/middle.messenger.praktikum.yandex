@@ -6,7 +6,7 @@ import { ProfileEditPage } from '/src/pages/profile/edit/ProfileEditPage';
 import { ChangePasswordPage } from '/src/pages/profile/changePassword/ChangePasswordPage';
 import { ROUTES } from '/src/const/routes';
 import Router from './utils/Router';
-import store from "/src/utils/Store";
+import AuthController from "/src/controllers/AuthController";
 
 document.addEventListener('DOMContentLoaded', async () => {
   Router
@@ -26,15 +26,14 @@ document.addEventListener('DOMContentLoaded', async () => {
       break;
   }
 
-  console.log(store.getState())
-
   try {
+    await AuthController.getUser();
 
     Router.start();
 
-    // if (!isProtectedRoute) {
-    //   Router.go(ROUTES.CHATS)
-    // }
+    if (!isProtectedRoute) {
+      Router.go(ROUTES.PROFILE)
+    }
 
   } catch (e) {
     Router.start();
@@ -44,3 +43,4 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
   }
 });
+

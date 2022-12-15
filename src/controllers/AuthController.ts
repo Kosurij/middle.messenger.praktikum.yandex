@@ -1,5 +1,5 @@
 import { AuthApi } from '/src/api/AuthApi';
-import { ISignInData, ISignUpData } from '/src/types/authTypes';
+import { ISignInData, ISignUpData } from '/src/types';
 import { ROUTES } from '/src/const/routes';
 import store from '/src/utils/Store';
 import Router from '/src/utils/Router'
@@ -46,11 +46,9 @@ class AuthController extends BaseController {
   }
 
   async getUser() {
-    await this.makeRequest(async () => {
-      const user = await this.api.read();
+    const user = await this.api.read();
 
-      store.set(`${this.storePath}.data`, user);
-    })
+    store.set(`${this.storePath}.data`, user);
   }
 }
 

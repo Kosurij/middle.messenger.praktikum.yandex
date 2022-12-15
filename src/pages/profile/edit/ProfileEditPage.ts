@@ -4,14 +4,23 @@ import { ProfileSidebar } from "/src/pages/profile/components/ProfileSidebar/Pro
 import { ProfileEditForm } from "/src/pages/profile/edit/components/ProfileEditForm/ProfileEditForm";
 import template from "./profileEdit.hbs";
 import styles from "./profileEdit.less";
+import { TState } from "/src/types";
+import store from "/src/utils/Store";
+import { userReducer } from "/src/reducers/reducers";
 
 export class ProfileEditPage extends Block {
+  private userData: TState;
+
   protected initChildren() {
+    const state = store.getState();
+
+    this.userData = userReducer(state);
+
     this.children.profileHeader = new ProfileHeader();
 
     this.children.sidebar = new ProfileSidebar();
 
-    this.children.profileEditForm = new ProfileEditForm();
+    this.children.profileEditForm = new ProfileEditForm(this.userData);
   }
 
   protected render() {

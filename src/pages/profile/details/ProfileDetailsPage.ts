@@ -5,7 +5,7 @@ import { ProfileSidebar } from '../components/ProfileSidebar/ProfileSidebar';
 import { ProfileDetailsData } from './components/ProfileDetailsData/ProfileDetailsData';
 import { ROUTES } from '/src/const/routes';
 import { userReducer } from '/src/reducers/reducers';
-import { TState } from '/src/types/commonTypes';
+import { TState } from '/src/types';
 import AuthController from '/src/controllers/AuthController';
 import template from './profileDetails.hbs';
 import styles from './profileDetails.less';

@@ -2,7 +2,7 @@ import Block from "/src/utils/Block";
 import { TextField } from "/src/components";
 import template from "./profileDetailsData.hbs";
 import styles from "./profileDetailsData.less";
-import { IUser } from "/src/types/authTypes";
+import { IUser } from "/src/types";
 
 export class ProfileDetailsData extends Block {
   constructor(props: IUser) {
@@ -12,32 +12,32 @@ export class ProfileDetailsData extends Block {
   protected initChildren() {
     this.children.emailField = new TextField({
       label: 'Почта',
-      value: this.props?.email,
+      value: this.props?.email || '-',
     });
 
     this.children.loginField = new TextField({
       label: 'Логин',
-      value: this.props?.login,
+      value: this.props?.login || '-',
     });
 
     this.children.firstNameField = new TextField({
       label: 'Имя',
-      value: this.props?.first_name,
+      value: this.props?.first_name || '-',
     });
 
     this.children.secondNameField = new TextField({
       label: 'Фамилия',
-      value: this.props?.second_name,
+      value: this.props?.second_name || '-',
     });
 
-    this.children.chatNameField = new TextField({
+    this.children.displayNameField = new TextField({
       label: 'Имя в чате',
-      value: this.props?.login,
+      value: this.props?.display_name || '-',
     });
 
     this.children.phoneField = new TextField({
       label: 'Телефон',
-      value: this.props?.phone,
+      value: this.props?.phone || '-',
     });
   }
 

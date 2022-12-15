@@ -9,9 +9,11 @@ type TErrors = Partial<Record<string, boolean>>;
 export enum FIELD_NAMES {
   first_name = "first_name",
   second_name = "second_name",
+  display_name = "display_name",
   login = "login",
   email = "email",
   oldPassword = "oldPassword",
+  newPassword = "newPassword",
   password = "password",
   phone = "phone",
   message = "message",
@@ -30,6 +32,10 @@ const VALIDATION_FIELDS: Record<TFieldNamesKeys, { pattern: RegExp, info: string
     pattern: /^(?=.*?([a-zA-Z]|-|_))(\w|-|_){3,20}$/,
     info: 'Логин должен содержать 3-20 символов: цифры, буквы и "_", "-"'
   },
+  [FIELD_NAMES.display_name]: {
+    pattern: /^(?=.*?([a-zA-Z]|-|_))(\w|-|_){3,20}$/,
+    info: 'Имя должно содержать 3-20 символов: цифры, буквы и "_", "-"'
+  },
   [FIELD_NAMES.email]: {
     pattern: /^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/,
     info: 'Некорректный email'
@@ -43,6 +49,10 @@ const VALIDATION_FIELDS: Record<TFieldNamesKeys, { pattern: RegExp, info: string
     info: 'Сообщение не должно быть пустым',
   },
   [FIELD_NAMES.oldPassword]: {
+    pattern: /^(?=.*?([A-Z]))(?=.*?\d)(\w|-|_){8,40}$/,
+    info: 'Пароль должен содержать 8-40 символов: заглавную букву и цифру'
+  },
+  [FIELD_NAMES.newPassword]: {
     pattern: /^(?=.*?([A-Z]))(?=.*?\d)(\w|-|_){8,40}$/,
     info: 'Пароль должен содержать 8-40 символов: заглавную букву и цифру'
   },
