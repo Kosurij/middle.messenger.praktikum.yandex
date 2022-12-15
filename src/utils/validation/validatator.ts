@@ -1,10 +1,4 @@
-export type TFieldNamesKeys = keyof typeof FIELD_NAMES;
-
-export type TFormData = [TFieldNamesKeys, string];
-
-export type TInput = { name: TFieldNamesKeys, value: string }
-
-type TErrors = Partial<Record<string, boolean>>;
+import { TErrors, TFieldNamesKeys, TFormData, TInput } from '/src/types';
 
 export enum FIELD_NAMES {
   first_name = "first_name",

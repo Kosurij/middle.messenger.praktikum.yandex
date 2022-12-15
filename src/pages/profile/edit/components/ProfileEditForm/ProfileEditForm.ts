@@ -7,6 +7,10 @@ import UserController from "/src/controllers/UserController";
 import { TProfile } from "/src/types";
 
 export class ProfileEditForm extends Block {
+  constructor(props: TProfile) {
+    super(props);
+  }
+
   protected initChildren() {
     this.children.emailEditField = new InputFiled({
       type: 'email',
@@ -61,11 +65,6 @@ export class ProfileEditForm extends Block {
       type: 'submit',
       events: {
         click: () => this.onSubmit()
-        // click: () => {
-        //   const form = document.querySelector('#profileEdit-form') as HTMLFormElement;
-        //
-        //   form.onsubmit = (e) => validateForm(e);
-        // },
       },
     });
   }

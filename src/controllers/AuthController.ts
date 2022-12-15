@@ -8,6 +8,7 @@ import BaseController from "/src/controllers/BaseController";
 class AuthController extends BaseController {
   private readonly api = new AuthApi();
   protected storePath: string;
+  protected notificationText?: string;
 
   constructor() {
     const storePath = 'user';
@@ -23,7 +24,9 @@ class AuthController extends BaseController {
 
       await this.getUser();
 
-      Router.go(ROUTES.CHATS);
+      Router.go(ROUTES.INDEX);
+
+      this.notificationText = 'Вы успешно зарегистрированы'
     })
   }
 

@@ -1,12 +1,12 @@
-import Block from "/src/utils/Block";
-import { ProfileHeader } from "/src/pages/profile/components/ProfileHeader/ProfileHeader";
-import { ProfileSidebar } from "/src/pages/profile/components/ProfileSidebar/ProfileSidebar";
-import { ProfileEditForm } from "/src/pages/profile/edit/components/ProfileEditForm/ProfileEditForm";
-import template from "./profileEdit.hbs";
-import styles from "./profileEdit.less";
-import { TState } from "/src/types";
-import store from "/src/utils/Store";
-import { userReducer } from "/src/reducers/reducers";
+import Block from '/src/utils/Block';
+import { ProfileHeader } from '/src/pages/profile/components/ProfileHeader/ProfileHeader';
+import { ProfileSidebar } from '/src/pages/profile/components/ProfileSidebar/ProfileSidebar';
+import { ProfileEditForm } from '/src/pages/profile/edit/components/ProfileEditForm/ProfileEditForm';
+import template from './profileEdit.hbs';
+import styles from './profileEdit.less';
+import { TState } from '/src/types';
+import store from '/src/utils/Store';
+import { userReducer } from '/src/reducers';
 
 export class ProfileEditPage extends Block {
   private userData: TState;
@@ -16,7 +16,7 @@ export class ProfileEditPage extends Block {
 
     this.userData = userReducer(state);
 
-    this.children.profileHeader = new ProfileHeader();
+    this.children.profileHeader = new ProfileHeader(this.userData);
 
     this.children.sidebar = new ProfileSidebar();
 

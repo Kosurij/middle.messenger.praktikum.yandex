@@ -4,7 +4,7 @@ import { ProfileHeader } from '../components/ProfileHeader/ProfileHeader';
 import { ProfileSidebar } from '../components/ProfileSidebar/ProfileSidebar';
 import { ProfileDetailsData } from './components/ProfileDetailsData/ProfileDetailsData';
 import { ROUTES } from '/src/const/routes';
-import { userReducer } from '/src/reducers/reducers';
+import { userReducer } from '/src/reducers';
 import { TState } from '/src/types';
 import AuthController from '/src/controllers/AuthController';
 import template from './profileDetails.hbs';
@@ -20,7 +20,7 @@ export class ProfileDetailsPage extends Block {
 
     this.userData = userReducer(state);
 
-    this.children.profileHeader = new ProfileHeader();
+    this.children.profileHeader = new ProfileHeader(this.userData);
 
     this.children.sidebar = new ProfileSidebar();
 

@@ -8,6 +8,7 @@ import { IPassword, TProfile } from "/src/types";
 class UserController extends BaseController {
   private readonly api = new UserApi();
   protected storePath: string;
+  protected notificationText?: string;
 
   constructor() {
     const storePath = 'user';
@@ -24,6 +25,8 @@ class UserController extends BaseController {
       await this.getUser();
 
       Router.go(ROUTES.PROFILE)
+
+      this.notificationText = 'Данные успешно изменены'
     })
   }
 
@@ -33,7 +36,7 @@ class UserController extends BaseController {
 
       Router.go(ROUTES.PROFILE)
 
-      alert('Пароль успешно изменен')
+      this.notificationText = 'Пароль успешно изменен'
     })
   }
 

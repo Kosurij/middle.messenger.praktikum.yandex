@@ -1,3 +1,5 @@
+import { FIELD_NAMES } from "/src/utils/validation/validatator";
+
 export interface ISignInData {
   login: string;
   password: string;
@@ -33,3 +35,11 @@ export interface IPassword {
 }
 
 export type TState = any;
+
+export type TFieldNamesKeys = keyof typeof FIELD_NAMES;
+
+export type TFormData = [TFieldNamesKeys, string];
+
+export type TInput = { name: TFieldNamesKeys, value: string }
+
+export type TErrors = Partial<Record<string, boolean>>;
