@@ -16,7 +16,7 @@ class ResourcesController extends BaseController {
   getResources(path: string) {
     const resourceUrl = `${HTTPTransport.API_URL}/resources/${path}`
 
-    store.set(`${this.storePath}.data`, resourceUrl);
+    store.set(`${this.storePath}.avatar`, resourceUrl);
   }
 }
 

@@ -4,11 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d1d11500-9420-42ea-a59d-c99902836c0f" name="Changes" comment="Header вынесен в самостоятельный блок.">
+    <list default="true" id="d1d11500-9420-42ea-a59d-c99902836c0f" name="Changes" comment="Добавлено обновление аватара.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/ResourcesController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/ResourcesController.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controllers/UserController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/UserController.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hocs/withStore.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/hocs/withStore.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/profile/components/ProfileHeader/ProfileHeader.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/profile/components/ProfileHeader/ProfileHeader.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/profile/components/ProfileHeader/components/Avatar.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/profile/components/ProfileHeader/components/Avatar.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/profile/components/ProfileHeader/components/avatar.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/profile/components/ProfileHeader/components/avatar.hbs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -154,6 +156,8 @@
       <workItem from="1671083025813" duration="16928000" />
       <workItem from="1671133867806" duration="8203000" />
       <workItem from="1671168721759" duration="9017000" />
+      <workItem from="1671188127398" duration="3163000" />
+      <workItem from="1671197736183" duration="2348000" />
     </task>
     <task id="LOCAL-00001" summary="Обновлен netlify.toml">
       <created>1669502710525</created>
@@ -232,7 +236,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671181466563</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Добавлено обновление аватара.">
+      <created>1671183791542</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1671183791542</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -260,6 +271,7 @@
     <MESSAGE value="Добавлена:&#10;авторизацию в полном объеме (регистрация, авторизация, выход из системы);&#10;работу с информацией пользователя (изменять данные пользователя, изменять пароль);" />
     <MESSAGE value="Добавлено уведомление." />
     <MESSAGE value="Header вынесен в самостоятельный блок." />
-    <option name="LAST_COMMIT_MESSAGE" value="Header вынесен в самостоятельный блок." />
+    <MESSAGE value="Добавлено обновление аватара." />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавлено обновление аватара." />
   </component>
 </project>

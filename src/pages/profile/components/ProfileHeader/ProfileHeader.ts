@@ -1,28 +1,24 @@
 import Block from "/src/utils/Block";
 import template from "./profileHeader.hbs";
 import styles from "./profileHeader.less";
-import defaultAvatar from "/static/user_avatar.svg";
 import { TState } from "/src/types";
 import store from "/src/utils/Store";
-import { resourcesReducer, userReducer } from "/src/reducers";
+import { userReducer } from "/src/reducers";
 import ResourcesController from "/src/controllers/ResourcesController";
+import { Avatar } from "./components/Avatar";
 import { Button, Dialog, InputFiled } from "/src/components";
 import { validateForm } from "/src/utils/validation/validateForm";
 import UserController from "/src/controllers/UserController";
-import { Avatar } from "/src/pages/profile/components/ProfileHeader/components/Avatar";
 
 export class ProfileHeader extends Block {
   private userData: TState;
-  private userAvatar = '';
 
   protected initChildren() {
     const state = store.getState();
 
     this.userData = userReducer(state);
 
-    ResourcesController.getResources(this.userData.avatar);
-
-    this.userAvatar = resourcesReducer(state);
+    this.changeAvatarState();
 
     this.children.changeAvatarDialog = new Dialog({
       title: 'Загрузите файл',
@@ -54,7 +50,6 @@ export class ProfileHeader extends Block {
     })
 
     this.children.avatar = new Avatar({
-      avatarPath: this.userAvatar || defaultAvatar,
       events: {
         click: () => this.showDialog()
       }
@@ -64,15 +59,17 @@ export class ProfileHeader extends Block {
   onChangeAvatarSubmit() {
     const form = document.querySelector('#dialog-form') as HTMLFormElement;
 
-    form.onsubmit = (e) => {
+    form.onsubmit = async (e) => {
       e.preventDefault();
 
       const data = new FormData(e.target as HTMLFormElement)
 
       if (validateForm(data)) {
-        UserController.changeAvatar(data);
+        await UserController.changeAvatar(data);
 
         this.closeDialog();
+
+        this.changeAvatarState();
       }
     }
   }
@@ -83,6 +80,14 @@ export class ProfileHeader extends Block {
 
   closeDialog() {
     (this.children.changeAvatarDialog as Dialog).hide();
+  }
+
+  changeAvatarState() {
+    const state = store.getState();
+
+    const { avatar } = userReducer(state);
+
+    ResourcesController.getResources(avatar);
   }
 
   protected render() {

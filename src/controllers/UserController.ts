@@ -47,8 +47,6 @@ class UserController extends BaseController {
       await this.getUser();
 
       this.notificationText = 'Аватар успешно изменен';
-
-      window.location.reload();
     })
   }
 
