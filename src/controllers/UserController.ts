@@ -44,7 +44,11 @@ class UserController extends BaseController {
     await this.makeRequest(async () => {
       await this.api.changeAvatar(data);
 
-      this.notificationText = 'Аватар успешно изменен'
+      await this.getUser();
+
+      this.notificationText = 'Аватар успешно изменен';
+
+      window.location.reload();
     })
   }
 

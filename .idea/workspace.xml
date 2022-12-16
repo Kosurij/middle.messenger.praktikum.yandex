@@ -4,20 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d1d11500-9420-42ea-a59d-c99902836c0f" name="Changes" comment="Добавлена возможность изменять картинку">
-      <change afterPath="$PROJECT_DIR$/src/pages/profile/components/ProfileHeader/components/Avatar.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/profile/components/ProfileHeader/components/avatar.hbs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/profile/components/ProfileHeader/components/avatar.less" afterDir="false" />
+    <list default="true" id="d1d11500-9420-42ea-a59d-c99902836c0f" name="Changes" comment="Header вынесен в самостоятельный блок.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Dialog/dialog.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dialog/dialog.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/profile/changePassword/ChangePasswordPage.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/profile/changePassword/ChangePasswordPage.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/profile/changePassword/changePassword.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/profile/changePassword/changePassword.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/profile/components/ProfileHeader/ProfileHeader.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/profile/components/ProfileHeader/ProfileHeader.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/profile/components/ProfileHeader/profileHeader.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/profile/components/ProfileHeader/profileHeader.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/profile/components/ProfileHeader/profileHeader.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/profile/components/ProfileHeader/profileHeader.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/profile/details/ProfileDetailsPage.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/profile/details/ProfileDetailsPage.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/profile/edit/ProfileEditPage.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/profile/edit/ProfileEditPage.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/profile/edit/profileEdit.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/profile/edit/profileEdit.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/UserController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/UserController.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hocs/withStore.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/hocs/withStore.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/profile/components/ProfileHeader/components/Avatar.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/profile/components/ProfileHeader/components/Avatar.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -234,7 +225,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671130201704</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Header вынесен в самостоятельный блок.">
+      <created>1671181466563</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1671181466563</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -261,6 +259,7 @@
     <MESSAGE value="Добавлен favicon.&#10;Скорректирована валидация: выводятся понятные пользователю ошибки.&#10;Добавлен класс роутера и изменен роутинг." />
     <MESSAGE value="Добавлена:&#10;авторизацию в полном объеме (регистрация, авторизация, выход из системы);&#10;работу с информацией пользователя (изменять данные пользователя, изменять пароль);" />
     <MESSAGE value="Добавлено уведомление." />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавлено уведомление." />
+    <MESSAGE value="Header вынесен в самостоятельный блок." />
+    <option name="LAST_COMMIT_MESSAGE" value="Header вынесен в самостоятельный блок." />
   </component>
 </project>
