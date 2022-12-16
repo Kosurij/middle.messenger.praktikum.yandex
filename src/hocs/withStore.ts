@@ -1,4 +1,3 @@
-import isEqual from "/src/utils/helpers/isEqual";
 import store, { StoreEvents } from "/src/utils/Store";
 import { TPlainObject } from "/src/utils/helpers/isPlainObject";
 import Block from "/src/utils/Block";
@@ -12,21 +11,16 @@ export function withStore(mapStateToProps: (state: any) => any) {
     return class WithStore extends Component {
 
       constructor(props: Props) {
-        const state = store.getState();
-        currentState = mapStateToProps(state);
+        currentState = mapStateToProps(store.getState());
 
         super({ ...props, ...currentState });
 
         store.on(StoreEvents.UPDATED, () => {
-          const state = store.getState();
-          const propsFromState: TPlainObject = mapStateToProps(state);
+          const propsFromState: TPlainObject = mapStateToProps(store.getState());
 
-          if (currentState !== null && !isEqual(currentState, propsFromState)) {
-            this.setProps({ ...propsFromState })
-          }
+          this.setProps({ ...propsFromState })
         })
       }
-
     }
   }
 }
