@@ -6,6 +6,7 @@ import styles from "./changePassword.less";
 import { validateForm } from "/src/utils/validation/validateForm";
 import { IPassword } from "/src/types";
 import UserController from "/src/controllers/UserController";
+import { ProfileHeader } from "/src/pages/profile/components/ProfileHeader/ProfileHeader";
 
 export class ChangePasswordPage extends Block {
   protected initChildren() {
@@ -32,6 +33,8 @@ export class ChangePasswordPage extends Block {
         click: () => this.onSubmit()
       },
     });
+
+    this.children.profileHeader = new ProfileHeader();
   }
 
   onSubmit() {
