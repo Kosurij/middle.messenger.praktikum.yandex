@@ -189,11 +189,11 @@ export default class Block<P extends Record<string, any> = any> {
     return document.createElement(tagName);
   }
 
-  protected show() {
+  show() {
     this.getContent()!.style.display = "block";
   }
 
-  protected hide() {
+  hide() {
     this.getContent()!.style.display = "none";
   }
 

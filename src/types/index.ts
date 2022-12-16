@@ -38,7 +38,7 @@ export type TState = any;
 
 export type TFieldNamesKeys = keyof typeof FIELD_NAMES;
 
-export type TFormData = [TFieldNamesKeys, string];
+export type TFormData = [TFieldNamesKeys, string | File];
 
 export type TInput = { name: TFieldNamesKeys, value: string }
 

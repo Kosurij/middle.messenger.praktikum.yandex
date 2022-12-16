@@ -4,22 +4,34 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d1d11500-9420-42ea-a59d-c99902836c0f" name="Changes" comment="Добавлена:&#10;авторизацию в полном объеме (регистрация, авторизация, выход из системы);&#10;работу с информацией пользователя (изменять данные пользователя, изменять пароль);">
+    <list default="true" id="d1d11500-9420-42ea-a59d-c99902836c0f" name="Changes" comment="Добавлено уведомление.">
+      <change afterPath="$PROJECT_DIR$/src/components/Dialog/Dialog.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Dialog/dialog.hbs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Dialog/dialog.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/FileInput/FileInput.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/FileInput/fileInput.hbs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/FileInput/fileInput.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/controllers/ResourcesController.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/AuthController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/AuthController.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/BaseController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/BaseController.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/InputField/InputField.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/InputField/InputField.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/InputField/inputField.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/InputField/inputField.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controllers/UserController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/UserController.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/profile/changePassword/ChangePasswordPage.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/profile/changePassword/ChangePasswordPage.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/profile/changePassword/changePassword.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/profile/changePassword/changePassword.hbs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/profile/components/ProfileHeader/ProfileHeader.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/profile/components/ProfileHeader/ProfileHeader.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/profile/components/ProfileHeader/profileHeader.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/profile/components/ProfileHeader/profileHeader.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/profile/components/ProfileHeader/profileHeader.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/profile/components/ProfileHeader/profileHeader.less" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/profile/details/ProfileDetailsPage.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/profile/details/ProfileDetailsPage.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/profile/details/profileDetails.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/profile/details/profileDetails.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/profile/details/profileDetails.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/profile/details/profileDetails.less" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/profile/edit/ProfileEditPage.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/profile/edit/ProfileEditPage.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/profile/edit/components/ProfileEditForm/ProfileEditForm.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/profile/edit/components/ProfileEditForm/ProfileEditForm.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducers/reducers.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/commonStyles.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/commonStyles.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/profile/edit/profileEdit.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/profile/edit/profileEdit.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducers/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/variables.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/variables.less" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/types/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/Block.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/Block.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/HTTPTransport.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/HTTPTransport.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/utils/validation/validatator.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/validation/validatator.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/validation/validateForm.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/validation/validateForm.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +76,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "last.edited.regexp": "731231231",
-    "last_opened_file_path": "C:/Users/kosur/Desktop/projects/middle.messenger.praktikum.yandex/src/api",
+    "last_opened_file_path": "C:/Users/kosur/Desktop/projects/middle.messenger.praktikum.yandex/src/controllers",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -76,8 +88,9 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\kosur\Desktop\projects\middle.messenger.praktikum.yandex\src\api" />
       <recent name="C:\Users\kosur\Desktop\projects\middle.messenger.praktikum.yandex\src\controllers" />
+      <recent name="C:\Users\kosur\Desktop\projects\middle.messenger.praktikum.yandex\src\api" />
+      <recent name="C:\Users\kosur\Desktop\projects\middle.messenger.praktikum.yandex\src\components\FileInput" />
     </key>
   </component>
   <component name="RunManager" selected="npm.dev">
@@ -161,7 +174,9 @@
       <workItem from="1670996021801" duration="8561000" />
       <workItem from="1671022952479" duration="3567000" />
       <workItem from="1671035678109" duration="7856000" />
-      <workItem from="1671083025813" duration="15343000" />
+      <workItem from="1671083025813" duration="16928000" />
+      <workItem from="1671133867806" duration="8203000" />
+      <workItem from="1671168721759" duration="9017000" />
     </task>
     <task id="LOCAL-00001" summary="Обновлен netlify.toml">
       <created>1669502710525</created>
@@ -226,7 +241,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671122972488</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Добавлено уведомление.">
+      <created>1671130201704</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1671130201704</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -252,6 +274,7 @@
     <MESSAGE value="Временно удален .nvmrc" />
     <MESSAGE value="Добавлен favicon.&#10;Скорректирована валидация: выводятся понятные пользователю ошибки.&#10;Добавлен класс роутера и изменен роутинг." />
     <MESSAGE value="Добавлена:&#10;авторизацию в полном объеме (регистрация, авторизация, выход из системы);&#10;работу с информацией пользователя (изменять данные пользователя, изменять пароль);" />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавлена:&#10;авторизацию в полном объеме (регистрация, авторизация, выход из системы);&#10;работу с информацией пользователя (изменять данные пользователя, изменять пароль);" />
+    <MESSAGE value="Добавлено уведомление." />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавлено уведомление." />
   </component>
 </project>

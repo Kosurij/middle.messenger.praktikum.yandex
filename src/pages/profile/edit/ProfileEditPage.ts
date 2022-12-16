@@ -1,5 +1,4 @@
 import Block from '/src/utils/Block';
-import { ProfileHeader } from '/src/pages/profile/components/ProfileHeader/ProfileHeader';
 import { ProfileSidebar } from '/src/pages/profile/components/ProfileSidebar/ProfileSidebar';
 import { ProfileEditForm } from '/src/pages/profile/edit/components/ProfileEditForm/ProfileEditForm';
 import template from './profileEdit.hbs';
@@ -15,8 +14,6 @@ export class ProfileEditPage extends Block {
     const state = store.getState();
 
     this.userData = userReducer(state);
-
-    this.children.profileHeader = new ProfileHeader(this.userData);
 
     this.children.sidebar = new ProfileSidebar();
 

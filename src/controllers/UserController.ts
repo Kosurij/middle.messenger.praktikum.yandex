@@ -3,7 +3,7 @@ import { ROUTES } from '/src/const/routes';
 import Router from '/src/utils/Router'
 import BaseController from "/src/controllers/BaseController";
 import AuthController from "/src/controllers/AuthController";
-import { IPassword, TProfile } from "/src/types";
+import { IPassword, TAvatar, TProfile } from "/src/types";
 
 class UserController extends BaseController {
   private readonly api = new UserApi();
@@ -37,6 +37,14 @@ class UserController extends BaseController {
       Router.go(ROUTES.PROFILE)
 
       this.notificationText = 'Пароль успешно изменен'
+    })
+  }
+
+  async changeAvatar(data: TAvatar) {
+    await this.makeRequest(async () => {
+      await this.api.changeAvatar(data);
+
+      this.notificationText = 'Аватар успешно изменен'
     })
   }
 

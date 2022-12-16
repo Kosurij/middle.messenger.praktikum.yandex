@@ -43,14 +43,17 @@ export default class HTTPTransport {
       xhr.onerror = () => reject({ reason: 'Network error' });
       xhr.ontimeout = () => reject({ reason: 'Timeout' });
 
-      xhr.setRequestHeader('Content-Type', 'application/json');
       xhr.withCredentials = true;
       xhr.responseType = 'json';
+
+      if (!(data instanceof FormData)) {
+        xhr.setRequestHeader('Content-Type', 'application/json');
+      }
 
       if (method === METHODS.GET || !data) {
         xhr.send();
       } else {
-        xhr.send(JSON.stringify(data));
+        xhr.send(data instanceof FormData ? data : JSON.stringify(data))
       }
     });
   };

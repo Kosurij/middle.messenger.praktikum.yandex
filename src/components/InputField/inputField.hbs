@@ -2,12 +2,11 @@
   <input
       type={{ type }}
       id={{ id }}
-      class="inputField__input"
-      placeholder={{ label }}
+      class="inputField__input {{#if customClass}}{{ customClass }}__input{{/if}}"
+      {{#if label}}placeholder={{ label }}{{/if}}
+      {{#if accept}}accept={{ accept }}{{/if}}
       name={{ name }}
       value="{{ value }}"
-      {{ required }}
-      title={{ title }}
   />
   <label for={{ id }} class="inputField__label">{{ label }}</label>
 </div>

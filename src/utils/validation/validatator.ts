@@ -11,6 +11,7 @@ export enum FIELD_NAMES {
   password = "password",
   phone = "phone",
   message = "message",
+  avatar = "avatar"
 }
 
 const VALIDATION_FIELDS: Record<TFieldNamesKeys, { pattern: RegExp, info: string }> = {
@@ -54,6 +55,10 @@ const VALIDATION_FIELDS: Record<TFieldNamesKeys, { pattern: RegExp, info: string
     pattern: /^(?=.*?([A-Z]))(?=.*?\d)(\w|-|_){8,40}$/,
     info: 'Пароль должен содержать 8-40 символов: заглавную букву и цифру'
   },
+  [FIELD_NAMES.avatar]: {
+    pattern: /(.|\s)*\S(.|\s)*$/,
+    info: "Вы должны выбрать файл",
+  },
 };
 
 const highlightErrors = (errors: TErrors, selector = '.inputField', errorClass = 'inputField-error') => {
@@ -71,7 +76,8 @@ const highlightErrors = (errors: TErrors, selector = '.inputField', errorClass =
   });
 };
 
-const validateFormData = ([fieldName, value]: TFormData): boolean => VALIDATION_FIELDS[fieldName].pattern.test(value);
+const validateFormData = ([fieldName, value]: TFormData): boolean =>
+  VALIDATION_FIELDS[fieldName].pattern.test(value instanceof File ? value.name : value)
 
 const validateInput = ({ name, value } : TInput) => VALIDATION_FIELDS[name].pattern.test(value);
 

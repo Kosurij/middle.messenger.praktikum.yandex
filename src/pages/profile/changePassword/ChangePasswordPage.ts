@@ -1,5 +1,4 @@
 import Block from "/src/utils/Block";
-import { ProfileHeader } from "/src/pages/profile/components/ProfileHeader/ProfileHeader";
 import { ProfileSidebar } from "/src/pages/profile/components/ProfileSidebar/ProfileSidebar";
 import { Button, InputFiled } from "/src/components";
 import template from "./changePassword.hbs";
@@ -10,8 +9,6 @@ import UserController from "/src/controllers/UserController";
 
 export class ChangePasswordPage extends Block {
   protected initChildren() {
-    this.children.profileHeader = new ProfileHeader();
-
     this.children.sidebar = new ProfileSidebar();
 
     this.children.oldPasswordField = new InputFiled({
