@@ -1,12 +1,18 @@
 <div class="messagesContainer">
   {{#if selectedChat }}
       <div class="messages">
-        <div class="messages__userInfo">
-          <div class="messages__userInfo__avatar">
-            <img src={{{ chatInfo.avatar }}} alt="userAvatar">
+        <div class="messages__toolbar">
+          <div class="toolbar__chatInfo">
+            <div class="toolbar__chatInfo__avatar">
+              <img src={{{ chatInfo.avatar }}} alt="chatAvatar">
+            </div>
+            <div class="toolbar__chatInfo__name">
+              {{{ chatInfo.title }}}
+            </div>
+
           </div>
-          <div class="messages__userInfo__name">
-            {{{ chatInfo.title }}}
+          <div class="toolbar__actionButton">
+            {{{ dropdown }}}
           </div>
         </div>
         <div class="messages__list">

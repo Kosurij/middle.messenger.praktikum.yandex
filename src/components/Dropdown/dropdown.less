@@ -1,0 +1,30 @@
+@import url('/src/styles/variables');
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  color: @text-color;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  bottom: -110px;
+  min-width: 210px;
+  border-radius: 12px;
+  box-shadow: 0 0 6px rgba(@box-shadow-color);
+  padding: 15px;
+}
+
+.content__item {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}

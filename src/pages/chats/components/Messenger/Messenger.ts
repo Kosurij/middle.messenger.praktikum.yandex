@@ -6,6 +6,7 @@ import { IChatInfo, ID, IMessage } from "/src/types";
 import { withStore } from "/src/hocs/withStore";
 import defaultChatAvatar from '/static/defaultGroup.svg'
 import { Message } from "/src/pages/chats/components/Messenger/components/Message/Message";
+import { Button, Dropdown } from "/src/components";
 
 interface IMessagesProps {
   selectedChat: number | undefined;
@@ -22,7 +23,24 @@ export class MessengerBase extends Block<IMessagesProps> {
   protected init() {
     this.children.messages = this.createMessages(this.props);
 
+    this.children.dropdown = new Dropdown({
+      element: new Button({
+        label: '',
+        type: 'button',
+        customClass: 'toolbar__actionButton__button',
+        events: {
+          click: () => this.toggleDropdown()
+        }
+      })
+    })
+
     this.children.messageForm = new MessageForm();
+  }
+
+  toggleDropdown() {
+    const content = document.querySelector('.dropdown-content');
+
+    content!.classList.toggle('visible')
   }
 
   protected componentDidUpdate(oldProps: IMessagesProps, newProps: IMessagesProps): boolean {
@@ -65,16 +83,12 @@ const withSelectedChatMessages = withStore(state => {
     };
   }
 
-  const obj = {
+  return {
     messages: (state.messages || {})[selectedChatId] || [],
     selectedChat: state.selectedChat,
     userId: state.user.id,
     chatInfo: {...chatInfo, avatar: chatInfo.avatar === null ? defaultChatAvatar : chatInfo.avatar}
   };
-
-  console.log('obj', obj);
-
-  return obj;
 });
 
 export const Messenger = withSelectedChatMessages(MessengerBase);

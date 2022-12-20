@@ -19,7 +19,6 @@ interface IChatProps {
 class ChatBase extends Block<IChatProps> {
   constructor(props: IChatProps) {
     super(props);
-    console.log('props', props);
   }
 
   protected render() {
