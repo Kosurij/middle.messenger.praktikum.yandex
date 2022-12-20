@@ -2,17 +2,16 @@ import Block from "/src/utils/Block";
 import template from "./messenger.hbs";
 import styles from "./messenger.less";
 import { MessageForm } from "./components/MessageInputForm/MessageForm";
-import { ID, IMessage } from "/src/types";
+import { IChatInfo, ID, IMessage } from "/src/types";
 import { withStore } from "/src/hocs/withStore";
+import defaultChatAvatar from '/static/defaultGroup.svg'
 import { Message } from "/src/pages/chats/components/Messenger/components/Message/Message";
 
 interface IMessagesProps {
-  // userName: string;
-  // date: string | Date;
-  // userAvatar: string;
   selectedChat: number | undefined;
   messages: IMessage[];
   userId: ID;
+  chatInfo: IChatInfo;
 }
 
 export class MessengerBase extends Block<IMessagesProps> {
@@ -44,9 +43,10 @@ export class MessengerBase extends Block<IMessagesProps> {
 
   protected render() {
     return this.compile(template, {
-      // userName: this.props.userName,
-      // userAvatar: this.props.userAvatar,
+      chatInfo: this.props.chatInfo,
+      selectedChat: this.props.selectedChat,
       messages: this.props.messages,
+      userId:  this.props.userId,
       styles,
     });
   }
@@ -54,20 +54,27 @@ export class MessengerBase extends Block<IMessagesProps> {
 
 const withSelectedChatMessages = withStore(state => {
   const selectedChatId = state.selectedChat;
+  const chatInfo = (state.chats || []).filter((chat: IChatInfo) => chat.id === selectedChatId)[0];
 
   if (!selectedChatId) {
     return {
       messages: [],
       selectedChat: undefined,
-      userId: state.user.id
+      userId: state.user.id,
+      chatInfo: {},
     };
   }
 
-  return {
+  const obj = {
     messages: (state.messages || {})[selectedChatId] || [],
     selectedChat: state.selectedChat,
-    userId: state.user.id
+    userId: state.user.id,
+    chatInfo: {...chatInfo, avatar: chatInfo.avatar === null ? defaultChatAvatar : chatInfo.avatar}
   };
+
+  console.log('obj', obj);
+
+  return obj;
 });
 
 export const Messenger = withSelectedChatMessages(MessengerBase);

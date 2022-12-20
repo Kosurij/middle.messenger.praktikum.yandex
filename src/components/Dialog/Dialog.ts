@@ -7,6 +7,7 @@ interface IDialog {
   content: Block;
   cancel: Block;
   submit: Block;
+  contentFullWidth?: boolean;
 }
 
 class Dialog extends Block<IDialog> {

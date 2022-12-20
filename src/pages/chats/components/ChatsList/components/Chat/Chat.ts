@@ -3,10 +3,12 @@ import template from './chat.hbs';
 import styles from './chat.less';
 import { withStore } from "/src/hocs/withStore";
 import { IChatInfo, ID } from "/src/types";
+import defaultChatAvatar from "/static/defaultGroup.svg";
 
 interface IChatProps {
   id: ID;
   title: string;
+  avatar: string;
   unread_count: number;
   selectedChat: IChatInfo;
   events: {
@@ -17,12 +19,16 @@ interface IChatProps {
 class ChatBase extends Block<IChatProps> {
   constructor(props: IChatProps) {
     super(props);
+    console.log('props', props);
   }
 
   protected render() {
     return this.compile(template, {
-      ...this.props, isSelected: this.props.id === this.props.selectedChat?.id,
-      styles});
+      ...this.props,
+      isSelected: this.props.id === this.props.selectedChat?.id,
+      avatar: this.props.avatar === null ? defaultChatAvatar : this.props.avatar,
+      styles
+    });
   }
 }
 

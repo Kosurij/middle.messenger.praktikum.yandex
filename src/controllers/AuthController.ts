@@ -24,7 +24,7 @@ class AuthController extends BaseController {
 
       await this.getUser();
 
-      Router.go(ROUTES.INDEX);
+      Router.go(ROUTES.PROFILE);
 
       this.notificationText = 'Вы успешно зарегистрированы'
     })

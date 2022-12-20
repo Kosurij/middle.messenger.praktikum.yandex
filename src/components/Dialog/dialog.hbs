@@ -3,7 +3,7 @@
     <h3 class="dialog__title">
       {{ title }}
     </h3>
-    <div class="dialog__content">
+    <div class="dialog__content {{#if contentFullWidth}} dialog__content-fullWidth {{/if}}">
       {{{ content }}}
     </div>
     <div class="dialog__actions">

@@ -2,10 +2,10 @@ import Block from '/src/utils/Block';
 import { Link, Button, InputFiled } from '../../components';
 import { validateForm } from '/src/utils/validation/validateForm';
 import { ROUTES } from '/src/const/routes';
-import { ISignUpData } from "/src/types/authTypes";
 import AuthController from "/src/controllers/AuthController";
 import template from './registration.hbs';
 import styles from './registration.less';
+import { ISignUpData } from "/src/types";
 
 export class RegistrationPage extends Block {
   protected initChildren() {

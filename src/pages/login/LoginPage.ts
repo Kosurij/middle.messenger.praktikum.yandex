@@ -4,8 +4,8 @@ import { validateForm } from "/src/utils/validation/validateForm";
 import template from './loginPage.hbs';
 import styles from './login.less';
 import { ROUTES } from "/src/const/routes";
-import { ISignInData } from "/src/types/authTypes";
 import AuthController from "/src/controllers/AuthController";
+import { ISignInData } from "/src/types";
 
 export class LoginPage extends Block {
   protected initChildren() {

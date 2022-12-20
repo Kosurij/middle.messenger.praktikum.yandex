@@ -87,7 +87,9 @@ export class ProfileHeader extends Block {
 
     const { avatar } = userReducer(state);
 
-    ResourcesController.getResources(avatar);
+    if (avatar) {
+      ResourcesController.getResources(avatar);
+    }
   }
 
   protected render() {

@@ -11,6 +11,7 @@ export enum FIELD_NAMES {
   password = "password",
   phone = "phone",
   message = "message",
+  newChat = 'newChat',
   avatar = "avatar"
 }
 
@@ -42,6 +43,10 @@ const VALIDATION_FIELDS: Record<TFieldNamesKeys, { pattern: RegExp, info: string
   [FIELD_NAMES.message]: {
     pattern: /[\s\S]+/,
     info: 'Сообщение не должно быть пустым',
+  },
+  [FIELD_NAMES.newChat]: {
+    pattern: /[\s\S]+/,
+    info: 'Название чата не должно быть пустым',
   },
   [FIELD_NAMES.oldPassword]: {
     pattern: /^(?=.*?([A-Z]))(?=.*?\d)(\w|-|_){8,40}$/,
