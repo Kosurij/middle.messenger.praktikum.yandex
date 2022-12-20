@@ -1,0 +1,24 @@
+<div class="chat {{#if isSelected }}chat-selected{{/if}}" onclick={{{ onclick }}} >
+  <div class="chatIcon">
+    <img src={{{ avatar }}} alt="avatar">
+  </div>
+  <div class="chatInfo">
+    <div class="chatInfo__name">
+      {{{ lastMessage.title }}}
+    </div>
+    <div class="chatInfo__lastMessage">
+      {{{ lastMessage.content }}}
+    </div>
+  </div>
+  <div class="chatSubInfo">
+    <div class="chatSubInfo__date">
+      {{{ lastMessage.time }}}
+    </div>
+
+    {{#if unread_count }}
+      <div class="chatSubInfo__unreadCount">
+        {{{ unread_count }}}
+      </div>
+    {{/if}}
+  </div>
+</div>

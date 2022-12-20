@@ -1,0 +1,8 @@
+<div class="message {{#if isMine}} message-got {{else}} message-sent {{/if}}">
+  <div class="message__content">
+   {{{ content  }}}
+  </div>
+  <div class="message__time  {{#if isMine}} message__time-got {{else}} message__time-sent {{/if}}">
+    {{{ time }}}
+  </div>
+</div>

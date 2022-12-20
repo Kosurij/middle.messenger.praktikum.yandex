@@ -1,14 +1,17 @@
 @import url('/src/styles/variables');
 
-.chatCard {
-  margin: 0 10px;
+.chat {
   padding: 15px 7px;
   color: @secondary-color;
   display: flex;
   border-bottom: 1px solid @border-color-1;
   cursor: pointer;
 
-  &:hover {
+  &-selected {
+    background-color: rgba(@primary-color, .7);
+  }
+
+  &:hover:not(&-selected) {
     background-color: @opacity-secondary;
   }
 }
@@ -49,7 +52,7 @@
   font-size: 12px;
   font-weight: 500;
 
-  &__newMessages {
+  &__unreadCount {
     width: 20px;
     height: 20px;
     background-color: @primary-color;

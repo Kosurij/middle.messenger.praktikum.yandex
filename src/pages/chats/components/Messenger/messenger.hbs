@@ -1,0 +1,28 @@
+<div class="messagesContainer">
+  {{#if selectedChat }}
+      <div class="messages">
+        <div class="messages__userInfo">
+          <div class="messages__userInfo__avatar">
+            <img src={{{ userAvatar }}} alt="userAvatar">
+          </div>
+          <div class="messages__userInfo__name">
+            {{{ userName }}}
+          </div>
+        </div>
+        <div class="messages__list">
+          <div class="chat__date">
+            {{{ date }}}
+          </div>
+          <div class="chat_messages">
+            {{{ messages }}}
+          </div>
+        </div>
+      </div>
+      {{{ messageForm }}}
+    {{else}}
+      <div class="messages-empty">
+        Выберите чат, чтобы отправить сообщение
+      </div>
+    {{/if}}
+</div>
+

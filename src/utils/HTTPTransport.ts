@@ -58,7 +58,7 @@ export default class HTTPTransport {
     });
   };
 
-  public get<Response>(path = '/'): Promise<Response> {
+  public get<Response>(path = ''): Promise<Response> {
     return this.request<Response>(this.endpoint + path);
   };
 
@@ -76,9 +76,10 @@ export default class HTTPTransport {
     });
   };
 
-  public delete<Response = void>(path: string): Promise<Response> {
+  public delete<Response = void>(path: string, data?: TData): Promise<Response> {
     return this.request<Response>(this.endpoint + path, {
       method: METHODS.DELETE,
+      data ,
     });
   };
 }

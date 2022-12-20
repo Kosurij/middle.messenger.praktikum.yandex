@@ -1,5 +1,9 @@
 <div class="chatsList">
-  {{#each chatList}}
-    {{{ this }}}
+  {{#if chats }}
+  {{#each chats}}
+    {{{this}}}
   {{/each}}
+  {{ else }}
+    Нет чатов
+  {{/if}}
 </div>

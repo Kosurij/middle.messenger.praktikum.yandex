@@ -1,5 +1,7 @@
 import { FIELD_NAMES } from "/src/utils/validation/validatator";
 
+export type ID = string | number;
+
 export interface ISignInData {
   login: string;
   password: string;
@@ -15,7 +17,7 @@ export interface ISignUpData {
 }
 
 export interface IUser {
-  id: number;
+  id: ID;
   first_name: string;
   second_name: string;
   login: string;
@@ -43,3 +45,32 @@ export type TFormData = [TFieldNamesKeys, string | File];
 export type TInput = { name: TFieldNamesKeys, value: string }
 
 export type TErrors = Partial<Record<string, boolean>>;
+
+export interface IChatInfo {
+  id: ID;
+  title: string;
+  avatar: string;
+  unread_count: number;
+  last_message: {
+    user: IUser,
+    time: string;
+    content: string;
+  }
+}
+
+export interface IMessage {
+  chat_id: ID;
+  time: string;
+  type: string;
+  user_id: ID;
+  content: string;
+  file?: {
+    id: ID;
+    user_id: ID;
+    path: string;
+    filename: string;
+    content_type: string;
+    content_size: number;
+    upload_date: string;
+  }
+}
