@@ -3,7 +3,8 @@ import { ROUTES } from '/src/const/routes';
 import Router from '/src/utils/Router'
 import BaseController from "/src/controllers/BaseController";
 import AuthController from "/src/controllers/AuthController";
-import { IPassword, TAvatar, TProfile } from "/src/types";
+import { IPassword, IUser, TAvatar, TProfile } from "/src/types";
+import store from "/src/utils/Store";
 
 class UserController extends BaseController {
   private readonly api = new UserApi();
@@ -52,6 +53,14 @@ class UserController extends BaseController {
 
   async getUser() {
     await AuthController.getUser()
+  }
+
+  async searchUser(data: Pick<IUser, 'login'>) {
+    await this.makeRequest(async () => {
+      const user = await this.api.searchUser(data);
+
+      store.set(`${this.storePath}.searchedUser`, user);
+    })
   }
 }
 

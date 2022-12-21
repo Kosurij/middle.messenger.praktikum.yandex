@@ -6,7 +6,8 @@ import { IChatInfo, ID, IMessage } from "/src/types";
 import { withStore } from "/src/hocs/withStore";
 import defaultChatAvatar from '/static/defaultGroup.svg'
 import { Message } from "/src/pages/chats/components/Messenger/components/Message/Message";
-import { Button, Dropdown } from "/src/components";
+import { Button } from "/src/components";
+import Dropdown from "./components/Dropdown/Dropdown";
 
 interface IMessagesProps {
   selectedChat: number | undefined;
@@ -72,7 +73,7 @@ export class MessengerBase extends Block<IMessagesProps> {
 
 const withSelectedChatMessages = withStore(state => {
   const selectedChatId = state.selectedChat;
-  const chatInfo = (state.chats || []).filter((chat: IChatInfo) => chat.id === selectedChatId)[0];
+  const chatInfo = (state.chats?.data || []).filter((chat: IChatInfo) => chat.id === selectedChatId)[0];
 
   if (!selectedChatId) {
     return {

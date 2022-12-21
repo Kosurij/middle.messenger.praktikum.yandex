@@ -18,6 +18,10 @@ export class UserApi extends BaseAPI {
     return this.http.put('/password', data);
   }
 
+  searchUser(data: Pick<IUser, 'login'>) {
+    return this.http.post('/search', data);
+  }
+
   update = undefined;
   read = undefined;
   create = undefined;

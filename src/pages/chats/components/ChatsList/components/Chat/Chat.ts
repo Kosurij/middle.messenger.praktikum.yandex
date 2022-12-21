@@ -31,6 +31,6 @@ class ChatBase extends Block<IChatProps> {
   }
 }
 
-export const withSelectedChat = withStore(state => ({selectedChat: (state.chats || []).find(({id}: IChatInfo) => id === state.selectedChat)}));
+export const withSelectedChat = withStore(state => ({selectedChat: (state.chats?.data || []).find(({id}: IChatInfo) => id === state.selectedChat)}));
 
 export const Chat = withSelectedChat(ChatBase);

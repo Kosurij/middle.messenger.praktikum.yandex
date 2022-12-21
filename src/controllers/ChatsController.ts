@@ -1,7 +1,7 @@
 import BaseController from "/src/controllers/BaseController";
 import store from "/src/utils/Store";
 import { ChatsApi } from "/src/api/ChatsApi";
-import { ID } from "/src/types";
+import { ID, IUser } from "/src/types";
 
 class ChatsController extends BaseController {
   private readonly api = new ChatsApi();
@@ -16,37 +16,61 @@ class ChatsController extends BaseController {
     this.storePath = storePath;
   }
 
-
   async getChats() {
-    const chats = await this.api.read();
+    await this.makeRequest(async () => {
+      const chats = await this.api.read();
 
-    // chats.map(async (chat) => {
-    //   const token = await this.getToken(chat.id);
-    //
-    //   await MessagesController.connect(chat.id, token);
-    // });
+      // chats.map(async (chat) => {
+      //   const token = await this.getToken(chat.id);
+      //
+      //   await MessagesController.connect(chat.id, token);
+      // });
 
-    store.set('chats', chats)
+      store.set('chats.data', chats)
+    })
   }
 
   async create(title: string) {
-    await this.api.create(title);
+    await this.makeRequest(async () => {
+      await this.api.create(title);
 
-    this.getChats();
+      this.getChats();
+    })
   }
 
   async delete(id: ID) {
-    await this.api.delete(id);
+    await this.makeRequest(async () => {
+      await this.api.delete(id);
 
-    this.getChats();
+      this.getChats();
+    })
   }
 
-  addUserToChat(id: ID, userId: ID) {
-    this.api.addUsers(id, [userId]);
+  async addUserToChat(id: ID, user: IUser) {
+    await this.makeRequest(async () => {
+      const { id: userId, login } = user;
+
+      await this.api.addUsers(id, [userId]);
+
+      this.notificationText = `Пользователь ${login} успешно добавлен`
+    })
   }
 
-  getToken(id: ID) {
-    return this.api.getToken(id);
+  async deleteUserFromChat(id: ID, user: IUser) {
+    await this.makeRequest(async () => {
+      const { id: userId, login } = user;
+
+      await this.api.deleteUsers(id, [userId]);
+
+      this.notificationText = `Пользователь ${login} успешно удален`
+    })
+  }
+
+
+  async getToken(id: ID) {
+    await this.makeRequest(async () => {
+      return this.api.getToken(id);
+    })
   }
 
   selectChat(id: ID) {
