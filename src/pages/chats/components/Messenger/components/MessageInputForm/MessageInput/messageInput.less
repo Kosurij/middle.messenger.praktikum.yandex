@@ -1,0 +1,27 @@
+@import url('/src/styles/variables');
+
+.messageInput {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 0 10px;
+
+  &__input {
+    width: 100%;
+    border: 1px solid @border-color-1;
+    background: @background-color-2;
+    border-radius: 30px;
+    outline: 0;
+    padding: 10px 20px;
+    color: @text-color;
+
+    &::placeholder {
+      color: @secondary-color;
+    }
+
+    &:focus {
+      background-color: @background-color;
+      border-color: @primary-color;
+    }
+  }
+}

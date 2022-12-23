@@ -11,6 +11,8 @@
     "noUnusedParameters": true,
     "sourceMap": true,
     "strictNullChecks": true,
+    "outDir": "dist",
+    "declaration": false,
     "lib": [
       "ESNext",
       "DOM",

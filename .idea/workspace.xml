@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="d1d11500-9420-42ea-a59d-c99902836c0f" name="Changes" comment="Прогнаны линтеры">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="TypeScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectId" id="2I6WJ5SNGeiUh6KLI2zpE7jPa7c" />
+  <component name="ProjectLevelVcsManager">
+    <OptionsSetting value="false" id="Update" />
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "ToolWindowRun.ShowToolbar": "false",
+    "WebServerToolWindowFactoryState": "false",
+    "last.edited.regexp": "731231231",
+    "last_opened_file_path": "C:/Users/kosur/Desktop/projects/middle.messenger.praktikum.yandex/src/components/IconButton",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "ts.external.directory.path": "C:\\Users\\kosur\\Desktop\\projects\\middle.messenger.praktikum.yandex\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\kosur\Desktop\projects\middle.messenger.praktikum.yandex\src\components\IconButton" />
+      <recent name="C:\Users\kosur\Desktop\projects\middle.messenger.praktikum.yandex\src\api" />
+      <recent name="C:\Users\kosur\Desktop\projects\middle.messenger.praktikum.yandex\src\controllers" />
+      <recent name="C:\Users\kosur\Desktop\projects\middle.messenger.praktikum.yandex\src\components\FileInput" />
+    </key>
+  </component>
+  <component name="RunManager" selected="npm.start">
+    <configuration name="dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="lint:fix" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="lint:fix" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="lint:less:fix" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="lint:less:fix" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="ts" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="ts" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.start" />
+        <item itemvalue="npm.dev" />
+        <item itemvalue="npm.ts" />
+        <item itemvalue="npm.lint:less:fix" />
+        <item itemvalue="npm.lint:fix" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d1d11500-9420-42ea-a59d-c99902836c0f" name="Changes" comment="" />
+      <created>1669502445649</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1669502445649</updated>
+      <workItem from="1669502450276" duration="635000" />
+      <workItem from="1669556831311" duration="11318000" />
+      <workItem from="1669617110850" duration="743000" />
+      <workItem from="1669726302692" duration="602000" />
+      <workItem from="1669727160042" duration="693000" />
+      <workItem from="1669740673216" duration="15000" />
+      <workItem from="1669818725550" duration="1199000" />
+      <workItem from="1669870476866" duration="363000" />
+      <workItem from="1670244492822" duration="607000" />
+      <workItem from="1670319844323" duration="3976000" />
+      <workItem from="1670419332420" duration="479000" />
+      <workItem from="1670443703625" duration="513000" />
+      <workItem from="1670475480202" duration="595000" />
+      <workItem from="1670480839521" duration="834000" />
+      <workItem from="1670854789401" duration="13384000" />
+      <workItem from="1670933784683" duration="7377000" />
+      <workItem from="1670992059728" duration="1361000" />
+      <workItem from="1670993461248" duration="149000" />
+      <workItem from="1670994177922" duration="402000" />
+      <workItem from="1670996021801" duration="8561000" />
+      <workItem from="1671022952479" duration="3567000" />
+      <workItem from="1671035678109" duration="7856000" />
+      <workItem from="1671083025813" duration="16928000" />
+      <workItem from="1671133867806" duration="8203000" />
+      <workItem from="1671168721759" duration="9017000" />
+      <workItem from="1671188127398" duration="3163000" />
+      <workItem from="1671197736183" duration="2667000" />
+      <workItem from="1671207064768" duration="500000" />
+      <workItem from="1671207689159" duration="1000" />
+      <workItem from="1671221479585" duration="1195000" />
+      <workItem from="1671222728116" duration="960000" />
+      <workItem from="1671273342290" duration="4996000" />
+      <workItem from="1671422868260" duration="7970000" />
+      <workItem from="1671506742759" duration="9533000" />
+      <workItem from="1671549095765" duration="8139000" />
+      <workItem from="1671772242543" duration="11175000" />
+    </task>
+    <task id="LOCAL-00001" summary="Обновлен netlify.toml">
+      <created>1669502710525</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1669502710526</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Убран бесячий engines">
+      <created>1669502790885</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1669502790885</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Скорректирован ридми">
+      <created>1669503006110</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1669503006110</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Поле версия ноды перенесена в .nvmrc&#10;Исправлена валидация.&#10;События focusin/focusout сразу добавляются в классе InputField.&#10;Убраны лишние логи и div.">
+      <created>1669610217506</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1669610217506</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Скорректирована переменная PORT">
+      <created>1669610372701</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1669610372701</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Скорректирована переменная PORT">
+      <created>1669611335776</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1669611335776</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Временно удален .nvmrc">
+      <created>1669611813638</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1669611813638</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Добавлен favicon.&#10;Скорректирована валидация: выводятся понятные пользователю ошибки.&#10;Добавлен класс роутера и изменен роутинг.">
+      <created>1670942033920</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1670942033920</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Добавлена:&#10;авторизацию в полном объеме (регистрация, авторизация, выход из системы);&#10;работу с информацией пользователя (изменять данные пользователя, изменять пароль);">
+      <created>1671122972488</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1671122972488</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Добавлено уведомление.">
+      <created>1671130201704</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1671130201704</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Header вынесен в самостоятельный блок.">
+      <created>1671181466563</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1671181466563</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Добавлено обновление аватара.">
+      <created>1671183791542</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1671183791542</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Аватарка изменяется без перезагрузки страницы.">
+      <created>1671200135022</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1671200135022</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Убрано сравнение isEqual">
+      <created>1671222923763</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1671222923763</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Переделана структура чата">
+      <created>1671508081219</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1671508081219</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Добавлена работа с чатами.">
+      <created>1671515759513</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1671515759513</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Подключены вебсокеты">
+      <created>1671790116863</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1671790116863</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Прогнаны линтеры">
+      <created>1671791118849</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1671791118849</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Обновлен netlify.toml" />
+    <MESSAGE value="Убран бесячий engines" />
+    <MESSAGE value="Скорректирован ридми" />
+    <MESSAGE value="Поле версия ноды перенесена в .nvmrc&#10;Исправлена валидация.&#10;События focusin/focusout сразу добавляются в классе InputField.&#10;Убраны лишние логи и div." />
+    <MESSAGE value="Скорректирована переменная PORT" />
+    <MESSAGE value="Временно удален .nvmrc" />
+    <MESSAGE value="Добавлен favicon.&#10;Скорректирована валидация: выводятся понятные пользователю ошибки.&#10;Добавлен класс роутера и изменен роутинг." />
+    <MESSAGE value="Добавлена:&#10;авторизацию в полном объеме (регистрация, авторизация, выход из системы);&#10;работу с информацией пользователя (изменять данные пользователя, изменять пароль);" />
+    <MESSAGE value="Добавлено уведомление." />
+    <MESSAGE value="Header вынесен в самостоятельный блок." />
+    <MESSAGE value="Добавлено обновление аватара." />
+    <MESSAGE value="Аватарка изменяется без перезагрузки страницы." />
+    <MESSAGE value="Убрано сравнение isEqual" />
+    <MESSAGE value="Переделана структура чата" />
+    <MESSAGE value="Добавлена работа с чатами." />
+    <MESSAGE value="Добавлена возможность добавления/удаления пользователя" />
+    <MESSAGE value="Подключены вебсокеты" />
+    <MESSAGE value="Прогнаны линтеры" />
+    <option name="LAST_COMMIT_MESSAGE" value="Прогнаны линтеры" />
+  </component>
+</project>

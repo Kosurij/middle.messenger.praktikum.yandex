@@ -1,11 +1,11 @@
 import Block from '/src/utils/Block';
 import { Button, InputFiled, Link } from '/src/components';
-import { RegistrationPage } from "/src/pages/registration/RegistrationPage";
-import { ChatsPage } from "/src/pages/chats/ChatsPage";
-import { renderDOM } from "/src/utils/renderDOM";
 import { validateForm } from "/src/utils/validation/validateForm";
 import template from './loginPage.hbs';
 import styles from './login.less';
+import { ROUTES } from "/src/const/routes";
+import AuthController from "/src/controllers/AuthController";
+import { ISignInData } from "/src/types";
 
 export class LoginPage extends Block {
   protected initChildren() {
@@ -27,43 +27,31 @@ export class LoginPage extends Block {
       label: 'Авторизоваться',
       type: 'submit',
       events: {
-        click: () => {
-          const form = document.querySelector('#login-form') as HTMLFormElement;
-
-          form.onsubmit = (e) => validateForm(e);
-        },
+        click: () => this.onSubmit(),
       },
     });
 
     this.children.registerLink = new Link({
       text: 'Нет аккаунта?',
       type: 'medium',
-      url: '/registration',
-      events: {
-        click: (e) => {
-          const registrationPage = new RegistrationPage();
-
-          e.preventDefault();
-
-          renderDOM(registrationPage);
-        },
-      },
+      to: ROUTES.REGISTRATION,
     });
+  }
 
-    this.children.chatsLink = new Link({
-      text: 'К чатам',
-      type: 'medium',
-      url: '/chats',
-      events: {
-        click: (e) => {
-          const chatsPage = new ChatsPage();
+  onSubmit() {
+    const form = document.querySelector('#login-form') as HTMLFormElement;
 
-          e.preventDefault();
+    form.onsubmit = (e) => {
+      e.preventDefault();
 
-          renderDOM(chatsPage);
-        },
-      },
-    });
+      const formData = new FormData(e.target as HTMLFormElement);
+
+      if (validateForm(formData)) {
+        const data = Object.fromEntries(formData.entries()) as unknown as ISignInData;
+
+        AuthController.signIn(data);
+      }
+    };
   }
 
   protected render() {

@@ -1,10 +1,11 @@
-import Block from "/src/utils/Block";
+import Block from '/src/utils/Block';
 import { Link, Button, InputFiled } from '../../components';
+import { validateForm } from '/src/utils/validation/validateForm';
+import { ROUTES } from '/src/const/routes';
+import AuthController from "/src/controllers/AuthController";
 import template from './registration.hbs';
 import styles from './registration.less';
-import { LoginPage } from "/src/pages/login/LoginPage";
-import { renderDOM } from "/src/utils/renderDOM";
-import { validateForm } from "/src/utils/validation/validateForm";
+import { ISignUpData } from "/src/types";
 
 export class RegistrationPage extends Block {
   protected initChildren() {
@@ -50,39 +51,35 @@ export class RegistrationPage extends Block {
       name: 'password',
     });
 
-    this.children.repeatPasswordField = new InputFiled({
-      type: 'password',
-      id: 'registration-form__repeatPassword',
-      label: 'Пароль (еще раз)',
-      name: 'repeatPassword',
-    });
-
     this.children.registerButton = new Button({
       label: 'Зарегистрироваться',
       type: 'submit',
       events: {
-        click: () => {
-          const form = document.querySelector('#registration-form') as HTMLFormElement;
-
-          form.onsubmit = (e) => validateForm(e);
-        },
+        click: () => this.onSubmit(),
       },
     });
 
     this.children.loginLink = new Link({
       text: 'Войти',
       type: 'medium',
-      url: '/',
-      events: {
-        click: (e) => {
-          const loginPage = new LoginPage();
-
-          e.preventDefault();
-
-          renderDOM(loginPage);
-        },
-      },
+      to: ROUTES.INDEX,
     });
+  }
+
+  onSubmit() {
+    const form = document.querySelector('#registration-form') as HTMLFormElement;
+
+    form.onsubmit = (e) => {
+      e.preventDefault();
+
+      const data = new FormData(e.target as HTMLFormElement);
+
+      if (validateForm(data)) {
+        const formData = Object.fromEntries(data.entries()) as unknown as ISignUpData;
+
+        AuthController.signUp(formData);
+      }
+    };
   }
 
   protected render() {
