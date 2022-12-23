@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="24d02a40-6d8c-41f4-ae23-f4676c785222" name="Changes" comment="Скорректирован жсдок">
+    <list default="true" id="24d02a40-6d8c-41f4-ae23-f4676c785222" name="Changes" comment="Изменен package.json и netlify.toml">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/netlify.toml" beforeDir="false" afterPath="$PROJECT_DIR$/netlify.toml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -70,12 +71,12 @@
       <recent name="C:\Users\kosur\Desktop\projects\middle.messenger.praktikum.yandex\src\components\FileInput" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.lint:less:fix">
-    <configuration name="dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="npm.build">
+    <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
       <scripts>
-        <script value="dev" />
+        <script value="build" />
       </scripts>
       <node-interpreter value="project" />
       <envs />
@@ -123,11 +124,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.build" />
         <item itemvalue="npm.lint:less:fix" />
         <item itemvalue="npm.ts" />
         <item itemvalue="npm.start" />
         <item itemvalue="npm.lint:fix" />
-        <item itemvalue="npm.dev" />
       </list>
     </recent_temporary>
   </component>
@@ -330,7 +331,21 @@
       <option name="project" value="LOCAL" />
       <updated>1671793614515</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Изменен package.json и netlify.toml">
+      <created>1671793823241</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1671793823241</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Изменен package.json и netlify.toml">
+      <created>1671794020923</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1671794020923</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -371,6 +386,7 @@
     <MESSAGE value="Файлу .stylelintrc добавлено расширение json" />
     <MESSAGE value="Добавлены игноры" />
     <MESSAGE value="Скорректирован жсдок" />
-    <option name="LAST_COMMIT_MESSAGE" value="Скорректирован жсдок" />
+    <MESSAGE value="Изменен package.json и netlify.toml" />
+    <option name="LAST_COMMIT_MESSAGE" value="Изменен package.json и netlify.toml" />
   </component>
 </project>
