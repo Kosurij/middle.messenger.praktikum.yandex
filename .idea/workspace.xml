@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="49e820e1-3a51-44fe-8506-7883e310fca6" name="Changes" comment="Стянуты изменения">
+    <list default="true" id="49e820e1-3a51-44fe-8506-7883e310fca6" name="Changes" comment="Поднята версия ноды до 16.18.1">
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -22,7 +22,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="deploy" />
+        <entry key="$PROJECT_DIR$" value="sprint_3" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -123,11 +123,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.build" />
-        <item itemvalue="npm.lint:less:fix" />
         <item itemvalue="npm.ts" />
         <item itemvalue="npm.start" />
+        <item itemvalue="npm.lint:less:fix" />
         <item itemvalue="npm.lint:fix" />
+        <item itemvalue="npm.build" />
       </list>
     </recent_temporary>
   </component>
