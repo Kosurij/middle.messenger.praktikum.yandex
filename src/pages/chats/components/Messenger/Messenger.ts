@@ -4,7 +4,7 @@ import styles from "./messenger.less";
 import { MessageForm } from "./components/MessageInputForm/MessageForm";
 import { IChatInfo, ID, IMessage } from "/src/types";
 import { withStore } from "/src/hocs/withStore";
-import defaultChatAvatar from '/static/defaultGroup.svg'
+import defaultChatAvatar from '/static/defaultGroup.svg';
 import { Message } from "/src/pages/chats/components/Messenger/components/Message/Message";
 import { Button } from "/src/components";
 import Dropdown from "./components/Dropdown/Dropdown";
@@ -30,10 +30,10 @@ export class MessengerBase extends Block<IMessagesProps> {
         type: 'button',
         customClass: 'toolbar__actionButton__button',
         events: {
-          click: () => this.toggleDropdown()
-        }
-      })
-    })
+          click: () => this.toggleDropdown(),
+        },
+      }),
+    });
 
     this.children.messageForm = new MessageForm();
   }
@@ -41,7 +41,7 @@ export class MessengerBase extends Block<IMessagesProps> {
   toggleDropdown() {
     const content = document.querySelector('.dropdown-content');
 
-    content!.classList.toggle('visible')
+    content!.classList.toggle('visible');
   }
 
   protected componentDidUpdate(oldProps: IMessagesProps, newProps: IMessagesProps): boolean {
@@ -51,17 +51,15 @@ export class MessengerBase extends Block<IMessagesProps> {
       return true;
     }
 
-    return false
+    return false;
   }
 
   private createMessages(props: IMessagesProps) {
-    return props.messages.map(data => {
-      return new Message({
-        ...data,
-        isMine: props.userId === data.user_id,
-        time: `${new Date(data.time).getHours()}:${new Date(data.time).getMinutes()}`
-      });
-    })
+    return props.messages.map((data) => new Message({
+      ...data,
+      isMine: props.userId === data.user_id,
+      time: `${new Date(data.time).getHours()}:${new Date(data.time).getMinutes()}`,
+    }));
   }
 
   protected render() {
@@ -69,13 +67,13 @@ export class MessengerBase extends Block<IMessagesProps> {
       chatInfo: this.props.chatInfo,
       selectedChat: this.props.selectedChat,
       messages: this.props.messages,
-      userId:  this.props.userId,
+      userId: this.props.userId,
       styles,
     });
   }
 }
 
-const withSelectedChatMessages = withStore(state => {
+const withSelectedChatMessages = withStore((state) => {
   const selectedChatId = state.selectedChat;
   const chatInfo = (state.chats?.data || []).filter((chat: IChatInfo) => chat.id === selectedChatId)[0];
 
@@ -92,7 +90,7 @@ const withSelectedChatMessages = withStore(state => {
     messages: (state.messages || {})[selectedChatId] || [],
     selectedChat: state.selectedChat,
     userId: state.user.data.id,
-    chatInfo: {...chatInfo, avatar: chatInfo.avatar === null ? defaultChatAvatar : chatInfo.avatar}
+    chatInfo: { ...chatInfo, avatar: chatInfo.avatar === null ? defaultChatAvatar : chatInfo.avatar },
   };
 });
 

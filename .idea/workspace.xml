@@ -4,38 +4,54 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d1d11500-9420-42ea-a59d-c99902836c0f" name="Changes" comment="Добавлена возможность добавления/удаления пользователя">
-      <change afterPath="$PROJECT_DIR$/src/controllers/MessagesController.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/WSTransport.ts" afterDir="false" />
+    <list default="true" id="d1d11500-9420-42ea-a59d-c99902836c0f" name="Changes" comment="Подключены вебсокеты">
+      <change beforePath="$PROJECT_DIR$/.eslintrc.json" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/AuthApi.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/AuthApi.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/ChatsApi.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/ChatsApi.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/UserApi.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/UserApi.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/InputField/InputField.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/InputField/InputField.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Link/Link.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Link/Link.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/AuthController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/AuthController.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/BaseController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/BaseController.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controllers/ChatsController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/ChatsController.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/MessagesController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/MessagesController.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/ResourcesController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/ResourcesController.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/UserController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/UserController.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hocs/withRouter.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/hocs/withRouter.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hocs/withStore.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/hocs/withStore.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/chats/components/ChatsHeader/ChatsHeader.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/chats/components/ChatsHeader/ChatsHeader.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/chats/components/ChatsList/ChatsList.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/chats/components/ChatsList/ChatsList.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/chats/components/ChatsList/components/Chat/Chat.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/chats/components/ChatsList/components/Chat/Chat.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/chats/components/Messenger/Messenger.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/chats/components/Messenger/Messenger.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/chats/components/Messenger/components/Message/message.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/chats/components/Messenger/components/Message/message.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/chats/components/Messenger/components/Message/message.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/chats/components/Messenger/components/Message/message.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/chats/components/Messenger/components/Dropdown/Dropdown.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/chats/components/Messenger/components/Dropdown/Dropdown.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/chats/components/Messenger/components/MessageInputForm/MessageForm.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/chats/components/Messenger/components/MessageInputForm/MessageForm.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/chats/components/Messenger/components/MessageInputForm/MessageInput/MessageInput.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/chats/components/Messenger/components/MessageInputForm/MessageInput/MessageInput.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/chats/components/Messenger/components/MessageInputForm/MessageInput/messageInput.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/chats/components/Messenger/components/MessageInputForm/MessageInput/messageInput.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/chats/components/Messenger/messenger.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/chats/components/Messenger/messenger.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/chats/components/Messenger/messenger.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/chats/components/Messenger/messenger.less" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/login/LoginPage.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/login/LoginPage.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/profile/changePassword/ChangePasswordPage.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/profile/changePassword/ChangePasswordPage.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/profile/components/ProfileHeader/ProfileHeader.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/profile/components/ProfileHeader/ProfileHeader.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/profile/components/ProfileHeader/components/Avatar.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/profile/components/ProfileHeader/components/Avatar.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/profile/details/ProfileDetailsPage.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/profile/details/ProfileDetailsPage.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/profile/edit/ProfileEditPage.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/profile/edit/ProfileEditPage.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/profile/edit/components/ProfileEditForm/ProfileEditForm.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/profile/edit/components/ProfileEditForm/ProfileEditForm.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/Block.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/Block.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/registration/RegistrationPage.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/registration/RegistrationPage.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducers/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/HTTPTransport.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/HTTPTransport.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/Router.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/Router.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/utils/Store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/Store.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/WSTransport.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/WSTransport.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/helpers/isArray.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/helpers/isEqual.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/helpers/isEqual.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/helpers/merge.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/helpers/merge.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/helpers/set.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/helpers/set.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/validation/validatator.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/validation/validatator.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="ChangesViewManager">
-    <option name="groupingKeys">
-      <option value="directory" />
-    </option>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -136,13 +152,23 @@
       <envs />
       <method v="2" />
     </configuration>
+    <configuration name="ts" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="ts" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="npm.dev" />
-        <item itemvalue="npm.start" />
-        <item itemvalue="npm.start" />
+        <item itemvalue="npm.ts" />
         <item itemvalue="npm.lint:less:fix" />
         <item itemvalue="npm.lint:fix" />
+        <item itemvalue="npm.start" />
       </list>
     </recent_temporary>
   </component>
@@ -189,7 +215,7 @@
       <workItem from="1671422868260" duration="7970000" />
       <workItem from="1671506742759" duration="9533000" />
       <workItem from="1671549095765" duration="8139000" />
-      <workItem from="1671772242543" duration="9917000" />
+      <workItem from="1671772242543" duration="10868000" />
     </task>
     <task id="LOCAL-00001" summary="Обновлен netlify.toml">
       <created>1669502710525</created>
@@ -303,7 +329,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671515759513</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Подключены вебсокеты">
+      <created>1671790116863</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1671790116863</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -338,6 +371,7 @@
     <MESSAGE value="Переделана структура чата" />
     <MESSAGE value="Добавлена работа с чатами." />
     <MESSAGE value="Добавлена возможность добавления/удаления пользователя" />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавлена возможность добавления/удаления пользователя" />
+    <MESSAGE value="Подключены вебсокеты" />
+    <option name="LAST_COMMIT_MESSAGE" value="Подключены вебсокеты" />
   </component>
 </project>

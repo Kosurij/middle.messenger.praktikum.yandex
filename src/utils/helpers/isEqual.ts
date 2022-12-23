@@ -16,10 +16,12 @@ function isEqual(lhs: TPlainObject | string, rhs: TPlainObject | string) {
 
     for (const [key, value] of Object.entries(lhs)) {
       const rightValue = rhs[key];
+
       if (isArrayOrObject(value) && isArrayOrObject(rightValue)) {
         if (isEqual(value, rightValue)) {
           continue;
         }
+
         return false;
       }
 
@@ -32,4 +34,4 @@ function isEqual(lhs: TPlainObject | string, rhs: TPlainObject | string) {
   }
 }
 
-export default isEqual
+export default isEqual;

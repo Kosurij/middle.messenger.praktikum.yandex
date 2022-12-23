@@ -30,7 +30,7 @@ export class ChangePasswordPage extends Block {
       label: 'Сохранить',
       type: 'submit',
       events: {
-        click: () => this.onSubmit()
+        click: () => this.onSubmit(),
       },
     });
 
@@ -43,14 +43,14 @@ export class ChangePasswordPage extends Block {
     form.onsubmit = (e) => {
       e.preventDefault();
 
-      const formData = new FormData(e.target as HTMLFormElement)
+      const formData = new FormData(e.target as HTMLFormElement);
 
       if (validateForm(formData)) {
         const data = Object.fromEntries(formData.entries()) as unknown as IPassword;
 
-        UserController.changePassword(data)
+        UserController.changePassword(data);
       }
-    }
+    };
   }
 
   protected render() {

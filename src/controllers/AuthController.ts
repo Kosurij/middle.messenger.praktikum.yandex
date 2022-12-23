@@ -2,12 +2,14 @@ import { AuthApi } from '/src/api/AuthApi';
 import { ISignInData, ISignUpData } from '/src/types';
 import { ROUTES } from '/src/const/routes';
 import store from '/src/utils/Store';
-import Router from '/src/utils/Router'
+import Router from '/src/utils/Router';
 import BaseController from "/src/controllers/BaseController";
 
 class AuthController extends BaseController {
   private readonly api = new AuthApi();
+
   protected storePath: string;
+
   protected notificationText?: string;
 
   constructor() {
@@ -26,8 +28,8 @@ class AuthController extends BaseController {
 
       Router.go(ROUTES.PROFILE);
 
-      this.notificationText = 'Вы успешно зарегистрированы'
-    })
+      this.notificationText = 'Вы успешно зарегистрированы';
+    });
   }
 
   async signIn(data: ISignInData) {
@@ -37,7 +39,7 @@ class AuthController extends BaseController {
       await this.getUser();
 
       Router.go(ROUTES.PROFILE);
-    })
+    });
   }
 
   async logout() {
@@ -45,7 +47,7 @@ class AuthController extends BaseController {
       await this.api.logout();
 
       Router.go(ROUTES.INDEX);
-    })
+    });
   }
 
   async getUser() {

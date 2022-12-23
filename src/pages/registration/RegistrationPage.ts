@@ -55,7 +55,7 @@ export class RegistrationPage extends Block {
       label: 'Зарегистрироваться',
       type: 'submit',
       events: {
-        click: () => this.onSubmit()
+        click: () => this.onSubmit(),
       },
     });
 
@@ -72,12 +72,12 @@ export class RegistrationPage extends Block {
     form.onsubmit = (e) => {
       e.preventDefault();
 
-      const data = new FormData(e.target as HTMLFormElement)
+      const data = new FormData(e.target as HTMLFormElement);
 
       if (validateForm(data)) {
         const formData = Object.fromEntries(data.entries()) as unknown as ISignUpData;
 
-        AuthController.signUp(formData)
+        AuthController.signUp(formData);
       }
     };
   }

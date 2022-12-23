@@ -11,7 +11,7 @@ class MessagesController {
       return;
     }
 
-    const userId = userReducer(store.getState()).id
+    const userId = userReducer(store.getState()).id;
 
     const wsTransport = new WSTransport(`wss://ya-praktikum.tech/ws/chats/${userId}/${id}/${token}`);
 
@@ -43,11 +43,11 @@ class MessagesController {
       throw new Error(`Chat ${id} is not connected`);
     }
 
-    socket.send({type: 'get old', content: '0'});
+    socket.send({ type: 'get old', content: '0' });
   }
 
   closeAll() {
-    Array.from(this.transports.values()).forEach(transport => transport.close());
+    Array.from(this.transports.values()).forEach((transport) => transport.close());
   }
 
   private onMessage(id: number, messages: IMessage | IMessage[]) {

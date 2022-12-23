@@ -64,7 +64,7 @@ export class ProfileEditForm extends Block {
       label: 'Сохранить',
       type: 'submit',
       events: {
-        click: () => this.onSubmit()
+        click: () => this.onSubmit(),
       },
     });
   }
@@ -75,14 +75,14 @@ export class ProfileEditForm extends Block {
     form.onsubmit = (e) => {
       e.preventDefault();
 
-      const formData = new FormData(e.target as HTMLFormElement)
+      const formData = new FormData(e.target as HTMLFormElement);
 
       if (validateForm(formData)) {
         const data = Object.fromEntries(formData.entries()) as unknown as TProfile;
 
-        UserController.changeProfile(data)
+        UserController.changeProfile(data);
       }
-    }
+    };
   }
 
   protected render() {

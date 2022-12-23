@@ -29,31 +29,31 @@ export class ProfileHeader extends Block {
         name: 'avatar',
         value: this.props?.avatar,
         accept: 'image/*',
-        customClass: 'fileInput'
+        customClass: 'fileInput',
       }),
       submit: new Button({
         label: 'Сохранить',
         type: 'submit',
         events: {
-          click: () => this.onChangeAvatarSubmit()
-        }
+          click: () => this.onChangeAvatarSubmit(),
+        },
       }),
-      cancel:  new Button({
+      cancel: new Button({
         label: 'Отменить',
         type: 'button',
         isGhost: true,
         customClass: 'dialog__actions-cancel',
         events: {
-          click: () => this.closeDialog()
-        }
+          click: () => this.closeDialog(),
+        },
       }),
-    })
+    });
 
     this.children.avatar = new Avatar({
       events: {
-        click: () => this.showDialog()
-      }
-    })
+        click: () => this.showDialog(),
+      },
+    });
   }
 
   onChangeAvatarSubmit() {
@@ -62,7 +62,7 @@ export class ProfileHeader extends Block {
     form.onsubmit = async (e) => {
       e.preventDefault();
 
-      const formData = new FormData(e.target as HTMLFormElement)
+      const formData = new FormData(e.target as HTMLFormElement);
 
       if (validateForm(formData)) {
         await UserController.changeAvatar(formData);
@@ -71,7 +71,7 @@ export class ProfileHeader extends Block {
 
         this.changeAvatarState();
       }
-    }
+    };
   }
 
   showDialog() {
@@ -96,9 +96,9 @@ export class ProfileHeader extends Block {
     return this.compile(template, {
       first_name: this.userData.first_name,
       events: {
-        click: () => this.showDialog
+        click: () => this.showDialog,
       },
-      styles
+      styles,
     });
   }
 }

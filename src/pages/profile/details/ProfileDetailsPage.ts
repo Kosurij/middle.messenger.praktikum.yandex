@@ -47,10 +47,9 @@ export class ProfileDetailsPage extends Block {
       customClass: 'profile__action__logout',
       isGhost: true,
       events: {
-        click: () => AuthController.logout()
-      }
+        click: () => AuthController.logout(),
+      },
     });
-
   }
 
   protected render() {

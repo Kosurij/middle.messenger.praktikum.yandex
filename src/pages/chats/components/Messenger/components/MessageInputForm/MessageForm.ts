@@ -12,7 +12,7 @@ export class MessageForm extends Block {
       label: '',
       type: 'submit',
       events: {
-        click: () => this.sendMessage()
+        click: () => this.sendMessage(),
       },
       customClass: 'message-form__sendMessage',
     });
@@ -28,7 +28,7 @@ export class MessageForm extends Block {
 
       const { message } = Object.fromEntries(new FormData(e.target as HTMLFormElement).entries());
 
-      const input =this.element?.children[1].children[0] as HTMLInputElement;
+      const input = this.element?.children[1].children[0] as HTMLInputElement;
 
       if (message) {
         const { selectedChat } = store.getState();
@@ -37,9 +37,8 @@ export class MessageForm extends Block {
 
         input.value = '';
       }
-    }
+    };
   }
-
 
   protected render() {
     return this.compile(template, {

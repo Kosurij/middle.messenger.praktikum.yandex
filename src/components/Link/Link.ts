@@ -22,8 +22,8 @@ class BaseLink extends Block<ILinkProps> {
         click: (e) => {
           e!.preventDefault();
 
-          this.navigate()
-        }
+          this.navigate();
+        },
       },
     });
   }

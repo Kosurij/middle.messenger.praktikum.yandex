@@ -9,7 +9,6 @@ export function withStore(mapStateToProps: (state: any) => any) {
     let currentState: TPlainObject | null = null;
 
     return class WithStore extends Component {
-
       constructor(props: Props) {
         currentState = mapStateToProps(store.getState());
 
@@ -18,9 +17,9 @@ export function withStore(mapStateToProps: (state: any) => any) {
         store.on(StoreEvents.UPDATED, () => {
           const propsFromState: TPlainObject = mapStateToProps(store.getState());
 
-          this.setProps({ ...propsFromState })
-        })
+          this.setProps({ ...propsFromState });
+        });
       }
-    }
-  }
+    };
+  };
 }

@@ -1,5 +1,7 @@
 import Block from '/src/utils/Block';
-import { Button, Dialog, InputFiled, Link } from '/src/components';
+import {
+  Button, Dialog, InputFiled, Link,
+} from '/src/components';
 import { ROUTES } from '/src/const/routes';
 import template from './chatsHeader.hbs';
 import styles from './chatsHeader.less';
@@ -20,9 +22,9 @@ export class ChatsHeader extends Block {
       isGhost: true,
       customClass: 'chatsHeader__actionMenu__createChatButton',
       events: {
-        click: () => this.showDialog()
-      }
-    })
+        click: () => this.showDialog(),
+      },
+    });
 
     this.children.chatDialog = new Dialog({
       title: 'Новый чат',
@@ -31,25 +33,25 @@ export class ChatsHeader extends Block {
         label: 'Сохранить',
         type: 'submit',
         events: {
-          click: () => this.createNewChat()
-        }
+          click: () => this.createNewChat(),
+        },
       }),
       content: new InputFiled({
         type: "text",
         id: "chatDialog-newChat",
         label: "Название",
-        name: "newChat"
+        name: "newChat",
       }),
-      cancel:  new Button({
+      cancel: new Button({
         label: 'Отменить',
         type: 'button',
         isGhost: true,
         customClass: 'dialog__actions-cancel',
         events: {
-          click: () => this.closeDialog()
-        }
+          click: () => this.closeDialog(),
+        },
       }),
-    })
+    });
   }
 
   showDialog() {
@@ -66,7 +68,7 @@ export class ChatsHeader extends Block {
     form.onsubmit = async (e) => {
       e.preventDefault();
 
-      const data = new FormData(e.target as HTMLFormElement)
+      const data = new FormData(e.target as HTMLFormElement);
 
       if (validateForm(data)) {
         const { newChat: title } = Object.fromEntries(data.entries());
@@ -75,7 +77,7 @@ export class ChatsHeader extends Block {
 
         this.closeDialog();
       }
-    }
+    };
   }
 
   protected render() {

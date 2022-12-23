@@ -1,9 +1,9 @@
 @import url('/src/styles/variables');
 
-.overlay{
+.overlay {
   display: none;
   z-index: 1000;
-  background-color: rgba(@black-color, .4);
+  background-color: rgb(@black-color 0.4);
   width: 100%;
   height: 100%;
   position: absolute;
@@ -20,7 +20,7 @@
   transform: translate(-50%, -50%);
   width: 370px;
   background: @white-color;
-  box-shadow: 0 0 6px rgba(@box-shadow-color, 0.14);
+  box-shadow: 0 0 6px rgb(@box-shadow-color 0.14);
   border: 1px solid @border-color-1;
   border-radius: 12px;
   padding: 40px 30px;
@@ -51,7 +51,7 @@
       border: 1px solid @error-color;
 
       &:hover {
-        border-color: rgba(@background-color-error, 0.8);
+        border-color: rgb(@background-color-error 0.8);
       }
     }
   }

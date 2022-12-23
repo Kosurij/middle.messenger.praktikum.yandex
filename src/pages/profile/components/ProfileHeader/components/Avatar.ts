@@ -1,7 +1,7 @@
 import Block from "/src/utils/Block";
 import { withStore } from "/src/hocs/withStore";
-import template from './avatar.hbs'
-import styles from './avatar.less'
+import template from './avatar.hbs';
+import styles from './avatar.less';
 import defaultAvatar from "/static/user_avatar.svg";
 
 interface IAvatar {
@@ -16,8 +16,8 @@ class AvatarBase extends Block<IAvatar> {
     return this.compile(template, {
       styles,
       events: this.props.events,
-      avatar: this.props?.avatar || defaultAvatar
-    })
+      avatar: this.props?.avatar || defaultAvatar,
+    });
   }
 }
 

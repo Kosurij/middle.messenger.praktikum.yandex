@@ -1,6 +1,6 @@
 import Block from "/src/utils/Block";
-import { NotFoundPage } from "/src/pages/404/404Page";
 import isEqual from "/src/utils/helpers/isEqual";
+import { NotFoundPage } from "/src/pages/404/404Page";
 
 function render(query: string, block: Block) {
   const root = document.querySelector(query);
@@ -21,8 +21,9 @@ class Route {
 
   constructor(
     private pathname: string,
-    private readonly blockClass: typeof Block,
-    private readonly query: string) {
+    private readonly BlockClass: typeof Block,
+    private readonly query: string,
+  ) {
   }
 
   leave() {
@@ -35,19 +36,20 @@ class Route {
 
   render() {
     if (!this.block) {
-      this.block = new this.blockClass({});
+      this.block = new this.BlockClass({});
 
       render(this.query, this.block);
-
-      return;
     }
   }
 }
 
 class Router {
   private static _instance: Router;
+
   private routes: Route[] = [];
+
   private currentRoute: Route | null = null;
+
   private history = window.history;
 
   constructor(private readonly rootQuery: string) {
@@ -73,7 +75,7 @@ class Router {
       const target = event.currentTarget as Window;
 
       this._onRoute(target.location.pathname);
-    }
+    };
 
     this._onRoute(window.location.pathname);
   }
@@ -83,6 +85,7 @@ class Router {
 
     if (!route) {
       new Route(pathname, NotFoundPage, this.rootQuery).render();
+
       return;
     }
 
@@ -110,7 +113,7 @@ class Router {
   }
 
   private getRoute(pathname: string) {
-    return this.routes.find(route => route.match(pathname));
+    return this.routes.find((route) => route.match(pathname));
   }
 }
 

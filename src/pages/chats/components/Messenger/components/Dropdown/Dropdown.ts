@@ -1,9 +1,11 @@
 import Block from "/src/utils/Block";
 import template from "./dropdown.hbs";
 import styles from "./dropdown.less";
-import addUserIcon from '/static/add_user.svg'
-import deleteUserIcon from '/static/delete_user.svg'
-import { Button, Dialog, IconButton, InputFiled } from "/src/components";
+import addUserIcon from '/static/add_user.svg';
+import deleteUserIcon from '/static/delete_user.svg';
+import {
+  Button, Dialog, IconButton, InputFiled,
+} from "/src/components";
 import { validateForm } from "/src/utils/validation/validateForm";
 import ChatsController from "/src/controllers/ChatsController";
 import UserController from "/src/controllers/UserController";
@@ -29,25 +31,25 @@ class Dropdown extends Block {
         label: 'Добавить',
         type: 'submit',
         events: {
-          click: () => this.addUser()
-        }
+          click: () => this.addUser(),
+        },
       }),
       content: new InputFiled({
         type: "text",
         id: "userDialog",
         label: "Логин",
-        name: "login"
+        name: "login",
       }),
-      cancel:  new Button({
+      cancel: new Button({
         label: 'Отменить',
         type: 'button',
         isGhost: true,
         customClass: 'dialog__actions-cancel',
         events: {
-          click: () => this.closeAddUserDialog()
-        }
+          click: () => this.closeAddUserDialog(),
+        },
       }),
-    })
+    });
 
     this.children.deleteUserDialog = new Dialog({
       title: 'Удалить пользователя',
@@ -57,41 +59,41 @@ class Dropdown extends Block {
         label: 'Удалить',
         type: 'submit',
         events: {
-          click: () => this.deleteUser()
-        }
+          click: () => this.deleteUser(),
+        },
       }),
       content: new InputFiled({
         type: "text",
         id: "userDialog",
         label: "Логин",
-        name: "login"
+        name: "login",
       }),
-      cancel:  new Button({
+      cancel: new Button({
         label: 'Отменить',
         type: 'button',
         isGhost: true,
         customClass: 'dialog__actions-cancel',
         events: {
-          click: () => this.closeDeleteUserDialog()
-        }
+          click: () => this.closeDeleteUserDialog(),
+        },
       }),
-    })
+    });
 
     this.children.addUserButton = new IconButton({
       text: 'Добавить пользователя',
       icon: addUserIcon,
       events: {
-        click: () => this.showAddUserDialog()
-      }
-    })
+        click: () => this.showAddUserDialog(),
+      },
+    });
 
     this.children.deleteUserButton = new IconButton({
       text: 'Удалить пользователя',
       icon: deleteUserIcon,
       events: {
-        click: () => this.showDeleteUserDialog()
-      }
-    })
+        click: () => this.showDeleteUserDialog(),
+      },
+    });
   }
 
   showAddUserDialog() {
@@ -116,7 +118,7 @@ class Dropdown extends Block {
     form.onsubmit = async (e) => {
       e.preventDefault();
 
-      const data = new FormData(e.target as HTMLFormElement)
+      const data = new FormData(e.target as HTMLFormElement);
 
       if (validateForm(data)) {
         const login = Object.fromEntries(data.entries()) as unknown as Pick<IUser, 'login'>;
@@ -133,7 +135,7 @@ class Dropdown extends Block {
 
         this.closeAddUserDialog();
       }
-    }
+    };
   }
 
   deleteUser() {
@@ -142,7 +144,7 @@ class Dropdown extends Block {
     form.onsubmit = async (e) => {
       e.preventDefault();
 
-      const data = new FormData(e.target as HTMLFormElement)
+      const data = new FormData(e.target as HTMLFormElement);
 
       if (validateForm(data)) {
         const login = Object.fromEntries(data.entries()) as unknown as Pick<IUser, 'login'>;
@@ -159,7 +161,7 @@ class Dropdown extends Block {
 
         this.closeDeleteUserDialog();
       }
-    }
+    };
   }
 
   protected render() {

@@ -19,7 +19,7 @@ export class ChatsApi extends BaseAPI {
   }
 
   getUsers(id: ID): Promise<IUser[] & { role: string }> {
-    return this.http.get(`/${id}/users`)
+    return this.http.get(`/${id}/users`);
   }
 
   addUsers(id: ID, users: ID[]): Promise<unknown> {
@@ -35,7 +35,6 @@ export class ChatsApi extends BaseAPI {
 
     return response.token;
   }
-
 
   update = undefined;
 }

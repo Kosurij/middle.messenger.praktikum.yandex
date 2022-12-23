@@ -1,14 +1,18 @@
 import { UserApi } from "/src/api/UserApi";
 import { ROUTES } from '/src/const/routes';
-import Router from '/src/utils/Router'
+import Router from '/src/utils/Router';
 import BaseController from "/src/controllers/BaseController";
 import AuthController from "/src/controllers/AuthController";
-import { IPassword, IUser, TAvatar, TProfile } from "/src/types";
+import {
+  IPassword, IUser, TAvatar, TProfile,
+} from "/src/types";
 import store from "/src/utils/Store";
 
 class UserController extends BaseController {
   private readonly api = new UserApi();
+
   protected storePath: string;
+
   protected notificationText?: string;
 
   constructor() {
@@ -25,20 +29,20 @@ class UserController extends BaseController {
 
       await this.getUser();
 
-      Router.go(ROUTES.PROFILE)
+      Router.go(ROUTES.PROFILE);
 
-      this.notificationText = 'Данные успешно изменены'
-    })
+      this.notificationText = 'Данные успешно изменены';
+    });
   }
 
   async changePassword(data: IPassword) {
     await this.makeRequest(async () => {
       await this.api.changePassword(data);
 
-      Router.go(ROUTES.PROFILE)
+      Router.go(ROUTES.PROFILE);
 
-      this.notificationText = 'Пароль успешно изменен'
-    })
+      this.notificationText = 'Пароль успешно изменен';
+    });
   }
 
   async changeAvatar(data: TAvatar) {
@@ -48,11 +52,11 @@ class UserController extends BaseController {
       await this.getUser();
 
       this.notificationText = 'Аватар успешно изменен';
-    })
+    });
   }
 
   async getUser() {
-    await AuthController.getUser()
+    await AuthController.getUser();
   }
 
   async searchUser(data: Pick<IUser, 'login'>) {
@@ -60,7 +64,7 @@ class UserController extends BaseController {
       const user = await this.api.searchUser(data);
 
       store.set(`${this.storePath}.searchedUser`, user);
-    })
+    });
   }
 }
 

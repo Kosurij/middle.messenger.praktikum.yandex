@@ -11,7 +11,7 @@ interface IChatsListProps {
 
 export class ChatsListBase extends Block<IChatsListProps> {
   constructor(props: IChatsListProps) {
-    super({...props});
+    super({ ...props });
   }
 
   protected init() {
@@ -25,20 +25,18 @@ export class ChatsListBase extends Block<IChatsListProps> {
       return true;
     }
 
-    return false
+    return false;
   }
 
   private createChats(props: IChatsListProps) {
-    return props.chats.map(data => {
-      return new Chat({
-        ...data,
-        events: {
-          click: () => {
-            ChatsController.selectChat(data.id);
-          }
-        }
-      });
-    })
+    return props.chats.map((data) => new Chat({
+      ...data,
+      events: {
+        click: () => {
+          ChatsController.selectChat(data.id);
+        },
+      },
+    }));
   }
 
   render() {
@@ -46,6 +44,6 @@ export class ChatsListBase extends Block<IChatsListProps> {
   }
 }
 
-const withChats = withStore((state) => ({chats: [...(state.chats?.data || [])]}));
+const withChats = withStore((state) => ({ chats: [...(state.chats?.data || [])] }));
 
 export const ChatsList = withChats(ChatsListBase);

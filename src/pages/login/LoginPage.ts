@@ -27,8 +27,8 @@ export class LoginPage extends Block {
       label: 'Авторизоваться',
       type: 'submit',
       events: {
-        click: () => this.onSubmit()
-      }
+        click: () => this.onSubmit(),
+      },
     });
 
     this.children.registerLink = new Link({
@@ -39,19 +39,19 @@ export class LoginPage extends Block {
   }
 
   onSubmit() {
-      const form = document.querySelector('#login-form') as HTMLFormElement;
+    const form = document.querySelector('#login-form') as HTMLFormElement;
 
-      form.onsubmit = (e) => {
-        e.preventDefault();
+    form.onsubmit = (e) => {
+      e.preventDefault();
 
-        const formData = new FormData(e.target as HTMLFormElement)
+      const formData = new FormData(e.target as HTMLFormElement);
 
-        if (validateForm(formData)) {
-          const data = Object.fromEntries(formData.entries()) as unknown as ISignInData;
+      if (validateForm(formData)) {
+        const data = Object.fromEntries(formData.entries()) as unknown as ISignInData;
 
-          AuthController.signIn(data)
-        }
+        AuthController.signIn(data);
       }
+    };
   }
 
   protected render() {

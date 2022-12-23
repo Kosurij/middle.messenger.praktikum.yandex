@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     .use(ROUTES.PROFILE, ProfileDetailsPage)
     .use(ROUTES.PROFILE_EDIT, ProfileEditPage)
     .use(ROUTES.CHANGE_PASSWORD, ChangePasswordPage)
-    .use(ROUTES.CHATS, ChatsPage)
+    .use(ROUTES.CHATS, ChatsPage);
 
   let isProtectedRoute = true;
 
@@ -32,9 +32,8 @@ document.addEventListener('DOMContentLoaded', async () => {
     Router.start();
 
     if (!isProtectedRoute) {
-      Router.go(ROUTES.PROFILE)
+      Router.go(ROUTES.PROFILE);
     }
-
   } catch (e) {
     Router.start();
 
@@ -43,4 +42,3 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
   }
 });
-

@@ -3,7 +3,9 @@ import { errorReducer } from "/src/reducers";
 
 export default class BaseController {
   protected readonly storePath: string;
+
   protected readonly notificationText?: string;
+
   protected readonly notification = document.querySelector(".notification") as HTMLElement;
 
   constructor(path: string, text?: string) {
@@ -25,7 +27,7 @@ export default class BaseController {
 
       setTimeout(() => {
         this.notificationInit();
-      }, 3000)
+      }, 3000);
     }
   }
 
@@ -44,24 +46,24 @@ export default class BaseController {
       this.notificationInit();
 
       this.notification.classList.remove('notification-error');
-    }, 3000)
+    }, 3000);
   }
 
   async makeRequest(callback: () => void) {
     this.notification.style.display = "none";
 
     try {
-      store.set(`${this.storePath}.isLoading`, true)
+      store.set(`${this.storePath}.isLoading`, true);
 
       await callback();
 
-      store.set(`${this.storePath}.error`, null)
+      store.set(`${this.storePath}.error`, null);
       this.notificationSuccess();
     } catch (e) {
       store.set(`error`, e);
       this.notificationError();
     } finally {
-      store.set(`${this.storePath}.isLoading`, false)
+      store.set(`${this.storePath}.isLoading`, false);
     }
   }
 }

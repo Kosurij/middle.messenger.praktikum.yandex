@@ -6,7 +6,9 @@ import MessagesController from "/src/controllers/MessagesController";
 
 class ChatsController extends BaseController {
   private readonly api = new ChatsApi();
+
   protected storePath: string;
+
   protected notificationText?: string;
 
   constructor() {
@@ -27,8 +29,8 @@ class ChatsController extends BaseController {
         await MessagesController.connect(chat.id as number, token);
       });
 
-      store.set('chats.data', chats)
-    })
+      store.set('chats.data', chats);
+    });
   }
 
   async create(title: string) {
@@ -36,7 +38,7 @@ class ChatsController extends BaseController {
       await this.api.create(title);
 
       this.getChats();
-    })
+    });
   }
 
   async delete(id: ID) {
@@ -44,7 +46,7 @@ class ChatsController extends BaseController {
       await this.api.delete(id);
 
       this.getChats();
-    })
+    });
   }
 
   async addUserToChat(id: ID, user: IUser) {
@@ -53,8 +55,8 @@ class ChatsController extends BaseController {
 
       await this.api.addUsers(id, [userId]);
 
-      this.notificationText = `Пользователь ${login} успешно добавлен`
-    })
+      this.notificationText = `Пользователь ${login} успешно добавлен`;
+    });
   }
 
   async deleteUserFromChat(id: ID, user: IUser) {
@@ -63,10 +65,9 @@ class ChatsController extends BaseController {
 
       await this.api.deleteUsers(id, [userId]);
 
-      this.notificationText = `Пользователь ${login} успешно удален`
-    })
+      this.notificationText = `Пользователь ${login} успешно удален`;
+    });
   }
-
 
   async getToken(id: ID) {
     return this.api.getToken(id);
@@ -75,7 +76,6 @@ class ChatsController extends BaseController {
   selectChat(id: ID) {
     store.set('selectedChat', id);
   }
-
 }
 
 export default new ChatsController();

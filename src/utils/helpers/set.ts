@@ -13,4 +13,4 @@ function set(object: TPlainObject, path: string, value: any): TPlainObject {
   return merge(object as TPlainObject, result);
 }
 
-export default set
+export default set;

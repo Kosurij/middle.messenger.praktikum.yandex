@@ -1,7 +1,7 @@
 import { TPlainObject } from "/src/utils/helpers/isPlainObject";
 
 function merge(lhs: TPlainObject, rhs: TPlainObject): TPlainObject {
-  for (let p in rhs) {
+  for (const p in rhs) {
     if (!rhs.hasOwnProperty(p)) {
       continue;
     }
@@ -12,7 +12,7 @@ function merge(lhs: TPlainObject, rhs: TPlainObject): TPlainObject {
       } else {
         lhs[p] = rhs[p];
       }
-    } catch(e) {
+    } catch (e) {
       lhs[p] = rhs[p];
     }
   }
@@ -20,4 +20,4 @@ function merge(lhs: TPlainObject, rhs: TPlainObject): TPlainObject {
   return lhs;
 }
 
-export default merge
+export default merge;

@@ -1,4 +1,6 @@
-import { TErrors, TFieldNamesKeys, TFormData, TInput } from '/src/types';
+import {
+  TErrors, TFieldNamesKeys, TFormData, TInput,
+} from '/src/types';
 
 export enum FIELD_NAMES {
   first_name = "first_name",
@@ -18,27 +20,27 @@ export enum FIELD_NAMES {
 const VALIDATION_FIELDS: Record<TFieldNamesKeys, { pattern: RegExp, info: string }> = {
   [FIELD_NAMES.first_name]: {
     pattern: /^[А-ЯЁA-Z]{1}([а-яёa-z]|-[А-ЯЁA-Zа-яёa-z]{1}[а-яёa-z])*$/,
-    info: 'Только из букв (первая заглавная)'
+    info: 'Только из букв (первая заглавная)',
   },
   [FIELD_NAMES.second_name]: {
     pattern: /^[А-ЯЁA-Z]{1}([а-яёa-z]|-[А-ЯЁA-Zа-яёa-z]{1}[а-яёa-z])*$/,
-    info: 'Только из букв (первая заглавная)'
+    info: 'Только из букв (первая заглавная)',
   },
   [FIELD_NAMES.login]: {
     pattern: /^(?=.*?([a-zA-Z]|-|_))(\w|-|_){3,20}$/,
-    info: 'Логин должен содержать 3-20 символов: цифры, буквы и "_", "-"'
+    info: 'Логин должен содержать 3-20 символов: цифры, буквы и "_", "-"',
   },
   [FIELD_NAMES.display_name]: {
     pattern: /^(?=.*?([a-zA-Z]|-|_))(\w|-|_){3,20}$/,
-    info: 'Имя должно содержать 3-20 символов: цифры, буквы и "_", "-"'
+    info: 'Имя должно содержать 3-20 символов: цифры, буквы и "_", "-"',
   },
   [FIELD_NAMES.email]: {
     pattern: /^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/,
-    info: 'Некорректный email'
+    info: 'Некорректный email',
   },
   [FIELD_NAMES.phone]: {
     pattern: /^\+?\d{10,15}$/,
-    info: 'Некорректный номер телефона'
+    info: 'Некорректный номер телефона',
   },
   [FIELD_NAMES.message]: {
     pattern: /[\s\S]+/,
@@ -50,15 +52,15 @@ const VALIDATION_FIELDS: Record<TFieldNamesKeys, { pattern: RegExp, info: string
   },
   [FIELD_NAMES.oldPassword]: {
     pattern: /^(?=.*?([A-Z]))(?=.*?\d)(\w|-|_){8,40}$/,
-    info: 'Пароль должен содержать 8-40 символов: заглавную букву и цифру'
+    info: 'Пароль должен содержать 8-40 символов: заглавную букву и цифру',
   },
   [FIELD_NAMES.newPassword]: {
     pattern: /^(?=.*?([A-Z]))(?=.*?\d)(\w|-|_){8,40}$/,
-    info: 'Пароль должен содержать 8-40 символов: заглавную букву и цифру'
+    info: 'Пароль должен содержать 8-40 символов: заглавную букву и цифру',
   },
   [FIELD_NAMES.password]: {
     pattern: /^(?=.*?([A-Z]))(?=.*?\d)(\w|-|_){8,40}$/,
-    info: 'Пароль должен содержать 8-40 символов: заглавную букву и цифру'
+    info: 'Пароль должен содержать 8-40 символов: заглавную букву и цифру',
   },
   [FIELD_NAMES.avatar]: {
     pattern: /(.|\s)*\S(.|\s)*$/,
@@ -76,13 +78,12 @@ const highlightErrors = (errors: TErrors, selector = '.inputField', errorClass =
       inputWrapper.classList.add(errorClass);
       inputWrapper.dataset.content = VALIDATION_FIELDS[input.name as TFieldNamesKeys].info;
     } else {
-      inputWrapper.classList.remove(errorClass)
+      inputWrapper.classList.remove(errorClass);
     }
   });
 };
 
-const validateFormData = ([fieldName, value]: TFormData): boolean =>
-  VALIDATION_FIELDS[fieldName].pattern.test(value instanceof File ? value.name : value)
+const validateFormData = ([fieldName, value]: TFormData): boolean => VALIDATION_FIELDS[fieldName].pattern.test(value instanceof File ? value.name : value);
 
 const validateInput = ({ name, value } : TInput) => VALIDATION_FIELDS[name].pattern.test(value);
 

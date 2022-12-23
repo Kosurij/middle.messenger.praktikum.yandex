@@ -1,5 +1,5 @@
 import EventBus from "/src/utils/EventBus";
-import set from '/src/utils/helpers/set'
+import set from '/src/utils/helpers/set';
 import { IChatInfo, IMessage, IUser } from "/src/types";
 
 type TStoreEvents = {
@@ -7,7 +7,7 @@ type TStoreEvents = {
 }
 
 export const StoreEvents = {
-  UPDATED: 'updated'
+  UPDATED: 'updated',
 } as const;
 
 interface IStore {
@@ -30,7 +30,7 @@ class Store extends EventBus<TStoreEvents> {
   public set(path: string, data: unknown) {
     set(this.state, path, data);
 
-    this.emit(StoreEvents.UPDATED, this.getState())
+    this.emit(StoreEvents.UPDATED, this.getState());
   }
 
   public getState() {

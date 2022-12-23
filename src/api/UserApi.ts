@@ -1,5 +1,7 @@
 import BaseAPI from '/src/api/BaseApi';
-import { IPassword, TProfile, TAvatar, IUser } from '/src/types';
+import {
+  IPassword, TProfile, TAvatar, IUser,
+} from '/src/types';
 
 export class UserApi extends BaseAPI {
   constructor() {
@@ -23,7 +25,10 @@ export class UserApi extends BaseAPI {
   }
 
   update = undefined;
+
   read = undefined;
+
   create = undefined;
+
   delete = undefined;
 }

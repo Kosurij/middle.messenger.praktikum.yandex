@@ -8,8 +8,8 @@ export const withRouter = (Component: typeof Block<any>) => {
     constructor(props: Props & PropsWithRouter) {
       super({ ...props, router: Router });
     }
-  }
-}
+  };
+};
 
 export interface PropsWithRouter {
   router: typeof Router;
