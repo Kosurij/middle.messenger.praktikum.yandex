@@ -44,12 +44,12 @@ export class LoginPage extends Block {
       form.onsubmit = (e) => {
         e.preventDefault();
 
-        const data = new FormData(e.target as HTMLFormElement)
+        const formData = new FormData(e.target as HTMLFormElement)
 
-        if (validateForm(data)) {
-          const formData = Object.fromEntries(data.entries()) as unknown as ISignInData;
+        if (validateForm(formData)) {
+          const data = Object.fromEntries(formData.entries()) as unknown as ISignInData;
 
-          AuthController.signIn(formData)
+          AuthController.signIn(data)
         }
       }
   }

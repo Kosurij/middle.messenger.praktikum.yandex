@@ -43,12 +43,12 @@ export class ChangePasswordPage extends Block {
     form.onsubmit = (e) => {
       e.preventDefault();
 
-      const data = new FormData(e.target as HTMLFormElement)
+      const formData = new FormData(e.target as HTMLFormElement)
 
-      if (validateForm(data)) {
-        const formData = Object.fromEntries(data.entries()) as unknown as IPassword;
+      if (validateForm(formData)) {
+        const data = Object.fromEntries(formData.entries()) as unknown as IPassword;
 
-        UserController.changePassword(formData)
+        UserController.changePassword(data)
       }
     }
   }

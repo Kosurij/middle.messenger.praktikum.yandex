@@ -9,7 +9,6 @@
             <div class="toolbar__chatInfo__name">
               {{{ chatInfo.title }}}
             </div>
-
           </div>
           <div class="toolbar__actionButton">
             {{{ dropdown }}}
@@ -20,7 +19,9 @@
             {{{ date }}}
           </div>
           <div class="chat_messages">
-            {{{ messages }}}
+            {{#each messages}}
+              {{{this}}}
+            {{/each}}
           </div>
         </div>
       </div>

@@ -75,12 +75,12 @@ export class ProfileEditForm extends Block {
     form.onsubmit = (e) => {
       e.preventDefault();
 
-      const data = new FormData(e.target as HTMLFormElement)
+      const formData = new FormData(e.target as HTMLFormElement)
 
-      if (validateForm(data)) {
-        const formData = Object.fromEntries(data.entries()) as unknown as TProfile;
+      if (validateForm(formData)) {
+        const data = Object.fromEntries(formData.entries()) as unknown as TProfile;
 
-        UserController.changeProfile(formData)
+        UserController.changeProfile(data)
       }
     }
   }

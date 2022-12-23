@@ -2,6 +2,7 @@ import BaseController from "/src/controllers/BaseController";
 import store from "/src/utils/Store";
 import { ChatsApi } from "/src/api/ChatsApi";
 import { ID, IUser } from "/src/types";
+import MessagesController from "/src/controllers/MessagesController";
 
 class ChatsController extends BaseController {
   private readonly api = new ChatsApi();
@@ -20,11 +21,11 @@ class ChatsController extends BaseController {
     await this.makeRequest(async () => {
       const chats = await this.api.read();
 
-      // chats.map(async (chat) => {
-      //   const token = await this.getToken(chat.id);
-      //
-      //   await MessagesController.connect(chat.id, token);
-      // });
+      chats.map(async (chat) => {
+        const token = await this.getToken(chat.id);
+
+        await MessagesController.connect(chat.id as number, token);
+      });
 
       store.set('chats.data', chats)
     })
@@ -68,9 +69,7 @@ class ChatsController extends BaseController {
 
 
   async getToken(id: ID) {
-    await this.makeRequest(async () => {
-      return this.api.getToken(id);
-    })
+    return this.api.getToken(id);
   }
 
   selectChat(id: ID) {

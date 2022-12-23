@@ -62,10 +62,10 @@ export class ProfileHeader extends Block {
     form.onsubmit = async (e) => {
       e.preventDefault();
 
-      const data = new FormData(e.target as HTMLFormElement)
+      const formData = new FormData(e.target as HTMLFormElement)
 
-      if (validateForm(data)) {
-        await UserController.changeAvatar(data);
+      if (validateForm(formData)) {
+        await UserController.changeAvatar(formData);
 
         this.closeDialog();
 

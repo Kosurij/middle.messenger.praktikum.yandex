@@ -56,7 +56,11 @@ export class MessengerBase extends Block<IMessagesProps> {
 
   private createMessages(props: IMessagesProps) {
     return props.messages.map(data => {
-      return new Message({...data, isMine: props.userId === data.user_id });
+      return new Message({
+        ...data,
+        isMine: props.userId === data.user_id,
+        time: `${new Date(data.time).getHours()}:${new Date(data.time).getMinutes()}`
+      });
     })
   }
 
@@ -79,7 +83,7 @@ const withSelectedChatMessages = withStore(state => {
     return {
       messages: [],
       selectedChat: undefined,
-      userId: state.user.id,
+      userId: state.user.data.id,
       chatInfo: {},
     };
   }
@@ -87,7 +91,7 @@ const withSelectedChatMessages = withStore(state => {
   return {
     messages: (state.messages || {})[selectedChatId] || [],
     selectedChat: state.selectedChat,
-    userId: state.user.id,
+    userId: state.user.data.id,
     chatInfo: {...chatInfo, avatar: chatInfo.avatar === null ? defaultChatAvatar : chatInfo.avatar}
   };
 });
