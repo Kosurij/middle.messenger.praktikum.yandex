@@ -8,5 +8,6 @@
     "no-descending-specificity": null,
     "property-no-unknown": null,
     "selector-class-pattern": "[A-Z]*"
-  }
+  },
+  "ignoreFiles": ["**/*.css"]
 }
