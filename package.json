@@ -19,9 +19,6 @@
     "type": "git",
     "url": "git+https://github.com/Kosurij/middle.messenger.praktikum.yandex.git"
   },
-  "engines": {
-    "node": "16.18.1"
-  },
   "keywords": [],
   "author": "Kosenko Yuri",
   "license": "ISC",

@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="49e820e1-3a51-44fe-8506-7883e310fca6" name="Changes" comment="Поднята версия ноды до 16.18.1">
+    <list default="true" id="49e820e1-3a51-44fe-8506-7883e310fca6" name="Changes" comment="Зафиксирована нода">
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -351,7 +351,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671795020798</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Зафиксирована нода">
+      <created>1671796604141</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1671796604141</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -394,6 +401,7 @@
     <MESSAGE value="Скорректирован жсдок" />
     <MESSAGE value="Изменен package.json и netlify.toml" />
     <MESSAGE value="Стянуты изменения" />
-    <option name="LAST_COMMIT_MESSAGE" value="Стянуты изменения" />
+    <MESSAGE value="Зафиксирована нода" />
+    <option name="LAST_COMMIT_MESSAGE" value="Зафиксирована нода" />
   </component>
 </project>
