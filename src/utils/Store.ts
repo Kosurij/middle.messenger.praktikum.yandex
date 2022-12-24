@@ -11,13 +11,21 @@ export const StoreEvents = {
 } as const;
 
 interface IStore {
-  user: IUser;
+  user: {
+    data: IUser;
+    error: null | Error,
+    isLoading: boolean;
+  };
   chats?: {
     data: IChatInfo[];
     error: null | Error,
     isLoading: boolean;
   };
-  messages?: Record<number, IMessage[]>;
+  messages?: {
+    data: Record<number, IMessage[]>,
+    error: null | Error,
+    isLoading: boolean;
+  };
   selectedChat?: number;
   resources? : {
     avatar?: string

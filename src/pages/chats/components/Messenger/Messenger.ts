@@ -87,7 +87,7 @@ const withSelectedChatMessages = withStore((state) => {
   }
 
   return {
-    messages: (state.messages || {})[selectedChatId] || [],
+    messages: (state.messages?.data || {})[selectedChatId] || [],
     selectedChat: state.selectedChat,
     userId: state.user.data.id,
     chatInfo: { ...chatInfo, avatar: chatInfo.avatar === null ? defaultChatAvatar : chatInfo.avatar },

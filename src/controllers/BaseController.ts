@@ -58,9 +58,13 @@ export default class BaseController {
       await callback();
 
       store.set(`${this.storePath}.error`, null);
+
       this.notificationSuccess();
     } catch (e) {
-      store.set(`error`, e);
+      store.set(`${this.storePath}.error`, e);
+
+      console.error(e);
+
       this.notificationError();
     } finally {
       store.set(`${this.storePath}.isLoading`, false);
