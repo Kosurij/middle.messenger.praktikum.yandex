@@ -51,9 +51,11 @@ class AuthController extends BaseController {
   }
 
   async getUser() {
-    const user = await this.api.read();
+    await this.makeRequest(async () => {
+      const user = await this.api.read();
 
-    store.set(`${this.storePath}.data`, user);
+      store.set(`${this.storePath}.data`, user);
+    });
   }
 }
 

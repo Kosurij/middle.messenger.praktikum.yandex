@@ -4,8 +4,65 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="49e820e1-3a51-44fe-8506-7883e310fca6" name="Changes" comment="Зафиксирована нода">
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+    <list default="true" id="49e820e1-3a51-44fe-8506-7883e310fca6" name="Changes" comment="Убрал ноду">
+      <change afterPath="$PROJECT_DIR$/src/utils/helpers/queryStringify.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/AuthApi.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/AuthApi.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/BaseApi.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/BaseApi.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/ChatsApi.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/ChatsApi.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/UserApi.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/UserApi.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Button/Button.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Button/Button.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Dialog/Dialog.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dialog/Dialog.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/IconButton/IconButton.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/IconButton/IconButton.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/InputField/InputField.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/InputField/InputField.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Link/Link.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Link/Link.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/const/routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/const/routes.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/AuthController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/AuthController.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/BaseController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/BaseController.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/ChatsController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/ChatsController.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/MessagesController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/MessagesController.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/ResourcesController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/ResourcesController.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/UserController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/UserController.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hocs/withRouter.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/hocs/withRouter.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hocs/withStore.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/hocs/withStore.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/404/404Page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/404/404Page.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/500/ServerErrorPage.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/500/ServerErrorPage.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/chats/ChatsPage.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/chats/ChatsPage.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/chats/components/ChatsHeader/ChatsHeader.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/chats/components/ChatsHeader/ChatsHeader.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/chats/components/ChatsList/ChatsList.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/chats/components/ChatsList/ChatsList.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/chats/components/ChatsList/components/Chat/Chat.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/chats/components/ChatsList/components/Chat/Chat.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/chats/components/Messenger/Messenger.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/chats/components/Messenger/Messenger.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/chats/components/Messenger/components/Dropdown/Dropdown.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/chats/components/Messenger/components/Dropdown/Dropdown.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/chats/components/Messenger/components/Message/Message.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/chats/components/Messenger/components/Message/Message.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/chats/components/Messenger/components/MessageInputForm/MessageForm.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/chats/components/Messenger/components/MessageInputForm/MessageForm.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/chats/components/Messenger/components/MessageInputForm/MessageInput/MessageInput.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/chats/components/Messenger/components/MessageInputForm/MessageInput/MessageInput.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/login/LoginPage.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/login/LoginPage.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/profile/changePassword/ChangePasswordPage.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/profile/changePassword/ChangePasswordPage.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/profile/components/ProfileHeader/ProfileHeader.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/profile/components/ProfileHeader/ProfileHeader.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/profile/components/ProfileHeader/components/Avatar.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/profile/components/ProfileHeader/components/Avatar.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/profile/components/ProfileSidebar/ProfileSidebar.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/profile/components/ProfileSidebar/ProfileSidebar.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/profile/details/ProfileDetailsPage.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/profile/details/ProfileDetailsPage.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/profile/details/components/ProfileDetailsData/ProfileDetailsData.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/profile/details/components/ProfileDetailsData/ProfileDetailsData.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/profile/edit/ProfileEditPage.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/profile/edit/ProfileEditPage.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/profile/edit/components/ProfileEditForm/ProfileEditForm.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/profile/edit/components/ProfileEditForm/ProfileEditForm.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/registration/RegistrationPage.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/registration/RegistrationPage.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducers/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/types/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/Block.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/Block.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/EventBus.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/EventBus.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/HTTPTransport.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/HTTPTransport.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/Router.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/Router.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/Store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/Store.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/WSTransport.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/WSTransport.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/helpers/isEqual.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/helpers/isEqual.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/helpers/isPlainObject.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/helpers/isPlainObject.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/helpers/merge.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/helpers/merge.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/helpers/set.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/helpers/set.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/validation/validatator.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/validation/validatator.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/validation/validateForm.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/validation/validateForm.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,7 +79,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="sprint_3" />
+        <entry key="$PROJECT_DIR$" value="deploy" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -58,7 +115,7 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\WebStorm 2022.2.3\\plugins\\JavaScriptLanguage\\jsLanguageServicesImpl\\external&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\kosur\\Desktop\\projects\\middle.messenger.praktikum.yandex\\node_modules\\typescript\\lib&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -70,12 +127,22 @@
       <recent name="C:\Users\kosur\Desktop\projects\middle.messenger.praktikum.yandex\src\components\FileInput" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.build">
+  <component name="RunManager" selected="npm.dev">
     <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
       <scripts>
         <script value="build" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="dev" />
       </scripts>
       <node-interpreter value="project" />
       <envs />
@@ -101,16 +168,6 @@
       <envs />
       <method v="2" />
     </configuration>
-    <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="start" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
     <configuration name="ts" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -123,11 +180,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.ts" />
-        <item itemvalue="npm.start" />
-        <item itemvalue="npm.lint:less:fix" />
+        <item itemvalue="npm.dev" />
         <item itemvalue="npm.lint:fix" />
         <item itemvalue="npm.build" />
+        <item itemvalue="npm.lint:less:fix" />
+        <item itemvalue="npm.ts" />
       </list>
     </recent_temporary>
   </component>
@@ -344,21 +401,7 @@
       <option name="project" value="LOCAL" />
       <updated>1671794020923</updated>
     </task>
-    <task id="LOCAL-00025" summary="Стянуты изменения">
-      <created>1671795020798</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1671795020798</updated>
-    </task>
-    <task id="LOCAL-00026" summary="Зафиксирована нода">
-      <created>1671796604141</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1671796604141</updated>
-    </task>
-    <option name="localTasksCounter" value="27" />
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -400,8 +443,6 @@
     <MESSAGE value="Добавлены игноры" />
     <MESSAGE value="Скорректирован жсдок" />
     <MESSAGE value="Изменен package.json и netlify.toml" />
-    <MESSAGE value="Стянуты изменения" />
-    <MESSAGE value="Зафиксирована нода" />
-    <option name="LAST_COMMIT_MESSAGE" value="Зафиксирована нода" />
+    <option name="LAST_COMMIT_MESSAGE" value="Изменен package.json и netlify.toml" />
   </component>
 </project>

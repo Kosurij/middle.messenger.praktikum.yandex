@@ -1,3 +1,5 @@
+import { queryStringify } from "/src/utils/helpers/queryStringify";
+
 enum METHODS {
   GET = 'GET',
   POST = 'POST',
@@ -24,10 +26,16 @@ export default class HTTPTransport {
   private request<Response>(url: string, options: IOptions = { method: METHODS.GET }): Promise<Response> {
     const { method, data } = options;
 
+    const isQueryParameters = method === METHODS.GET && !!data && typeof data === 'object';
+
+    const resultUrl = isQueryParameters ? `${url}${queryStringify(data)}` : url;
+
     return new Promise((resolve, reject) => {
       const xhr = new XMLHttpRequest();
 
       xhr.open(method, url);
+
+      xhr.open(method, resultUrl);
 
       xhr.onreadystatechange = () => {
         if (xhr.readyState === XMLHttpRequest.DONE) {
@@ -59,8 +67,11 @@ export default class HTTPTransport {
     });
   };
 
-  public get<Response>(path = ''): Promise<Response> {
-    return this.request<Response>(this.endpoint + path);
+  public get<Response>(path = '', data?: TData): Promise<Response> {
+    return this.request<Response>(this.endpoint + path, {
+      method: METHODS.GET,
+      data,
+    });
   };
 
   public post<Response = void>(path: string, data?: TData): Promise<Response> {
