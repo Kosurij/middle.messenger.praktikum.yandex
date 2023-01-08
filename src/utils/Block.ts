@@ -8,9 +8,9 @@ type BlockEvents<P = any> = {
   'flow:render': [];
 }
 
-type Props<P extends Record<string, unknown> = any> = { events?: Record<string, () => void> } & P;
+type Props<P extends Record<string, unknown> = any> = { events?: Record<string, (e?: Event) => void> } & P;
 
-export default class Block<P extends Record<string, unknown> = any> {
+export default class Block<P extends Record<string, any> = any> {
   static EVENTS = {
     INIT: "init",
     FLOW_CDM: "flow:component-did-mount",
@@ -189,11 +189,11 @@ export default class Block<P extends Record<string, unknown> = any> {
     return document.createElement(tagName);
   }
 
-  protected show() {
+  show() {
     this.getContent()!.style.display = "block";
   }
 
-  protected hide() {
+  hide() {
     this.getContent()!.style.display = "none";
   }
 

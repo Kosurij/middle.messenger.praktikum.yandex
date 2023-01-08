@@ -1,34 +1,49 @@
 import Block from "../../utils/Block";
+import { PropsWithRouter, withRouter } from "/src/hocs/withRouter";
 import template from "./link.hbs";
 import styles from "./link.less";
 
-interface ILinkProps {
+interface ILinkProps extends PropsWithRouter {
   text: string;
-  url: string;
-  type?: string;
+  to: string;
+  type?: 'medium | large';
   color?: string;
   customClass?: string;
   events?: {
-    click?: (e: Event) => void;
+    click?: (e?: Event) => void;
   },
 }
 
-export default class Link extends Block {
+class BaseLink extends Block<ILinkProps> {
   constructor(props: ILinkProps) {
-    super(props);
+    super({
+      ...props,
+      events: {
+        click: (e) => {
+          e!.preventDefault();
+
+          this.navigate();
+        },
+      },
+    });
+  }
+
+  navigate() {
+    this.props.router.go(this.props.to);
   }
 
   render() {
     return this.compile(template, {
       text: this.props.text,
-      url: this.props.url,
+      to: this.props.to,
       type: this.props.type,
       color: this.props.color,
       customClass: this.props.customClass,
-      events: {
-        click: this.props.click,
-      },
       styles,
     });
   }
 }
+
+const Link = withRouter(BaseLink);
+
+export default Link;

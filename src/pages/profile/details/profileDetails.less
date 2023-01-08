@@ -28,11 +28,40 @@
     }
   }
 
-  &__homeLink {
+  &__logout {
+    font-size: 14px;
+    width: auto;
+    height: auto;
     color: @error-color;
 
     &:hover {
       color: rgb(@error-color 0.8);
+    }
+  }
+}
+
+.fileInput {
+  input[type='file' i]::-webkit-file-upload-button {
+    border-radius: 25px;
+    border: none;
+    margin: 0 10px;
+    color: @primary-color;
+    background-color: transparent;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  &__input {
+    font-size: 14px;
+    text-decoration: underline;
+    border-bottom: 1px solid transparent;
+    cursor: pointer;
+
+    &:focus {
+      border-bottom: 2px solid transparent;
     }
   }
 }

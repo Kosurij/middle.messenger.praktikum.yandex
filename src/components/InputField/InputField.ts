@@ -3,7 +3,7 @@ import template from "./inputField.hbs";
 import styles from "./inputField.less";
 import { inputValidationHandler } from "/src/utils/validation/validatator";
 
-const eventsObject = {
+const eventsObject: Record<string, any> = {
   focusin: inputValidationHandler,
   focusout: inputValidationHandler,
 };
@@ -14,11 +14,11 @@ interface IInputFieldProps {
   type: string;
   id: string;
   value?: string;
-  styles?: Record<string, string>;
-  required?: string;
+  accept?: string;
+  customClass?: string;
 }
 
-export default class InputFiled extends Block {
+export default class InputFiled extends Block<IInputFieldProps> {
   constructor(props: IInputFieldProps) {
     super({ ...props, events: eventsObject });
   }
@@ -30,8 +30,8 @@ export default class InputFiled extends Block {
       type: this.props.type,
       id: this.props.id,
       value: this.props.value,
-      required: this.props.required,
-      title: this.props.title,
+      accept: this.props.accept,
+      customClass: this.props.customClass,
       styles,
     });
   }

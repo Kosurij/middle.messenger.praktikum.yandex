@@ -1,17 +1,11 @@
 import { formValidation } from "./validatator";
 
-export const validateForm = (event: SubmitEvent, selector?: string, errorClass?: string) => {
-  event.preventDefault();
+export const validateForm = (data: FormData, selector?: string, errorClass?: string) => {
+  const notification: HTMLElement | null = document.querySelector(".notification");
 
-  const form = event.target as HTMLFormElement;
+  notification!.textContent = "";
 
-  if (!form) {
-    return;
-  }
+  const invalidFields = formValidation(data, selector, errorClass);
 
-  const invalidFields = formValidation(new FormData(form), selector, errorClass);
-
-  if (invalidFields === null) {
-    console.log(Object.fromEntries(new FormData(form).entries()));
-  }
+  return invalidFields === null;
 };

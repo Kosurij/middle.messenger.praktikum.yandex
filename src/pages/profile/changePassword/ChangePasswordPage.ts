@@ -1,15 +1,15 @@
 import Block from "/src/utils/Block";
-import { ProfileHeader } from "/src/pages/profile/components/ProfileHeader/ProfileHeader";
 import { ProfileSidebar } from "/src/pages/profile/components/ProfileSidebar/ProfileSidebar";
 import { Button, InputFiled } from "/src/components";
 import template from "./changePassword.hbs";
 import styles from "./changePassword.less";
 import { validateForm } from "/src/utils/validation/validateForm";
+import { IPassword } from "/src/types";
+import UserController from "/src/controllers/UserController";
+import { ProfileHeader } from "/src/pages/profile/components/ProfileHeader/ProfileHeader";
 
 export class ChangePasswordPage extends Block {
   protected initChildren() {
-    this.children.profileHeader = new ProfileHeader();
-
     this.children.sidebar = new ProfileSidebar();
 
     this.children.oldPasswordField = new InputFiled({
@@ -23,27 +23,34 @@ export class ChangePasswordPage extends Block {
       type: 'password',
       id: 'changePassword__newPassword',
       label: 'Новый пароль',
-      name: 'password',
-    });
-
-    this.children.repeatNewPasswordField = new InputFiled({
-      type: 'password',
-      id: 'changePassword__repeatNewPassword',
-      label: 'Повторите новый пароль',
-      name: 'repeatPassword',
+      name: 'newPassword',
     });
 
     this.children.saveButton = new Button({
       label: 'Сохранить',
       type: 'submit',
       events: {
-        click: () => {
-          const form = document.querySelector('#changePassword-form') as HTMLFormElement;
-
-          form.onsubmit = (e) => validateForm(e);
-        },
+        click: () => this.onSubmit(),
       },
     });
+
+    this.children.profileHeader = new ProfileHeader();
+  }
+
+  onSubmit() {
+    const form = document.querySelector('#changePassword-form') as HTMLFormElement;
+
+    form.onsubmit = (e) => {
+      e.preventDefault();
+
+      const formData = new FormData(e.target as HTMLFormElement);
+
+      if (validateForm(formData)) {
+        const data = Object.fromEntries(formData.entries()) as unknown as IPassword;
+
+        UserController.changePassword(data);
+      }
+    };
   }
 
   protected render() {

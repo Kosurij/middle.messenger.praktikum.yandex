@@ -19,6 +19,10 @@
     "type": "git",
     "url": "git+https://github.com/Kosurij/middle.messenger.praktikum.yandex.git"
   },
+  "engines": {
+    "node": "16.18.1"
+  },
+  "browserslist": ["> 0.5%, last 2 versions, not dead"],
   "keywords": [],
   "author": "Kosenko Yuri",
   "license": "ISC",
@@ -32,10 +36,12 @@
     "@parcel/transformer-less": "2.7.0",
     "@typescript-eslint/eslint-plugin": "5.44.0",
     "@typescript-eslint/parser": "5.44.0",
+    "chai": "4.3.7",
     "eslint": "8.28.0",
     "eslint-config-airbnb-base": "15.0.0",
     "eslint-plugin-import": "2.25.4",
     "handlebars": "4.7.7",
+    "mocha": "10.2.0",
     "parcel": "2.7.0",
     "postcss-less": "6.0.0",
     "postcss-lit": "0.5.0",

@@ -1,0 +1,14 @@
+<form class="overlay" id={{#if id}}{{ id }}{{else}}dialog-form{{/if}}>
+  <div class="dialog">
+    <h3 class="dialog__title">
+      {{ title }}
+    </h3>
+    <div class="dialog__content {{#if contentFullWidth}} dialog__content-fullWidth {{/if}}">
+      {{{ content }}}
+    </div>
+    <div class="dialog__actions">
+      {{{ cancel }}}
+      {{{ submit }}}
+    </div>
+  </div>
+</form>
