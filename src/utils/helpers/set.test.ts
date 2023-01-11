@@ -1,11 +1,10 @@
 import set from "./set";
 import { expect } from "chai";
-import { TPlainObject } from "./isPlainObject";
 
 describe('set function', () => {
   it('should return passed object if it not a plain object', () => {
     //arrange
-    const obj: TPlainObject = [];
+    const obj: any = [];
 
     //act
     const result = set(obj, 'a.b', 3)

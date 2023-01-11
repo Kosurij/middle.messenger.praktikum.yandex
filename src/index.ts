@@ -7,6 +7,7 @@ import { ChangePasswordPage } from '/src/pages/profile/changePassword/ChangePass
 import { ROUTES } from '/src/const/routes';
 import Router from './utils/Router';
 import AuthController from "/src/controllers/AuthController";
+import './styles/commonStyles.less'
 
 document.addEventListener('DOMContentLoaded', async () => {
   Router

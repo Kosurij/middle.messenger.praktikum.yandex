@@ -5,7 +5,7 @@ import { TState } from "/src/types";
 import store from "/src/utils/Store";
 import { userReducer } from "/src/reducers";
 import ResourcesController from "/src/controllers/ResourcesController";
-import { Avatar } from "./components/Avatar";
+import { UserAvatar } from "./components/UserAvatar";
 import { Button, Dialog, InputFiled } from "/src/components";
 import { validateForm } from "/src/utils/validation/validateForm";
 import UserController from "/src/controllers/UserController";
@@ -49,7 +49,7 @@ export class ProfileHeader extends Block {
       }),
     });
 
-    this.children.avatar = new Avatar({
+    this.children.avatar = new UserAvatar({
       events: {
         click: () => this.showDialog(),
       },
@@ -85,7 +85,7 @@ export class ProfileHeader extends Block {
   changeAvatarState() {
     const state = store.getState();
 
-    const { avatar } = userReducer(state);
+    const avatar = userReducer(state)?.avatar;
 
     if (avatar) {
       ResourcesController.getResources(avatar);
@@ -94,7 +94,7 @@ export class ProfileHeader extends Block {
 
   protected render() {
     return this.compile(template, {
-      first_name: this.userData.first_name,
+      first_name: this.userData?.first_name,
       events: {
         click: () => this.showDialog,
       },
