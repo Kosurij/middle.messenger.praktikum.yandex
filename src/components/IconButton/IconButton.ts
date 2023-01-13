@@ -1,4 +1,4 @@
-import Block from "/src/utils/Block";
+import Block from "../../utils/Block";
 import template from "./iconButton.hbs";
 import styles from "./iconButton.less";
 

@@ -4,20 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="61a96401-389c-4cd8-90bf-af9b1d71f7fc" name="Changes" comment="Настроено окружение, добавлен первый тест">
-      <change afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
+    <list default="true" id="61a96401-389c-4cd8-90bf-af9b1d71f7fc" name="Changes" comment="Добавлены тесты">
+      <change afterPath="$PROJECT_DIR$/mochaSetup.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Link/Link.test.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/Block.test.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/HTTPTransport.test.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/Router.test.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/profile/components/ProfileHeader/ProfileHeader.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/profile/components/ProfileHeader/ProfileHeader.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/profile/components/ProfileHeader/components/Avatar.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/profile/components/ProfileHeader/components/UserAvatar.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Dialog/Dialog.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dialog/Dialog.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/IconButton/IconButton.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/IconButton/IconButton.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/InputField/InputField.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/InputField/InputField.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Link/Link.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Link/Link.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/404/404Page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/404/404Page.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/HTTPTransport.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/HTTPTransport.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/utils/Router.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/Router.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/WSTransport.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/WSTransport.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/helpers/merge.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/helpers/merge.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/helpers/isEqual.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/helpers/isEqual.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/utils/helpers/set.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/helpers/set.test.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/helpers/set.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/helpers/set.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,64 +58,66 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;18.12.1&quot;,
-    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;18.11.18&quot;,
-    &quot;last.edited.regexp&quot;: &quot;731231231&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/kosur/Desktop/projects/middle.messenger.praktikum.yandex/src/components/IconButton&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs.mocha.mocha_node_package_dir&quot;: &quot;C:/Users/kosur/Desktop/projects/middle.messenger.praktikum.yandex/node_modules/mocha&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\kosur\\Desktop\\projects\\middle.messenger.praktikum.yandex\\node_modules\\typescript\\lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "javascript.nodejs.core.library.configured.version": "18.12.1",
+    "javascript.nodejs.core.library.typings.version": "18.11.18",
+    "last.edited.regexp": "731231231",
+    "last_opened_file_path": "C:/Users/kosur/Desktop/projects/middle.messenger.praktikum.yandex/src/utils",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs.mocha.mocha_node_package_dir": "C:/Users/kosur/Desktop/projects/middle.messenger.praktikum.yandex/node_modules/mocha",
+    "nodejs_package_manager_path": "npm",
+    "ts.external.directory.path": "C:\\Users\\kosur\\Desktop\\projects\\middle.messenger.praktikum.yandex\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\kosur\Desktop\projects\middle.messenger.praktikum.yandex\src\utils" />
       <recent name="C:\Users\kosur\Desktop\projects\middle.messenger.praktikum.yandex\src\components\IconButton" />
       <recent name="C:\Users\kosur\Desktop\projects\middle.messenger.praktikum.yandex\src\api" />
       <recent name="C:\Users\kosur\Desktop\projects\middle.messenger.praktikum.yandex\src\controllers" />
       <recent name="C:\Users\kosur\Desktop\projects\middle.messenger.praktikum.yandex\src\components\FileInput" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.webpack_dev">
-    <configuration name="dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="dev" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
+  <component name="RunManager" selected="Mocha.Block">
+    <configuration name="Block" type="mocha-javascript-test-runner" temporary="true" nameIsGenerated="true">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <mocha-package>$PROJECT_DIR$/node_modules/mocha</mocha-package>
+      <working-directory>$PROJECT_DIR$</working-directory>
+      <pass-parent-env>true</pass-parent-env>
+      <ui>bdd</ui>
+      <extra-mocha-options>--require ts-node/register</extra-mocha-options>
+      <test-kind>SUITE</test-kind>
+      <test-file>$PROJECT_DIR$/src/utils/Block.test.ts</test-file>
+      <test-names>
+        <name value="Block" />
+      </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="webpack_dec" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="webpack_dec" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
-    <configuration name="webpack_dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="webpack_dev" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
+    <configuration name="Block.should fire init event on initialization" type="mocha-javascript-test-runner" temporary="true" nameIsGenerated="true">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <mocha-package>$PROJECT_DIR$/node_modules/mocha</mocha-package>
+      <working-directory>$PROJECT_DIR$</working-directory>
+      <pass-parent-env>true</pass-parent-env>
+      <ui>bdd</ui>
+      <extra-mocha-options>--require ts-node/register</extra-mocha-options>
+      <test-kind>TEST</test-kind>
+      <test-file>$PROJECT_DIR$/src/utils/Block.test.ts</test-file>
+      <test-names>
+        <name value="Block" />
+        <name value="should fire init event on initialization" />
+      </test-names>
       <method v="2" />
     </configuration>
     <configuration name="set function" type="mocha-javascript-test-runner" temporary="true" nameIsGenerated="true">
@@ -145,13 +151,29 @@
       </test-names>
       <method v="2" />
     </configuration>
+    <configuration name="set function.should set new property to passed object with passed value" type="mocha-javascript-test-runner" temporary="true" nameIsGenerated="true">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <mocha-package>$PROJECT_DIR$/node_modules/mocha</mocha-package>
+      <working-directory>$PROJECT_DIR$</working-directory>
+      <pass-parent-env>true</pass-parent-env>
+      <ui>bdd</ui>
+      <extra-mocha-options>--require ts-node/register</extra-mocha-options>
+      <test-kind>TEST</test-kind>
+      <test-file>$PROJECT_DIR$/src/utils/helpers/set.test.ts</test-file>
+      <test-names>
+        <name value="set function" />
+        <name value="should set new property to passed object with passed value" />
+      </test-names>
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.webpack_dev" />
-        <item itemvalue="npm.webpack_dec" />
-        <item itemvalue="Mocha.set function.should return passed object if it not a plain object" />
+        <item itemvalue="Mocha.Block" />
+        <item itemvalue="Mocha.Block.should fire init event on initialization" />
         <item itemvalue="Mocha.set function" />
-        <item itemvalue="npm.dev" />
+        <item itemvalue="Mocha.set function.should set new property to passed object with passed value" />
+        <item itemvalue="Mocha.set function.should return passed object if it not a plain object" />
       </list>
     </recent_temporary>
   </component>
@@ -201,7 +223,10 @@
       <workItem from="1671772242543" duration="11175000" />
       <workItem from="1673200603304" duration="1793000" />
       <workItem from="1673244795770" duration="2532000" />
-      <workItem from="1673358022026" duration="4149000" />
+      <workItem from="1673358022026" duration="5152000" />
+      <workItem from="1673461404406" duration="2374000" />
+      <workItem from="1673507085488" duration="3717000" />
+      <workItem from="1673527364922" duration="8170000" />
     </task>
     <task id="LOCAL-00001" summary="Обновлен netlify.toml">
       <created>1669502710525</created>
@@ -371,7 +396,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671794020923</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Переведено на вебпак">
+      <created>1673419530295</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1673419530295</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -413,6 +445,8 @@
     <MESSAGE value="Добавлены игноры" />
     <MESSAGE value="Скорректирован жсдок" />
     <MESSAGE value="Изменен package.json и netlify.toml" />
-    <option name="LAST_COMMIT_MESSAGE" value="Изменен package.json и netlify.toml" />
+    <MESSAGE value="Переведено на вебпак" />
+    <MESSAGE value="Добавлены тесты" />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавлены тесты" />
   </component>
 </project>

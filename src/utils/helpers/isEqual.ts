@@ -1,4 +1,4 @@
-import { isPlainObject, TPlainObject } from "/src/utils/helpers/isPlainObject";
+import { isPlainObject, TPlainObject } from "./isPlainObject";
 
 function isArrayOrObject(value: unknown): value is [] | TPlainObject {
   return isPlainObject(value) || Array.isArray(value);

@@ -1,39 +1,28 @@
 import set from "./set";
+import { TPlainObject } from "./isPlainObject";
 import { expect } from "chai";
 
 describe('set function', () => {
+  let obj: TPlainObject = {};
+  const path = 'a.b';
+  const value = 'value'
+
+
+  beforeEach(() => {
+    obj = {};
+  })
+
   it('should return passed object if it not a plain object', () => {
-    //arrange
-    const obj: any = [];
+    obj = [];
 
-    //act
-    const result = set(obj, 'a.b', 3)
+    const result = set(obj, path, value)
 
-    //assert
     expect(result).to.eq(obj)
   });
 
-  it('should return passed null if null is passed as first argument', () => {
-    //arrange
-
-    //act
-
-    //assert
-  });
-
   it('should set new property to passed object with passed value', () => {
-    //arrange
+    set(obj, path, value);
 
-    //act
-
-    //assert
-  });
-
-  it('should not return new object', () => {
-    //arrange
-
-    //act
-
-    //assert
+    expect(obj.a.b).to.eq(value)
   });
 })
