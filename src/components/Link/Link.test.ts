@@ -1,6 +1,6 @@
-import { BaseLink as Link } from "./Link";
 import { expect } from 'chai';
 import sinon from 'sinon';
+import { BaseLink as Link } from "./Link";
 
 describe('Link', () => {
   let routerMock: any;
@@ -20,7 +20,7 @@ describe('Link', () => {
 
     const element = link.getContent();
 
-    expect(element).to.be.instanceof(window.HTMLAnchorElement)
+    expect(element).to.be.instanceof(window.HTMLAnchorElement);
   });
 
   it('should go to passed route on click', () => {

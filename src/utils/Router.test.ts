@@ -1,4 +1,4 @@
-import Router from './Router'
+import Router from './Router';
 import { expect } from 'chai';
 import sinon from 'sinon';
 import Block from "/src/utils/Block";
