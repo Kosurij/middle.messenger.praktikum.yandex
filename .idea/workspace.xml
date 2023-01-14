@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="61a96401-389c-4cd8-90bf-af9b1d71f7fc" name="Changes" comment="Прогнан линтер">
-      <change afterPath="$PROJECT_DIR$/.dockerignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+    <list default="true" id="61a96401-389c-4cd8-90bf-af9b1d71f7fc" name="Changes" comment="Настроен докер">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,12 +75,32 @@
       <recent name="C:\Users\kosur\Desktop\projects\middle.messenger.praktikum.yandex\src\components\FileInput" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.lint:fix">
+  <component name="RunManager" selected="npm.lint:all:fix">
+    <configuration name="lint:all:fix" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="lint:all:fix" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <configuration name="lint:fix" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
       <scripts>
         <script value="lint:fix" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="lint:less:fix" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="lint:less:fix" />
       </scripts>
       <node-interpreter value="project" />
       <envs />
@@ -118,44 +137,13 @@
       </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="set function" type="mocha-javascript-test-runner" temporary="true" nameIsGenerated="true">
-      <node-interpreter>project</node-interpreter>
-      <node-options />
-      <mocha-package>$PROJECT_DIR$/node_modules/mocha</mocha-package>
-      <working-directory>$PROJECT_DIR$</working-directory>
-      <pass-parent-env>true</pass-parent-env>
-      <ui>bdd</ui>
-      <extra-mocha-options>--require ts-node/register</extra-mocha-options>
-      <test-kind>SUITE</test-kind>
-      <test-file>$PROJECT_DIR$/src/utils/helpers/set.test.ts</test-file>
-      <test-names>
-        <name value="set function" />
-      </test-names>
-      <method v="2" />
-    </configuration>
-    <configuration name="set function.should set new property to passed object with passed value" type="mocha-javascript-test-runner" temporary="true" nameIsGenerated="true">
-      <node-interpreter>project</node-interpreter>
-      <node-options />
-      <mocha-package>$PROJECT_DIR$/node_modules/mocha</mocha-package>
-      <working-directory>$PROJECT_DIR$</working-directory>
-      <pass-parent-env>true</pass-parent-env>
-      <ui>bdd</ui>
-      <extra-mocha-options>--require ts-node/register</extra-mocha-options>
-      <test-kind>TEST</test-kind>
-      <test-file>$PROJECT_DIR$/src/utils/helpers/set.test.ts</test-file>
-      <test-names>
-        <name value="set function" />
-        <name value="should set new property to passed object with passed value" />
-      </test-names>
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.lint:all:fix" />
+        <item itemvalue="npm.lint:less:fix" />
         <item itemvalue="npm.lint:fix" />
         <item itemvalue="Mocha.Block" />
         <item itemvalue="Mocha.Block.should fire init event on initialization" />
-        <item itemvalue="Mocha.set function" />
-        <item itemvalue="Mocha.set function.should set new property to passed object with passed value" />
       </list>
     </recent_temporary>
   </component>
@@ -211,7 +199,7 @@
       <workItem from="1673527364922" duration="8957000" />
       <workItem from="1673692598409" duration="906000" />
       <workItem from="1673693974412" duration="3339000" />
-      <workItem from="1673702861293" duration="600000" />
+      <workItem from="1673702861293" duration="972000" />
     </task>
     <task id="LOCAL-00001" summary="Обновлен netlify.toml">
       <created>1669502710525</created>
@@ -402,7 +390,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673617411165</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Настроен докер">
+      <created>1673703815154</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1673703815154</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -421,7 +416,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Убран бесячий engines" />
     <MESSAGE value="Скорректирован ридми" />
     <MESSAGE value="Поле версия ноды перенесена в .nvmrc&#10;Исправлена валидация.&#10;События focusin/focusout сразу добавляются в классе InputField.&#10;Убраны лишние логи и div." />
     <MESSAGE value="Скорректирована переменная PORT" />
@@ -446,6 +440,7 @@
     <MESSAGE value="Переведено на вебпак" />
     <MESSAGE value="Добавлены тесты" />
     <MESSAGE value="Прогнан линтер" />
-    <option name="LAST_COMMIT_MESSAGE" value="Прогнан линтер" />
+    <MESSAGE value="Настроен докер" />
+    <option name="LAST_COMMIT_MESSAGE" value="Настроен докер" />
   </component>
 </project>

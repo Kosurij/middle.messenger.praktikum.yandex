@@ -10,7 +10,8 @@
     "lint": "eslint src",
     "lint:fix": "eslint --fix src",
     "lint:less": "stylelint \"./src/**/*.less\"",
-    "lint:less:fix": "stylelint \"./src/**/*.less\" --fix"
+    "lint:less:fix": "stylelint \"./src/**/*.less\" --fix",
+    "lint:all:fix": "npm run lint:fix && npm run lint:less:fix"
   },
   "staticFiles": {
     "staticPath": "static/",
@@ -33,13 +34,18 @@
     "url": "https://github.com/Kosurij/middle.messenger.praktikum.yandex/issues"
   },
   "homepage": "https://github.com/Kosurij/middle.messenger.praktikum.yandex#readme",
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm-run-all test lint:all:fix"
+    }
+  },
   "devDependencies": {
     "@anikin/parcel-transformer-handlebars": "1.0.9",
     "@anikin/parcel-transformer-handlebars-precompile": "1.0.1",
     "@parcel/transformer-less": "2.7.0",
     "@types/chai": "4.3.4",
     "@types/mocha": "10.0.1",
-    "@types/proxyquire": "^1.3.28",
+    "@types/proxyquire": "1.3.28",
     "@types/sinon": "10.0.13",
     "@typescript-eslint/eslint-plugin": "5.44.0",
     "@typescript-eslint/parser": "5.44.0",
@@ -51,6 +57,7 @@
     "handlebars": "4.7.7",
     "handlebars-loader": "1.7.3",
     "html-webpack-plugin": "5.5.0",
+    "husky": "8.0.3",
     "jsdom": "21.0.0",
     "less": "4.1.3",
     "less-loader": "11.1.0",
@@ -68,7 +75,7 @@
     "typescript": "4.9.3",
     "webpack": "5.75.0",
     "webpack-cli": "5.0.1",
-    "webpack-dev-server": "^4.11.1"
+    "webpack-dev-server": "4.11.1"
   },
   "dependencies": {
     "express": "4.18.2",
