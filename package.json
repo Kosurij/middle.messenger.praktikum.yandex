@@ -11,7 +11,8 @@
     "lint:fix": "eslint --fix src",
     "lint:less": "stylelint \"./src/**/*.less\"",
     "lint:less:fix": "stylelint \"./src/**/*.less\" --fix",
-    "lint:all:fix": "npm run lint:fix && npm run lint:less:fix"
+    "lint:all:fix": "npm run lint:fix && npm run lint:less:fix",
+    "prepare": "husky install"
   },
   "staticFiles": {
     "staticPath": "static/",

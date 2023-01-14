@@ -9,6 +9,8 @@ import Router from './utils/Router';
 import AuthController from "/src/controllers/AuthController";
 import './styles/commonStyles.less';
 
+console.log('example');
+
 document.addEventListener('DOMContentLoaded', async () => {
   Router
     .use(ROUTES.INDEX, LoginPage)

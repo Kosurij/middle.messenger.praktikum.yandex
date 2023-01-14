@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="61a96401-389c-4cd8-90bf-af9b1d71f7fc" name="Changes" comment="Настроен докер">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+    <list default="true" id="61a96401-389c-4cd8-90bf-af9b1d71f7fc" name="Changes" comment="Добавлен прекоммит хук">
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -199,7 +198,7 @@
       <workItem from="1673527364922" duration="8957000" />
       <workItem from="1673692598409" duration="906000" />
       <workItem from="1673693974412" duration="3339000" />
-      <workItem from="1673702861293" duration="972000" />
+      <workItem from="1673702861293" duration="1193000" />
     </task>
     <task id="LOCAL-00001" summary="Обновлен netlify.toml">
       <created>1669502710525</created>
@@ -397,7 +396,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673703815154</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Добавлен прекоммит хук">
+      <created>1673704195021</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1673704195021</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -416,7 +422,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Скорректирован ридми" />
     <MESSAGE value="Поле версия ноды перенесена в .nvmrc&#10;Исправлена валидация.&#10;События focusin/focusout сразу добавляются в классе InputField.&#10;Убраны лишние логи и div." />
     <MESSAGE value="Скорректирована переменная PORT" />
     <MESSAGE value="Временно удален .nvmrc" />
@@ -441,6 +446,7 @@
     <MESSAGE value="Добавлены тесты" />
     <MESSAGE value="Прогнан линтер" />
     <MESSAGE value="Настроен докер" />
-    <option name="LAST_COMMIT_MESSAGE" value="Настроен докер" />
+    <MESSAGE value="Добавлен прекоммит хук" />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавлен прекоммит хук" />
   </component>
 </project>
