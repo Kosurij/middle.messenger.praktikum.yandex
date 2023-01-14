@@ -7,12 +7,20 @@ import MessagesController from "/src/controllers/MessagesController";
 import store from "/src/utils/Store";
 
 export class MessageForm extends Block {
+  constructor() {
+    super();
+
+    this.getContent()!.onsubmit = (e) => {
+      this.sendMessage(e);
+    };
+  }
+
   protected init() {
     this.children.sendButton = new Button({
       label: '',
       type: 'submit',
       events: {
-        click: () => this.sendMessage(),
+        click: (e) => this.sendMessage(e as Event),
       },
       customClass: 'message-form__sendMessage',
     });
@@ -20,24 +28,20 @@ export class MessageForm extends Block {
     this.children.messageInput = new MessageInput();
   }
 
-  sendMessage() {
-    const form = document.querySelector('#message-form') as HTMLFormElement;
+  sendMessage(e: Event) {
+    e.preventDefault();
 
-    form.onsubmit = (e) => {
-      e.preventDefault();
+    const { message } = Object.fromEntries(new FormData(e.target as HTMLFormElement).entries());
 
-      const { message } = Object.fromEntries(new FormData(e.target as HTMLFormElement).entries());
+    const input = this.element?.children[1].children[0] as HTMLInputElement;
 
-      const input = this.element?.children[1].children[0] as HTMLInputElement;
+    if (message) {
+      const { selectedChat } = store.getState();
 
-      if (message) {
-        const { selectedChat } = store.getState();
+      MessagesController.sendMessage(selectedChat!, message as string);
 
-        MessagesController.sendMessage(selectedChat!, message as string);
-
-        input.value = '';
-      }
-    };
+      input.value = '';
+    }
   }
 
   protected render() {
