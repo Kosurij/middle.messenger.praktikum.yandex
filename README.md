@@ -19,11 +19,13 @@
 
 ## Ссылки.
 
-[Ссылка на Netlify](https://lucky-truffle-2d27d8.netlify.app)
+[Netlify](https://lucky-truffle-2d27d8.netlify.app)
 
-[Ссылка на PR](https://github.com/Kosurij/middle.messenger.praktikum.yandex/pull/3)
+[Развернутый docker-образ на Render.com](https://app-chat-y0ph.onrender.com/)
 
-[Ссылка на макет в Figma](https://www.figma.com/file/jF5fFFzgGOxQeB4CmKWTiE/Chat_external_link?node-id=0%3A1)
+[PR](https://github.com/Kosurij/middle.messenger.praktikum.yandex/pull/4)
+
+[Макет в Figma](https://www.figma.com/file/jF5fFFzgGOxQeB4CmKWTiE/Chat_external_link?node-id=0%3A1)
 
 ## Локальный запуск.
 

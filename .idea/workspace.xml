@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="61a96401-389c-4cd8-90bf-af9b1d71f7fc" name="Changes" comment="Проведен аудит пакетов">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-    </list>
+    <list default="true" id="49e820e1-3a51-44fe-8506-7883e310fca6" name="Changes" comment="Стянуты изменения из ветки 4 спринта" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -432,7 +428,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673704972127</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="Стянуты изменения из ветки 4 спринта">
+      <created>1673705609200</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1673705609200</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -451,7 +454,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Скорректирована переменная PORT" />
     <MESSAGE value="Временно удален .nvmrc" />
     <MESSAGE value="Добавлен favicon.&#10;Скорректирована валидация: выводятся понятные пользователю ошибки.&#10;Добавлен класс роутера и изменен роутинг." />
     <MESSAGE value="Добавлена:&#10;авторизацию в полном объеме (регистрация, авторизация, выход из системы);&#10;работу с информацией пользователя (изменять данные пользователя, изменять пароль);" />
@@ -476,6 +478,7 @@
     <MESSAGE value="Настроен докер" />
     <MESSAGE value="Добавлен прекоммит хук" />
     <MESSAGE value="Проведен аудит пакетов" />
-    <option name="LAST_COMMIT_MESSAGE" value="Проведен аудит пакетов" />
+    <MESSAGE value="Стянуты изменения из ветки 4 спринта" />
+    <option name="LAST_COMMIT_MESSAGE" value="Стянуты изменения из ветки 4 спринта" />
   </component>
 </project>
