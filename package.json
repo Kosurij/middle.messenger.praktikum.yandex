@@ -4,8 +4,8 @@
   "scripts": {
     "dev": "webpack serve",
     "build": "webpack build",
+    "start": "npm run build && node ./server.js",
     "ts": "tsc",
-    "start": "parcel build src/index.html && node ./server.js",
     "test": "mocha --require ts-node/register --require mochaSetup.js './src/**/*.test.ts'",
     "lint": "eslint src",
     "lint:fix": "eslint --fix src",

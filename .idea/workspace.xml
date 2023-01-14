@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="61a96401-389c-4cd8-90bf-af9b1d71f7fc" name="Changes" comment="Добавлен прекоммит хук">
-      <change afterPath="$PROJECT_DIR$/.husky/pre-commit" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/HTTPTransport.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/HTTPTransport.test.ts" afterDir="false" />
+    <list default="true" id="61a96401-389c-4cd8-90bf-af9b1d71f7fc" name="Changes" comment="Проведен аудит пакетов">
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -199,7 +199,7 @@
       <workItem from="1673527364922" duration="8957000" />
       <workItem from="1673692598409" duration="906000" />
       <workItem from="1673693974412" duration="3339000" />
-      <workItem from="1673702861293" duration="1588000" />
+      <workItem from="1673702861293" duration="1895000" />
     </task>
     <task id="LOCAL-00001" summary="Обновлен netlify.toml">
       <created>1669502710525</created>
@@ -411,7 +411,28 @@
       <option name="project" value="LOCAL" />
       <updated>1673704404945</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="Добавлен прекоммит хук">
+      <created>1673704834063</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1673704834063</updated>
+    </task>
+    <task id="LOCAL-00032" summary="Добавлен прекоммит хук">
+      <created>1673704880976</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1673704880976</updated>
+    </task>
+    <task id="LOCAL-00033" summary="Проведен аудит пакетов">
+      <created>1673704972127</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1673704972127</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -430,7 +451,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Поле версия ноды перенесена в .nvmrc&#10;Исправлена валидация.&#10;События focusin/focusout сразу добавляются в классе InputField.&#10;Убраны лишние логи и div." />
     <MESSAGE value="Скорректирована переменная PORT" />
     <MESSAGE value="Временно удален .nvmrc" />
     <MESSAGE value="Добавлен favicon.&#10;Скорректирована валидация: выводятся понятные пользователю ошибки.&#10;Добавлен класс роутера и изменен роутинг." />
@@ -455,6 +475,7 @@
     <MESSAGE value="Прогнан линтер" />
     <MESSAGE value="Настроен докер" />
     <MESSAGE value="Добавлен прекоммит хук" />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавлен прекоммит хук" />
+    <MESSAGE value="Проведен аудит пакетов" />
+    <option name="LAST_COMMIT_MESSAGE" value="Проведен аудит пакетов" />
   </component>
 </project>
