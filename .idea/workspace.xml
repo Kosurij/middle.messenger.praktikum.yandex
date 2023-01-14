@@ -4,65 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="49e820e1-3a51-44fe-8506-7883e310fca6" name="Changes" comment="Убрал ноду">
-      <change afterPath="$PROJECT_DIR$/src/utils/helpers/queryStringify.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/AuthApi.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/AuthApi.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/BaseApi.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/BaseApi.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/ChatsApi.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/ChatsApi.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/UserApi.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/UserApi.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Button/Button.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Button/Button.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Dialog/Dialog.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dialog/Dialog.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/IconButton/IconButton.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/IconButton/IconButton.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/InputField/InputField.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/InputField/InputField.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Link/Link.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Link/Link.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/const/routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/const/routes.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/AuthController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/AuthController.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/BaseController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/BaseController.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/ChatsController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/ChatsController.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/MessagesController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/MessagesController.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/ResourcesController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/ResourcesController.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/UserController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/UserController.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hocs/withRouter.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/hocs/withRouter.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hocs/withStore.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/hocs/withStore.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/404/404Page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/404/404Page.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/500/ServerErrorPage.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/500/ServerErrorPage.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/chats/ChatsPage.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/chats/ChatsPage.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/chats/components/ChatsHeader/ChatsHeader.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/chats/components/ChatsHeader/ChatsHeader.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/chats/components/ChatsList/ChatsList.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/chats/components/ChatsList/ChatsList.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/chats/components/ChatsList/components/Chat/Chat.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/chats/components/ChatsList/components/Chat/Chat.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/chats/components/Messenger/Messenger.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/chats/components/Messenger/Messenger.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/chats/components/Messenger/components/Dropdown/Dropdown.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/chats/components/Messenger/components/Dropdown/Dropdown.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/chats/components/Messenger/components/Message/Message.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/chats/components/Messenger/components/Message/Message.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/chats/components/Messenger/components/MessageInputForm/MessageForm.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/chats/components/Messenger/components/MessageInputForm/MessageForm.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/chats/components/Messenger/components/MessageInputForm/MessageInput/MessageInput.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/chats/components/Messenger/components/MessageInputForm/MessageInput/MessageInput.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/login/LoginPage.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/login/LoginPage.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/profile/changePassword/ChangePasswordPage.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/profile/changePassword/ChangePasswordPage.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/profile/components/ProfileHeader/ProfileHeader.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/profile/components/ProfileHeader/ProfileHeader.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/profile/components/ProfileHeader/components/Avatar.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/profile/components/ProfileHeader/components/Avatar.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/profile/components/ProfileSidebar/ProfileSidebar.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/profile/components/ProfileSidebar/ProfileSidebar.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/profile/details/ProfileDetailsPage.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/profile/details/ProfileDetailsPage.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/profile/details/components/ProfileDetailsData/ProfileDetailsData.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/profile/details/components/ProfileDetailsData/ProfileDetailsData.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/profile/edit/ProfileEditPage.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/profile/edit/ProfileEditPage.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/profile/edit/components/ProfileEditForm/ProfileEditForm.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/profile/edit/components/ProfileEditForm/ProfileEditForm.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/registration/RegistrationPage.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/registration/RegistrationPage.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducers/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/types/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/Block.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/Block.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/EventBus.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/EventBus.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/HTTPTransport.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/HTTPTransport.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/Router.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/Router.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/Store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/Store.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/WSTransport.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/WSTransport.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/helpers/isEqual.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/helpers/isEqual.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/helpers/isPlainObject.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/helpers/isPlainObject.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/helpers/merge.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/helpers/merge.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/helpers/set.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/helpers/set.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/validation/validatator.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/validation/validatator.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/validation/validateForm.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/validation/validateForm.ts" afterDir="false" />
+    <list default="true" id="61a96401-389c-4cd8-90bf-af9b1d71f7fc" name="Changes" comment="Проведен аудит пакетов">
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,7 +24,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="deploy" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -105,44 +50,37 @@
     &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;ToolWindowRun.ShowToolbar&quot;: &quot;false&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;18.12.1&quot;,
+    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;18.11.18&quot;,
     &quot;last.edited.regexp&quot;: &quot;731231231&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/kosur/Desktop/projects/middle.messenger.praktikum.yandex/src/components/IconButton&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/kosur/Desktop/projects/middle.messenger.praktikum.yandex/src/utils&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs.mocha.mocha_node_package_dir&quot;: &quot;C:/Users/kosur/Desktop/projects/middle.messenger.praktikum.yandex/node_modules/mocha&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\kosur\\Desktop\\projects\\middle.messenger.praktikum.yandex\\node_modules\\typescript\\lib&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\kosur\Desktop\projects\middle.messenger.praktikum.yandex\src\utils" />
       <recent name="C:\Users\kosur\Desktop\projects\middle.messenger.praktikum.yandex\src\components\IconButton" />
       <recent name="C:\Users\kosur\Desktop\projects\middle.messenger.praktikum.yandex\src\api" />
       <recent name="C:\Users\kosur\Desktop\projects\middle.messenger.praktikum.yandex\src\controllers" />
       <recent name="C:\Users\kosur\Desktop\projects\middle.messenger.praktikum.yandex\src\components\FileInput" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.dev">
-    <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="npm.lint:all:fix">
+    <configuration name="lint:all:fix" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
       <scripts>
-        <script value="build" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
-    <configuration name="dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="dev" />
+        <script value="lint:all:fix" />
       </scripts>
       <node-interpreter value="project" />
       <envs />
@@ -168,30 +106,51 @@
       <envs />
       <method v="2" />
     </configuration>
-    <configuration name="ts" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="ts" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
+    <configuration name="Block" type="mocha-javascript-test-runner" temporary="true" nameIsGenerated="true">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <mocha-package>$PROJECT_DIR$/node_modules/mocha</mocha-package>
+      <working-directory>$PROJECT_DIR$</working-directory>
+      <pass-parent-env>true</pass-parent-env>
+      <ui>bdd</ui>
+      <extra-mocha-options>--require ts-node/register</extra-mocha-options>
+      <test-kind>SUITE</test-kind>
+      <test-file>$PROJECT_DIR$/src/utils/Block.test.ts</test-file>
+      <test-names>
+        <name value="Block" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="Block.should fire init event on initialization" type="mocha-javascript-test-runner" temporary="true" nameIsGenerated="true">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <mocha-package>$PROJECT_DIR$/node_modules/mocha</mocha-package>
+      <working-directory>$PROJECT_DIR$</working-directory>
+      <pass-parent-env>true</pass-parent-env>
+      <ui>bdd</ui>
+      <extra-mocha-options>--require ts-node/register</extra-mocha-options>
+      <test-kind>TEST</test-kind>
+      <test-file>$PROJECT_DIR$/src/utils/Block.test.ts</test-file>
+      <test-names>
+        <name value="Block" />
+        <name value="should fire init event on initialization" />
+      </test-names>
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.dev" />
-        <item itemvalue="npm.lint:fix" />
-        <item itemvalue="npm.build" />
+        <item itemvalue="npm.lint:all:fix" />
         <item itemvalue="npm.lint:less:fix" />
-        <item itemvalue="npm.ts" />
+        <item itemvalue="npm.lint:fix" />
+        <item itemvalue="Mocha.Block" />
+        <item itemvalue="Mocha.Block.should fire init event on initialization" />
       </list>
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="d1d11500-9420-42ea-a59d-c99902836c0f" name="Changes" comment="" />
+      <changelist id="61a96401-389c-4cd8-90bf-af9b1d71f7fc" name="Changes" comment="" />
       <created>1669502445649</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -232,6 +191,15 @@
       <workItem from="1671506742759" duration="9533000" />
       <workItem from="1671549095765" duration="8139000" />
       <workItem from="1671772242543" duration="11175000" />
+      <workItem from="1673200603304" duration="1793000" />
+      <workItem from="1673244795770" duration="2532000" />
+      <workItem from="1673358022026" duration="5152000" />
+      <workItem from="1673461404406" duration="2374000" />
+      <workItem from="1673507085488" duration="3717000" />
+      <workItem from="1673527364922" duration="8957000" />
+      <workItem from="1673692598409" duration="906000" />
+      <workItem from="1673693974412" duration="3339000" />
+      <workItem from="1673702861293" duration="1895000" />
     </task>
     <task id="LOCAL-00001" summary="Обновлен netlify.toml">
       <created>1669502710525</created>
@@ -401,7 +369,70 @@
       <option name="project" value="LOCAL" />
       <updated>1671794020923</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Переведено на вебпак">
+      <created>1673419530295</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1673419530295</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Добавлены тесты">
+      <created>1673617245810</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1673617245810</updated>
+    </task>
+    <task id="LOCAL-00027" summary="Прогнан линтер">
+      <created>1673617411165</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1673617411165</updated>
+    </task>
+    <task id="LOCAL-00028" summary="Настроен докер">
+      <created>1673703815154</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1673703815154</updated>
+    </task>
+    <task id="LOCAL-00029" summary="Добавлен прекоммит хук">
+      <created>1673704195021</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1673704195021</updated>
+    </task>
+    <task id="LOCAL-00030" summary="Добавлен прекоммит хук">
+      <created>1673704404945</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1673704404945</updated>
+    </task>
+    <task id="LOCAL-00031" summary="Добавлен прекоммит хук">
+      <created>1673704834063</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1673704834063</updated>
+    </task>
+    <task id="LOCAL-00032" summary="Добавлен прекоммит хук">
+      <created>1673704880976</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1673704880976</updated>
+    </task>
+    <task id="LOCAL-00033" summary="Проведен аудит пакетов">
+      <created>1673704972127</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1673704972127</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -420,10 +451,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Обновлен netlify.toml" />
-    <MESSAGE value="Убран бесячий engines" />
-    <MESSAGE value="Скорректирован ридми" />
-    <MESSAGE value="Поле версия ноды перенесена в .nvmrc&#10;Исправлена валидация.&#10;События focusin/focusout сразу добавляются в классе InputField.&#10;Убраны лишние логи и div." />
     <MESSAGE value="Скорректирована переменная PORT" />
     <MESSAGE value="Временно удален .nvmrc" />
     <MESSAGE value="Добавлен favicon.&#10;Скорректирована валидация: выводятся понятные пользователю ошибки.&#10;Добавлен класс роутера и изменен роутинг." />
@@ -443,6 +470,12 @@
     <MESSAGE value="Добавлены игноры" />
     <MESSAGE value="Скорректирован жсдок" />
     <MESSAGE value="Изменен package.json и netlify.toml" />
-    <option name="LAST_COMMIT_MESSAGE" value="Изменен package.json и netlify.toml" />
+    <MESSAGE value="Переведено на вебпак" />
+    <MESSAGE value="Добавлены тесты" />
+    <MESSAGE value="Прогнан линтер" />
+    <MESSAGE value="Настроен докер" />
+    <MESSAGE value="Добавлен прекоммит хук" />
+    <MESSAGE value="Проведен аудит пакетов" />
+    <option name="LAST_COMMIT_MESSAGE" value="Проведен аудит пакетов" />
   </component>
 </project>

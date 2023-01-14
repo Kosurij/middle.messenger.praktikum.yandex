@@ -2,14 +2,17 @@
   "name": "middle.messenger.praktikum.yandex",
   "version": "1.0.0",
   "scripts": {
-    "dev": "parcel serve src/index.html --no-cache",
+    "dev": "webpack serve",
+    "build": "webpack build",
+    "start": "npm run build && node ./server.js",
     "ts": "tsc",
-    "build": "parcel build src/index.html",
-    "start": "parcel build src/index.html && node ./server.js",
+    "test": "mocha --require ts-node/register --require mochaSetup.js './src/**/*.test.ts'",
     "lint": "eslint src",
     "lint:fix": "eslint --fix src",
     "lint:less": "stylelint \"./src/**/*.less\"",
-    "lint:less:fix": "stylelint \"./src/**/*.less\" --fix"
+    "lint:less:fix": "stylelint \"./src/**/*.less\" --fix",
+    "lint:all:fix": "npm run lint:fix && npm run lint:less:fix",
+    "prepare": "husky install"
   },
   "staticFiles": {
     "staticPath": "static/",
@@ -19,6 +22,12 @@
     "type": "git",
     "url": "git+https://github.com/Kosurij/middle.messenger.praktikum.yandex.git"
   },
+  "engines": {
+    "node": "16.18.1"
+  },
+  "browserslist": [
+    "> 0.5%, last 2 versions, not dead"
+  ],
   "keywords": [],
   "author": "Kosenko Yuri",
   "license": "ISC",
@@ -26,27 +35,51 @@
     "url": "https://github.com/Kosurij/middle.messenger.praktikum.yandex/issues"
   },
   "homepage": "https://github.com/Kosurij/middle.messenger.praktikum.yandex#readme",
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm-run-all test lint:all:fix"
+    }
+  },
   "devDependencies": {
     "@anikin/parcel-transformer-handlebars": "1.0.9",
     "@anikin/parcel-transformer-handlebars-precompile": "1.0.1",
     "@parcel/transformer-less": "2.7.0",
+    "@types/chai": "4.3.4",
+    "@types/mocha": "10.0.1",
+    "@types/proxyquire": "1.3.28",
+    "@types/sinon": "10.0.13",
     "@typescript-eslint/eslint-plugin": "5.44.0",
     "@typescript-eslint/parser": "5.44.0",
     "chai": "4.3.7",
+    "css-loader": "6.7.3",
     "eslint": "8.28.0",
     "eslint-config-airbnb-base": "15.0.0",
     "eslint-plugin-import": "2.25.4",
     "handlebars": "4.7.7",
+    "handlebars-loader": "1.7.3",
+    "html-webpack-plugin": "5.5.0",
+    "husky": "8.0.3",
+    "jsdom": "21.0.0",
+    "less": "4.1.3",
+    "less-loader": "11.1.0",
     "mocha": "10.2.0",
     "parcel": "2.7.0",
     "postcss-less": "6.0.0",
     "postcss-lit": "0.5.0",
+    "proxyquire": "2.1.3",
+    "sinon": "15.0.1",
+    "style-loader": "3.3.1",
     "stylelint": "14.15.0",
     "stylelint-config-standard": "29.0.0",
-    "typescript": "4.9.3"
+    "ts-loader": "9.4.2",
+    "ts-node": "10.9.1",
+    "typescript": "4.9.3",
+    "webpack": "5.75.0",
+    "webpack-cli": "5.0.1",
+    "webpack-dev-server": "4.11.1"
   },
   "dependencies": {
     "express": "4.18.2",
-    "nanoid": "4.0.0"
+    "nanoid": "3.3.4"
   }
 }

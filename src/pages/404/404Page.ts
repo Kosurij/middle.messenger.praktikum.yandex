@@ -1,6 +1,6 @@
-import Block from '/src/utils/Block';
+import Block from '../../utils/Block';
 import { Link } from '../../components';
-import { ROUTES } from '/src/const/routes';
+import { ROUTES } from '../../const/routes';
 import template from './404.hbs';
 import styles from './404.less';
 

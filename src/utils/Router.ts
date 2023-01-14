@@ -1,6 +1,6 @@
-import Block from "/src/utils/Block";
-import isEqual from "/src/utils/helpers/isEqual";
-import { NotFoundPage } from "/src/pages/404/404Page";
+import Block from "./Block";
+import isEqual from "./helpers/isEqual";
+import { NotFoundPage } from "../pages/404/404Page";
 
 function render(query: string, block: Block) {
   const root = document.querySelector(query);
@@ -102,6 +102,11 @@ class Router {
     this.history.pushState({}, '', pathname);
 
     this._onRoute(pathname);
+  }
+
+  public reset() {
+    this.routes = [];
+    this.currentRoute = null;
   }
 
   public back() {

@@ -1,4 +1,4 @@
-import Block from "/src/utils/Block";
+import Block from "../../utils/Block";
 import template from "./dialog.hbs";
 import styles from "./dialog.less";
 

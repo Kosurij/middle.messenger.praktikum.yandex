@@ -1,5 +1,5 @@
-import { isPlainObject, TPlainObject } from '/src/utils/helpers/isPlainObject';
-import merge from '/src/utils/helpers/merge';
+import { isPlainObject, TPlainObject } from './isPlainObject';
+import merge from './merge';
 
 function set(object: TPlainObject, path: string, value: any): TPlainObject {
   if (!isPlainObject(object)) {
