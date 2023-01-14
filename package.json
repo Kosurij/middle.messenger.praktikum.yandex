@@ -41,7 +41,7 @@
     }
   },
   "devDependencies": {
-    "@anikin/parcel-transformer-handlebars": "1.0.9",
+    "@anikin/parcel-transformer-handlebars": "1.0.2",
     "@anikin/parcel-transformer-handlebars-precompile": "1.0.1",
     "@parcel/transformer-less": "2.7.0",
     "@types/chai": "4.3.4",
