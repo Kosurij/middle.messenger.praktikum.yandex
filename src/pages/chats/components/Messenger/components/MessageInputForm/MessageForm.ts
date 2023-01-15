@@ -11,7 +11,7 @@ export class MessageForm extends Block {
     super();
 
     this.getContent()!.onsubmit = (e) => {
-      this.sendMessage(e);
+      e.preventDefault();
     };
   }
 
@@ -20,7 +20,7 @@ export class MessageForm extends Block {
       label: '',
       type: 'submit',
       events: {
-        click: (e) => this.sendMessage(e as Event),
+        click: () => this.sendMessage(),
       },
       customClass: 'message-form__sendMessage',
     });
@@ -28,20 +28,24 @@ export class MessageForm extends Block {
     this.children.messageInput = new MessageInput();
   }
 
-  sendMessage(e: Event) {
-    e.preventDefault();
+  sendMessage() {
+    const form = document.querySelector('#message-form') as HTMLFormElement;
 
-    const { message } = Object.fromEntries(new FormData(e.target as HTMLFormElement).entries());
+    form.onsubmit = (e) => {
+      e.preventDefault();
 
-    const input = this.element?.children[1].children[0] as HTMLInputElement;
+      const { message } = Object.fromEntries(new FormData(e.target as HTMLFormElement).entries());
 
-    if (message) {
-      const { selectedChat } = store.getState();
+      const input = this.element?.children[1].children[0] as HTMLInputElement;
 
-      MessagesController.sendMessage(selectedChat!, message as string);
+      if (message) {
+        const { selectedChat } = store.getState();
 
-      input.value = '';
-    }
+        MessagesController.sendMessage(selectedChat!, message as string);
+
+        input.value = '';
+      }
+    };
   }
 
   protected render() {
