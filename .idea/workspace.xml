@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="49e820e1-3a51-44fe-8506-7883e310fca6" name="Changes" comment="Скорректирован ридми">
+    <list default="true" id="49e820e1-3a51-44fe-8506-7883e310fca6" name="Changes" comment="Добавлена возмжонсть отправки по нажатию на Enter и убрана перезагрузка страницы.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/chats/components/Messenger/components/MessageInputForm/MessageForm.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/chats/components/Messenger/components/MessageInputForm/MessageForm.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -76,7 +74,7 @@
       <recent name="C:\Users\kosur\Desktop\projects\middle.messenger.praktikum.yandex\src\components\FileInput" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.start">
+  <component name="RunManager" selected="npm.dev">
     <configuration name="dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -129,11 +127,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.start" />
-        <item itemvalue="npm.lint:all:fix" />
         <item itemvalue="npm.dev" />
+        <item itemvalue="npm.start" />
         <item itemvalue="npm.lint:less:fix" />
         <item itemvalue="npm.lint:fix" />
+        <item itemvalue="npm.lint:all:fix" />
       </list>
     </recent_temporary>
   </component>
@@ -191,6 +189,7 @@
       <workItem from="1673693974412" duration="3339000" />
       <workItem from="1673702861293" duration="1895000" />
       <workItem from="1673714577860" duration="3977000" />
+      <workItem from="1673762342689" duration="585000" />
     </task>
     <task id="LOCAL-00001" summary="Обновлен netlify.toml">
       <created>1669502710525</created>
