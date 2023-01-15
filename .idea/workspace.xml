@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="49e820e1-3a51-44fe-8506-7883e310fca6" name="Changes" comment="Добавлена возмжонсть отправки по нажатию на Enter и убрана перезагрузка страницы.">
+    <list default="true" id="49e820e1-3a51-44fe-8506-7883e310fca6" name="Changes" comment="Убрана перезагрузка страницы по нажатию на Enter">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/chats/components/Messenger/components/MessageInputForm/MessageForm.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/chats/components/Messenger/components/MessageInputForm/MessageForm.ts" afterDir="false" />
     </list>
@@ -189,7 +189,7 @@
       <workItem from="1673693974412" duration="3339000" />
       <workItem from="1673702861293" duration="1895000" />
       <workItem from="1673714577860" duration="3977000" />
-      <workItem from="1673762342689" duration="585000" />
+      <workItem from="1673762342689" duration="635000" />
     </task>
     <task id="LOCAL-00001" summary="Обновлен netlify.toml">
       <created>1669502710525</created>
@@ -455,7 +455,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Добавлен favicon.&#10;Скорректирована валидация: выводятся понятные пользователю ошибки.&#10;Добавлен класс роутера и изменен роутинг." />
     <MESSAGE value="Добавлена:&#10;авторизацию в полном объеме (регистрация, авторизация, выход из системы);&#10;работу с информацией пользователя (изменять данные пользователя, изменять пароль);" />
     <MESSAGE value="Добавлено уведомление." />
     <MESSAGE value="Header вынесен в самостоятельный блок." />
@@ -480,6 +479,7 @@
     <MESSAGE value="Проведен аудит пакетов" />
     <MESSAGE value="Стянуты изменения из ветки 4 спринта" />
     <MESSAGE value="Скорректирован ридми" />
-    <option name="LAST_COMMIT_MESSAGE" value="Скорректирован ридми" />
+    <MESSAGE value="Убрана перезагрузка страницы по нажатию на Enter" />
+    <option name="LAST_COMMIT_MESSAGE" value="Убрана перезагрузка страницы по нажатию на Enter" />
   </component>
 </project>
