@@ -7,6 +7,14 @@ import MessagesController from "/src/controllers/MessagesController";
 import store from "/src/utils/Store";
 
 export class MessageForm extends Block {
+  constructor() {
+    super();
+
+    this.getContent()!.onsubmit = (e) => {
+      e.preventDefault();
+    };
+  }
+
   protected init() {
     this.children.sendButton = new Button({
       label: '',

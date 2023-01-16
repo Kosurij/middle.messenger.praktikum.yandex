@@ -1,7 +1,7 @@
 import Block from "../../utils/Block";
 import template from "./inputField.hbs";
 import styles from "./inputField.less";
-import { inputValidationHandler } from "/src/utils/validation/validatator";
+import { inputValidationHandler } from "../../utils/validation/validatator";
 
 const eventsObject: Record<string, any> = {
   focusin: inputValidationHandler,

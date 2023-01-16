@@ -1,6 +1,6 @@
-import { queryStringify } from "/src/utils/helpers/queryStringify";
+import { queryStringify } from "./helpers/queryStringify";
 
-enum METHODS {
+export enum METHODS {
   GET = 'GET',
   POST = 'POST',
   PUT ='PUT',

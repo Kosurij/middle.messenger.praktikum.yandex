@@ -23,4 +23,4 @@ class AvatarBase extends Block<IAvatar> {
 
 const withResources = withStore((state) => state.resources);
 
-export const Avatar = withResources(AvatarBase);
+export const UserAvatar = withResources(AvatarBase);

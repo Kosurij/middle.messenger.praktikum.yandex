@@ -1,4 +1,4 @@
-import { TPlainObject } from "/src/utils/helpers/isPlainObject";
+import { TPlainObject } from "./isPlainObject";
 
 function merge(lhs: TPlainObject, rhs: TPlainObject): TPlainObject {
   for (const p in rhs) {
